@@ -1,0 +1,29 @@
+{
+ "file": "tafel_03_Teller.jpg",
+ "tafel": "3",
+ "seite": "85",
+ "titel": "Teller",
+ "beschriftungen": [
+  {
+   "de": "Oval.",
+   "fr": "Plat oval."
+  },
+  {
+   "de": "Suppen-Teller.",
+   "fr": "Assiettes à potage. (Assiettes creuses.)"
+  },
+  {
+   "de": "Fleisch-Teller.",
+   "fr": "Assiettes à viande. (Assiettes plates.)"
+  },
+  {
+   "de": "Mehlspeise-Teller.",
+   "fr": "Assiettes à entremets sucré."
+  },
+  {
+   "de": "Dessert-Teller.",
+   "fr": "Assiettes à dessert."
+  }
+ ],
+ "unsicher": []
+}

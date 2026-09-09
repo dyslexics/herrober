@@ -1,0 +1,180 @@
+{
+ "kapitel": {
+  "capitel-07": [
+   {
+    "stem": "capitel-07-1",
+    "seiten": [
+     "47",
+     "48"
+    ],
+    "duration": 254088
+   }
+  ],
+  "einleitung": [
+   {
+    "stem": "einleitung-1",
+    "seiten": [
+     "5",
+     "8"
+    ],
+    "duration": 378456
+   }
+  ],
+  "capitel-01": [
+   {
+    "stem": "capitel-01-1",
+    "seiten": [
+     "9",
+     "14"
+    ],
+    "duration": 620880
+   },
+   {
+    "stem": "capitel-01-2",
+    "seiten": [
+     "15",
+     "18"
+    ],
+    "duration": 556104
+   },
+   {
+    "stem": "capitel-01-3",
+    "seiten": [
+     "19",
+     "21"
+    ],
+    "duration": 396864
+   }
+  ],
+  "capitel-02": [
+   {
+    "stem": "capitel-02-1",
+    "seiten": [
+     "22",
+     "24"
+    ],
+    "duration": 372456
+   }
+  ],
+  "capitel-03": [
+   {
+    "stem": "capitel-03-1",
+    "seiten": [
+     "25",
+     "30"
+    ],
+    "duration": 731232
+   }
+  ],
+  "capitel-04": [
+   {
+    "stem": "capitel-04-1",
+    "seiten": [
+     "31",
+     "35"
+    ],
+    "duration": 676056
+   }
+  ],
+  "capitel-05": [
+   {
+    "stem": "capitel-05-1",
+    "seiten": [
+     "36",
+     "40"
+    ],
+    "duration": 644088
+   }
+  ],
+  "capitel-06": [
+   {
+    "stem": "capitel-06-1",
+    "seiten": [
+     "41",
+     "45"
+    ],
+    "duration": 643728
+   },
+   {
+    "stem": "capitel-06-2",
+    "seiten": [
+     "46",
+     "46"
+    ],
+    "duration": 90504
+   }
+  ],
+  "capitel-08": [
+   {
+    "stem": "capitel-08-1",
+    "seiten": [
+     "49",
+     "53"
+    ],
+    "duration": 643008
+   },
+   {
+    "stem": "capitel-08-2",
+    "seiten": [
+     "54",
+     "57"
+    ],
+    "duration": 580704
+   },
+   {
+    "stem": "capitel-08-3",
+    "seiten": [
+     "58",
+     "61"
+    ],
+    "duration": 541488
+   },
+   {
+    "stem": "capitel-08-4",
+    "seiten": [
+     "62",
+     "66"
+    ],
+    "duration": 663600
+   },
+   {
+    "stem": "capitel-08-5",
+    "seiten": [
+     "67",
+     "67"
+    ],
+    "duration": 76728
+   }
+  ],
+  "capitel-09": [
+   {
+    "stem": "capitel-09-1",
+    "seiten": [
+     "68",
+     "72"
+    ],
+    "duration": 694704
+   },
+   {
+    "stem": "capitel-09-2",
+    "seiten": [
+     "73",
+     "73"
+    ],
+    "duration": 120768
+   }
+  ],
+  "capitel-10": [
+   {
+    "stem": "capitel-10-1",
+    "seiten": [
+     "74",
+     "77"
+    ],
+    "duration": 385344
+   }
+  ]
+ },
+ "tafeln": {},
+ "menus": {}
+}

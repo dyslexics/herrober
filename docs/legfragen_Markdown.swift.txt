@@ -1,0 +1,221 @@
+import SwiftUI
+
+enum MDBlock {
+    case heading(Int, String)
+    case paragraph(String)
+    case bullets([String])
+    case numbered([String])
+    case image(String, String)   // alt, asset
+    case quote(String)
+    case table([[String]])
+    case rule
+}
+
+/// Kleiner, robuster Block-Parser für die Buchkapitel (Überschriften, Absätze, Listen,
+/// Bilder, Zitat, Tabelle, Trennlinie). Inline-Formatierung übernimmt AttributedString.
+enum MarkdownParser {
+    static func parse(_ md: String) -> [MDBlock] {
+        var blocks: [MDBlock] = []
+        var para: [String] = []
+        var bullets: [String] = []
+        var numbered: [String] = []
+        var table: [[String]] = []
+
+        func flushPara() {
+            if !para.isEmpty { blocks.append(.paragraph(para.joined(separator: " "))); para = [] }
+        }
+        func flushLists() {
+            if !bullets.isEmpty { blocks.append(.bullets(bullets)); bullets = [] }
+            if !numbered.isEmpty { blocks.append(.numbered(numbered)); numbered = [] }
+        }
+        func flushTable() {
+            if !table.isEmpty { blocks.append(.table(table)); table = [] }
+        }
+        func flushAll() { flushPara(); flushLists(); flushTable() }
+
+        for raw in md.components(separatedBy: "\n") {
+            let line = raw.trimmingCharacters(in: .whitespaces)
+            if line.isEmpty { flushAll(); continue }
+
+            if line.hasPrefix("#") {
+                flushAll()
+                let level = line.prefix { $0 == "#" }.count
+                let text = line.dropFirst(level).trimmingCharacters(in: .whitespaces)
+                blocks.append(.heading(level, text))
+                continue
+            }
+            if line == "---" || line == "***" || line == "___" {
+                flushAll(); blocks.append(.rule); continue
+            }
+            if line.hasPrefix("!["), let r = line.range(of: "](", options: .literal), line.hasSuffix(")") {
+                flushAll()
+                let alt = String(line[line.index(line.startIndex, offsetBy: 2)..<r.lowerBound])
+                let asset = String(line[r.upperBound..<line.index(before: line.endIndex)])
+                blocks.append(.image(alt, asset))
+                continue
+            }
+            if line.hasPrefix(">") {
+                flushAll()
+                blocks.append(.quote(line.dropFirst().trimmingCharacters(in: .whitespaces)))
+                continue
+            }
+            if line.hasPrefix("|") {
+                flushPara(); flushLists()
+                var cells = line.split(separator: "|", omittingEmptySubsequences: false)
+                    .map { $0.trimmingCharacters(in: .whitespaces) }
+                if cells.first == "" { cells.removeFirst() }
+                if cells.last == "" { cells.removeLast() }
+                let separator = cells.allSatisfy { !$0.isEmpty && $0.allSatisfy { "-:".contains($0) } }
+                if !separator { table.append(cells) }
+                continue
+            }
+            if line.hasPrefix("- ") || line.hasPrefix("* ") || line.hasPrefix("• ") {
+                flushPara(); flushTable()
+                if !numbered.isEmpty { blocks.append(.numbered(numbered)); numbered = [] }
+                bullets.append(String(line.dropFirst(2)))
+                continue
+            }
+            if let dot = line.firstIndex(where: { $0 == "." || $0 == ")" }),
+               dot != line.startIndex,
+               line[..<dot].allSatisfy(\.isNumber),
+               line.index(after: dot) < line.endIndex,
+               line[line.index(after: dot)] == " " {
+                flushPara(); flushTable()
+                if !bullets.isEmpty { blocks.append(.bullets(bullets)); bullets = [] }
+                numbered.append(line[line.index(dot, offsetBy: 2)...].trimmingCharacters(in: .whitespaces))
+                continue
+            }
+            flushLists(); flushTable()
+            para.append(line)
+        }
+        flushAll()
+        return blocks
+    }
+}
+
+func inlineMarkdown(_ s: String) -> AttributedString {
+    if let a = try? AttributedString(markdown: s,
+                                     options: .init(interpretedSyntax: .inlineOnlyPreservingWhitespace)) {
+        return a
+    }
+    return AttributedString(s)
+}
+
+/// Lesetext in Atkinson Hyperlegible: Größe und Zeilenhöhe aus den Einstellungen, Dynamic Type zusätzlich.
+struct MarkdownView: View {
+    let blocks: [MDBlock]
+    @EnvironmentObject private var settings: Settings
+    @EnvironmentObject private var repo: ContentRepository
+    @Environment(\.leseMarkierung) private var markierung: LeseMarkierung?
+
+    private var groesse: CGFloat { CGFloat(settings.fontSize) }
+    private var lesetext: Font { Schrift.regular(groesse) }
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: groesse * 0.8) {
+            ForEach(Array(blocks.enumerated()), id: \.offset) { i, block in
+                render(block, index: i)
+                    .id("block-\(i)")
+            }
+        }
+        .foregroundStyle(Theme.tinte)
+    }
+
+    /// Inline-Markdown → AttributedString; beim Vorlesen bekommt das aktuelle Wort einen Textmarker.
+    private func text(_ s: String, block: Int, item: Int) -> AttributedString {
+        var a = inlineMarkdown(s)
+        if let m = markierung, m.block == block, m.item == item, m.start < m.end, m.end <= a.characters.count {
+            let von = a.characters.index(a.startIndex, offsetBy: m.start)
+            let bis = a.characters.index(a.startIndex, offsetBy: m.end)
+            a[von..<bis].backgroundColor = Theme.markierung
+        }
+        return a
+    }
+
+    @ViewBuilder
+    private func render(_ block: MDBlock, index: Int) -> some View {
+        switch block {
+        case .heading(let level, let t):
+            Text(text(t, block: index, item: -1))
+                .font(Schrift.bold(groesse * (level <= 1 ? 1.4 : level == 2 ? 1.25 : 1.1)))
+                .fixedSize(horizontal: false, vertical: true)
+                .padding(.top, groesse * 0.5)
+                .accessibilityAddTraits(.isHeader)
+        case .paragraph(let t):
+            Text(text(t, block: index, item: -1))
+                .font(lesetext)
+                .lineSpacing(settings.lineSpacing)
+                .fixedSize(horizontal: false, vertical: true)
+                .tint(Theme.akzent)
+        case .bullets(let items):
+            VStack(alignment: .leading, spacing: groesse * 0.35) {
+                ForEach(Array(items.enumerated()), id: \.offset) { k, item in
+                    HStack(alignment: .firstTextBaseline, spacing: 10) {
+                        Text("•").font(lesetext).foregroundStyle(Theme.akzent)
+                        Text(text(item, block: index, item: k)).font(lesetext).lineSpacing(settings.lineSpacing)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                }
+            }
+            .padding(.leading, 4)
+        case .numbered(let items):
+            VStack(alignment: .leading, spacing: groesse * 0.35) {
+                ForEach(Array(items.enumerated()), id: \.offset) { i, item in
+                    HStack(alignment: .firstTextBaseline, spacing: 10) {
+                        Text("\(i + 1).").font(Schrift.bold(groesse)).monospacedDigit().foregroundStyle(Theme.akzent)
+                        Text(text(item, block: index, item: i)).font(lesetext).lineSpacing(settings.lineSpacing)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                }
+            }
+            .padding(.leading, 4)
+        case .image(let alt, let asset):
+            if let img = repo.image(asset) {
+                // Sehr breite Grafiken (Wortbilder, Banner) nicht auf volle Breite ziehen
+                let breit = img.size.width > img.size.height * 2
+                VStack(alignment: .leading, spacing: 6) {
+                    Image(uiImage: img)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(maxWidth: breit ? 360 : .infinity, alignment: .leading)
+                        .clipShape(RoundedRectangle(cornerRadius: Theme.radius, style: .continuous))
+                        .overlay(RoundedRectangle(cornerRadius: Theme.radius, style: .continuous).stroke(Theme.linie))
+                        .accessibilityLabel(alt)
+                    if !alt.isEmpty {
+                        Text(alt).font(Schrift.klein).foregroundStyle(Theme.leise)
+                    }
+                }
+                .padding(.vertical, 4)
+            }
+        case .quote(let t):
+            HStack(alignment: .top, spacing: 12) {
+                RoundedRectangle(cornerRadius: 2).fill(Theme.akzent).frame(width: 3)
+                Text(text(t, block: index, item: -1)).font(lesetext).lineSpacing(settings.lineSpacing)
+                    .foregroundStyle(Theme.leise)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            .padding(.vertical, 2)
+        case .table(let rows):
+            VStack(spacing: 0) {
+                ForEach(Array(rows.enumerated()), id: \.offset) { ri, row in
+                    HStack(alignment: .top, spacing: 12) {
+                        ForEach(Array(row.enumerated()), id: \.offset) { _, cell in
+                            Text(inlineMarkdown(cell))
+                                .font(ri == 0 ? Schrift.bold(groesse * 0.9) : Schrift.regular(groesse * 0.9))
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .fixedSize(horizontal: false, vertical: true)
+                        }
+                    }
+                    .padding(.vertical, 8)
+                    .padding(.horizontal, 10)
+                    .background(ri == 0 ? Theme.weich : Color.clear)
+                    if ri < rows.count - 1 { HaarLinie() }
+                }
+            }
+            .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+            .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(Theme.linie))
+        case .rule:
+            HaarLinie().padding(.vertical, 4)
+        }
+    }
+}

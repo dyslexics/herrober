@@ -1,0 +1,23 @@
+{"file": "08_Schneebergfreunde_1898.jpg", "titel": "Festliche Abendtafel anläßlich der Gründungsfeier des Vereines der Schneebergfreunde", "ort_datum": "Wien, 2. December 1898.",
+ "sprache": "de",
+ "zeilen": [
+  {"text": "Festliche Abendtafel", "art": "titel"},
+  {"text": "anläßlich der", "art": "titel"},
+  {"text": "Gründungsfeier", "art": "titel"},
+  {"text": "des", "art": "titel"},
+  {"text": "Vereines der Schneebergfreunde", "art": "titel"},
+  {"text": "Wien, 2. December 1898.", "art": "sonstiges"},
+  {"text": "Hühner-Kraftsuppe", "art": "gang"},
+  {"text": "Schwarza-Forellen — Kartoffel", "art": "gang"},
+  {"text": "Englischer Rinderbraten — Gemüse", "art": "gang"},
+  {"text": "Birkhühner", "art": "gang"},
+  {"text": "Dunstobst — Salat", "art": "gang"},
+  {"text": "Schneeberg-Krapfen", "art": "gang"},
+  {"text": "Eis.", "art": "gang"},
+  {"text": "Dreher-Bier.", "art": "wein"},
+  {"text": "Perle Österreichs 1868.", "art": "wein"},
+  {"text": "Vöslauer Ausstich 1890.", "art": "wein"},
+  {"text": "Schaumwein von R. Schlumberger.", "art": "wein"},
+  {"text": "Ferdinand Heß, Wien.", "art": "sonstiges"}
+ ],
+ "unsicher": ["„Perle Österreichs 1868.“ und „Vöslauer Ausstich 1890.“ stehen nebeneinander auf einer Zeile (links/rechts versetzt); hier als zwei Zeilen erfasst."]}

@@ -1,0 +1,87 @@
+{
+ "file": "tafel_07_Weinglaeser.jpg",
+ "tafel": "7",
+ "seite": "91",
+ "titel": "Wasser-, Wein- und Champagner-Gläser",
+ "beschriftungen": [
+  {
+   "de": "Wasser-Gläser.",
+   "fr": "Verres à eau."
+  },
+  {
+   "de": "Wasser-Flasche u. Wasser-Glas.",
+   "fr": "Carafe à eau et verre à eau."
+  },
+  {
+   "de": "Weißwein-Gläser.",
+   "fr": "Verres à vin blanc."
+  },
+  {
+   "de": "Rothwein-Glas.",
+   "fr": "Verre à vin rouge."
+  },
+  {
+   "de": "Sherry-Glas.",
+   "fr": "Verre à sherry."
+  },
+  {
+   "de": "Cognac- und Liqueur-Gläser.",
+   "fr": "Verres à cognac et à liqueur.",
+   "gruppe": true
+  },
+  {
+   "de": "Liqueurglas.",
+   "fr": null
+  },
+  {
+   "de": "Rheinwein-Glas.",
+   "fr": "Verre à vin du Rhin."
+  },
+  {
+   "de": "Sodawasser-Glas.",
+   "fr": "Verre à soda."
+  },
+  {
+   "de": "Champagner-Gläser.",
+   "fr": "Verres à Champagne.",
+   "gruppe": true
+  },
+  {
+   "de": "Kelch.",
+   "fr": "Coupe."
+  },
+  {
+   "de": "Schale.",
+   "fr": "Coupe."
+  },
+  {
+   "de": "Becher.",
+   "fr": "Bocal."
+  },
+  {
+   "de": "Flöte.",
+   "fr": "Flûte."
+  },
+  {
+   "de": "Rum-Flacon.",
+   "fr": "Flacon à rhum."
+  },
+  {
+   "de": "Absynth-Glas.",
+   "fr": "Verre à absinthe."
+  },
+  {
+   "de": "Liqueur-Flacons.",
+   "fr": "Flacons à liqueurs."
+  },
+  {
+   "de": "Melange-Gläser.",
+   "fr": "Verres à café au lait."
+  },
+  {
+   "de": "Punsch-Glas.",
+   "fr": "Verre à punch."
+  }
+ ],
+ "unsicher": []
+}

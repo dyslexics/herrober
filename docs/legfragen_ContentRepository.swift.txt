@@ -1,0 +1,71 @@
+import UIKit
+
+/// Lädt content.json + Bilder aus dem Bundle-Ordner `Content/` (Folder-Reference, Hierarchie bleibt).
+final class ContentRepository: ObservableObject {
+    let themes: [Thema]
+    let books: [Quelle]
+    let extras: [Extra]
+    private let index: [String: (thema: Thema, position: Int)]
+    private let quellen: [String: Quelle]
+    private let cache = NSCache<NSString, UIImage>()
+    private let bundle: Bundle
+
+    init(bundle: Bundle = .main) {
+        self.bundle = bundle
+        var loaded = Library(version: 0, themes: [], books: [], extras: [])
+        if let url = bundle.url(forResource: "content", withExtension: "json", subdirectory: "Content"),
+           let data = try? Data(contentsOf: url),
+           let lib = try? JSONDecoder().decode(Library.self, from: data) {
+            loaded = lib
+        }
+        themes = loaded.themes
+        books = loaded.books
+        extras = loaded.extras
+        var idx: [String: (Thema, Int)] = [:]
+        for t in loaded.themes {
+            for (i, c) in t.chapters.enumerated() { idx[c.id] = (t, i) }
+        }
+        index = idx
+        quellen = Dictionary(uniqueKeysWithValues: loaded.books.map { ($0.slug, $0) })
+    }
+
+    var chapterCount: Int { themes.reduce(0) { $0 + $1.chapters.count } }
+    var questionCount: Int { themes.reduce(0) { $0 + $1.questionCount } }
+    var allChapters: [Chapter] { themes.flatMap(\.chapters) }
+
+    func thema(_ slug: String) -> Thema? { themes.first { $0.slug == slug } }
+    func extra(_ slug: String) -> Extra? { extras.first { $0.slug == slug } }
+    func chapter(_ id: String) -> Chapter? { index[id].map { $0.thema.chapters[$0.position] } }
+    func location(of id: String) -> (thema: Thema, position: Int)? { index[id] }
+    func quelle(for chapter: Chapter) -> Quelle? { quellen[chapter.bookSlug] }
+
+    func next(after id: String) -> Chapter? {
+        guard let loc = index[id], loc.position + 1 < loc.thema.chapters.count else { return nil }
+        return loc.thema.chapters[loc.position + 1]
+    }
+
+    func previous(before id: String) -> Chapter? {
+        guard let loc = index[id], loc.position > 0 else { return nil }
+        return loc.thema.chapters[loc.position - 1]
+    }
+
+    func audioURL(_ stem: String) -> URL? {
+        bundle.url(forResource: stem, withExtension: "mp3", subdirectory: "Content/Audio")
+    }
+
+    func vorleseDaten(_ stem: String) -> VorleseDaten? {
+        guard let url = bundle.url(forResource: stem, withExtension: "json", subdirectory: "Content/Audio"),
+              let data = try? Data(contentsOf: url) else { return nil }
+        return try? JSONDecoder().decode(VorleseDaten.self, from: data)
+    }
+
+    func image(_ asset: String) -> UIImage? {
+        if let hit = cache.object(forKey: asset as NSString) { return hit }
+        let stem = (asset as NSString).deletingPathExtension
+        let ext = (asset as NSString).pathExtension
+        guard let url = bundle.url(forResource: stem, withExtension: ext, subdirectory: "Content/Images"),
+              let img = UIImage(contentsOfFile: url.path) else { return nil }
+        cache.setObject(img, forKey: asset as NSString)
+        return img
+    }
+}

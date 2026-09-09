@@ -1,0 +1,101 @@
+{
+ "file": "tafel_53-54_G_Tafel.jpg",
+ "tafel": "53-54",
+ "seite": "144-145",
+ "titel": "Tafel in G-Form (geschlossenes Hufeisen) für 80 Personen",
+ "beschriftungen": [
+  {
+   "de": "Tafel in G-Form (geschlossenes Hufeisen) für 80 Personen.",
+   "fr": null,
+   "gruppe": true
+  },
+  {
+   "de": "(8 Services à 10 Personen.) [Annahme: 2 Ehrenplätze (Brautpaar).]",
+   "fr": null
+  },
+  {
+   "de": "Brautpaar.",
+   "fr": null,
+   "lage": "oben Mitte unter „Tafel 53–54“, im Falz; darunter die Ziffern 1 (schwarz) und 2 (rot)"
+  },
+  {
+   "nr": "1",
+   "de": "Braut.",
+   "fr": null,
+   "lage": "oben Mitte links des Falzes, schwarz, mit Stern-Pfeil nach links; Platz 1 des schwarzen Kopfservices"
+  },
+  {
+   "nr": "2",
+   "de": "Bräutigam.",
+   "fr": null,
+   "lage": "oben Mitte rechts des Falzes, rot, mit Stern-Pfeil nach rechts; Platz 1 des roten Kopfservices"
+  },
+  {
+   "de": "Eltern des Bräutigams.",
+   "fr": null,
+   "lage": "oben links von „Braut.“, schwarz, über den Plätzen 2–3 des schwarzen Kopfservices"
+  },
+  {
+   "de": "Eltern der Braut.",
+   "fr": null,
+   "lage": "oben rechts von „Bräutigam.“, rot, über den Plätzen 2–3 des roten Kopfservices"
+  }
+ ],
+ "sitzplan": {
+  "legende": "Arabische Ziffern = Reihenfolge beim ersten Gang, Beginn am Pfeil mit Stern; römische Ziffern = Reihenfolge beim zweiten Gang (Wechseln des Services), Beginn am Pfeil mit Punkt; Servicegruppen durch Rot- bzw. Schwarzdruck unterschieden. Trapeze = Sitze, Doppelkreise = Gedecke.",
+  "services": [
+   {
+    "farbe": "schwarz",
+    "lage": "Kopfseite links der Mitte (S. 144), linke obere Ecke, linke Außenseite oben",
+    "plaetze": "1 (Braut), 2, 3, 4, 5, 6, 7, 8 (Kopfseite von der Mitte nach links), 9 (Ecke), 10 (linke Außenseite) – ohne römische Ziffern",
+    "pfeile": "Stern-Pfeil bei 1 nach links"
+   },
+   {
+    "farbe": "rot",
+    "lage": "Kopfseite rechts der Mitte (S. 145), rechte obere Ecke, rechte Außenseite oben",
+    "plaetze": "1 (Bräutigam), 2, 3, 4, 5, 6, 7, 8 (Kopfseite von der Mitte nach rechts), 9 (Ecke), 10 (rechte Außenseite) – ohne römische Ziffern",
+    "pfeile": "Stern-Pfeil bei 1 nach rechts"
+   },
+   {
+    "farbe": "rot",
+    "lage": "linke untere Ecke und linke Außenseite, von unten nach oben",
+    "plaetze": "1/X (Ecke unten links), 2/IX, 3/VIII, 4/VII, 5/VI, 6/V, 7/IV, 8/III, 9/II, 10/I",
+    "pfeile": "Stern-Pfeil links neben 1/X nach oben; Punkt-Pfeil bei I 10 nach unten"
+   },
+   {
+    "farbe": "schwarz",
+    "lage": "Innenseite des linken Schenkels unten, untere Innenreihe links, untere Außenreihe links",
+    "plaetze": "1/X (Innenseite links unten), 2/IX, 3/VIII, 4/VII, 5/VI (untere Innenreihe links, von links nach rechts), 6/V, 7/IV, 8/III, 9/II, 10/I (untere Außenreihe links, von rechts nach links)",
+    "pfeile": "Stern-Pfeil bei 1/X bzw. IX 2 nach rechts unten; Punkt-Pfeil bei 10/I nach rechts"
+   },
+   {
+    "farbe": "rot",
+    "lage": "obere Innenreihe links der Mitte und Innenseite links, von rechts nach links und dann nach unten",
+    "plaetze": "1/X (obere Innenreihe, Mitte), 2/IX, 3/VIII, 4/VII, 5/VI (obere Innenreihe nach links), 6/V, 7/IV, 8/III, 9/II, 10/I (Innenseite links von oben nach unten)",
+    "pfeile": "Stern-Pfeil bei 1/X nach links; Punkt-Pfeil bei 10/I nach oben"
+   },
+   {
+    "farbe": "schwarz",
+    "lage": "Innenseite rechts von unten nach oben, obere Innenreihe rechts der Mitte",
+    "plaetze": "1/X (Innenseite rechts unten), 2/IX, 3/VIII, 4/VII, 5/VI (Innenseite rechts nach oben), 6/V, 7/IV, 8/III, 9/II, 10/I (obere Innenreihe von rechts zur Mitte)",
+    "pfeile": "Stern-Pfeil bei 1/X nach oben; Punkt-Pfeil bei 10/I nach rechts"
+   },
+   {
+    "farbe": "rot",
+    "lage": "untere Außenreihe rechts, untere Innenreihe rechts, Innenseite rechts unten",
+    "plaetze": "1/X, 2/IX, 3/VIII, 4/VII, 5/VI (untere Außenreihe rechts, von rechts der Mitte nach links), 6/V, 7/IV, 8/III, 9/II (untere Innenreihe rechts, von links nach rechts), 10/I (Innenseite rechts unten)",
+    "pfeile": "Stern-Pfeil bei 1/X nach links; Punkt-Pfeil bei I 10 nach unten"
+   },
+   {
+    "farbe": "schwarz",
+    "lage": "rechte Außenseite von oben nach unten und rechte untere Ecke",
+    "plaetze": "1/X, 2/IX, 3/VIII, 4/VII, 5/VI, 6/V, 7/IV, 8/III, 9/II (rechte Außenseite), 10/I (Ecke unten rechts)",
+    "pfeile": "Stern-Pfeil bei 1/X nach unten; Punkt-Pfeil rechts neben 10/I nach oben"
+   }
+  ]
+ },
+ "unsicher": [
+  "Bildkopf „Tafel 53–54“ und „Brautpaar.“ liegen im Buchfalz und sind teilweise verdeckt, Lesung aus dem Kontext eindeutig.",
+  "Bedeutung der Ziffern „1“ (schwarz) und „2“ (rot) unter „Brautpaar.“: vermutlich Nummerierung der beiden Ehrenplätze (Braut = 1, Bräutigam = 2); nicht im Bild erläutert."
+ ]
+}

@@ -1,0 +1,26 @@
+{
+ "file": "tafel_14_Ragout_und_Tranchierbesteck.jpg",
+ "tafel": "14",
+ "seite": "101",
+ "titel": "Ragout-Löffel und Tranchier-Besteck",
+ "beschriftungen": [
+  {
+   "de": "Ragout-Löffel.",
+   "fr": "Cuiller à ragoût."
+  },
+  {
+   "de": "Tranchier-Besteck.",
+   "fr": "Service à découper.",
+   "gruppe": true
+  },
+  {
+   "de": "Gabel.",
+   "fr": "Fourchette."
+  },
+  {
+   "de": "Messer.",
+   "fr": "Couteau."
+  }
+ ],
+ "unsicher": []
+}

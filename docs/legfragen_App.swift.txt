@@ -1,0 +1,120 @@
+import SwiftUI
+
+@main
+struct LegFragenApp: App {
+    @StateObject private var repo: ContentRepository
+    @StateObject private var progress: ProgressStore
+    @StateObject private var settings: Settings
+    @StateObject private var nav = Navigator()
+
+    init() {
+        let r = ContentRepository()
+        let p = ProgressStore()
+        if Launch.demoProgress { p.loadDemo(repo: r) }
+        let s = Settings()
+        if let l = Launch.lang, let al = AppLang(rawValue: l) { s.lang = al }
+        _repo = StateObject(wrappedValue: r)
+        _progress = StateObject(wrappedValue: p)
+        _settings = StateObject(wrappedValue: s)
+        LegFragenApp.tabLeiste()
+    }
+
+    /// Tab-Leiste in Papier/Fläche mit Akzent für den aktiven Tab.
+    private static func tabLeiste() {
+        let a = UITabBarAppearance()
+        a.configureWithOpaqueBackground()
+        a.backgroundColor = UIColor { $0.userInterfaceStyle == .dark ? UIColor(rgb: 0x1B293D) : UIColor(rgb: 0xFFFFFF) }
+        a.shadowColor = UIColor { $0.userInterfaceStyle == .dark ? UIColor(rgb: 0x2B3B54) : UIColor(rgb: 0xE1E3E8) }
+        let leise = UIColor { $0.userInterfaceStyle == .dark ? UIColor(rgb: 0xB2BDCD) : UIColor(rgb: 0x586475) }
+        let akzent = UIColor { $0.userInterfaceStyle == .dark ? UIColor(rgb: 0xB9CEF4) : UIColor(rgb: 0x264398) }
+        for item in [a.stackedLayoutAppearance, a.inlineLayoutAppearance, a.compactInlineLayoutAppearance] {
+            item.normal.iconColor = leise
+            item.normal.titleTextAttributes = [.foregroundColor: leise]
+            item.selected.iconColor = akzent
+            item.selected.titleTextAttributes = [.foregroundColor: akzent]
+        }
+        UITabBar.appearance().standardAppearance = a
+        UITabBar.appearance().scrollEdgeAppearance = a
+    }
+
+    var body: some Scene {
+        WindowGroup {
+            RootView()
+                .environmentObject(repo)
+                .environmentObject(progress)
+                .environmentObject(settings)
+                .environmentObject(nav)
+                .environment(\.locale, Locale(identifier: settings.resolved))
+                .preferredColorScheme(settings.darstellung.scheme)
+        }
+    }
+}
+
+struct RootView: View {
+    @EnvironmentObject private var settings: Settings
+    @EnvironmentObject private var repo: ContentRepository
+    @EnvironmentObject private var nav: Navigator
+    @State private var launched = false
+
+    var body: some View {
+        TabView(selection: $nav.tab) {
+            // Jeder Stack bekommt seinen eigenen Pfad (siehe Navigator).
+            NavigationStack(path: $nav.libraryPath) {
+                LibraryView().routeDestinations()
+            }
+            .tabItem { Label(T("tab.library"), systemImage: "book") }
+            .tag(0)
+
+            NavigationStack(path: $nav.progressPath) {
+                FortschrittView().routeDestinations()
+            }
+            .tabItem { Label(T("tab.progress"), systemImage: "chart.bar") }
+            .tag(1)
+
+            NavigationStack(path: $nav.settingsPath) {
+                EinstellungenView().routeDestinations()
+            }
+            .tabItem { Label(T("tab.settings"), systemImage: "gearshape") }
+            .tag(2)
+
+            NavigationStack(path: $nav.aboutPath) {
+                UeberUnsView().routeDestinations()
+            }
+            .tabItem { Label(T("tab.about"), systemImage: "info.circle") }
+            .tag(3)
+        }
+        .tint(Theme.akzent)
+        .id(settings.resolved)   // Sprachwechsel: alle Texte neu, Tab + Pfade leben im Navigator weiter
+        .onAppear {
+            guard !launched else { return }
+            launched = true
+            applyLaunch()
+        }
+    }
+
+    /// Screenshot-/Demo-Navigation per Launch-Arg (-screen thema|chapter|quiz|result, -thema, -chapter).
+    private func applyLaunch() {
+        if let slug = Launch.extra {
+            nav.tab = 3
+            nav.open(.extra(slug))
+            return
+        }
+        guard let screen = Launch.screen else { return }
+        if ["about-us", "about", "imprint"].contains(screen) {
+            nav.tab = 3
+            if screen == "about" { nav.open(.aboutApp) }
+            if screen == "imprint" { nav.open(.imprint) }
+            return
+        }
+        let slug = Launch.thema ?? repo.themes.first?.slug ?? ""
+        guard let thema = repo.thema(slug), !thema.chapters.isEmpty else { return }
+        let idx = max(0, min(thema.chapters.count - 1, (Launch.chapter ?? 1) - 1))
+        let chapter = thema.chapters[idx]
+        nav.tab = 0
+        nav.open(.thema(slug))
+        if screen == "thema" || screen == "book" { return }
+        nav.open(.chapter(chapter.id))
+        if screen == "chapter" { return }
+        nav.open(.quiz(chapter.id))
+    }
+}

@@ -1,0 +1,69 @@
+{
+ "file": "tafel_52_U_Tafel.jpg",
+ "tafel": "52",
+ "seite": "143",
+ "titel": "Tafel in Hufeisen- oder U-Form für 66 Personen",
+ "beschriftungen": [
+  {
+   "de": "Tafel in Hufeisen- oder U-Form für 66 Personen.",
+   "fr": null,
+   "gruppe": true
+  },
+  {
+   "de": "(6 Services à 11 Personen.) [Annahme: 2 Ehrenplätze (Brautpaar).]",
+   "fr": null
+  },
+  {
+   "de": "Ehrenplätze.",
+   "fr": null,
+   "lage": "oben Mitte über dem Querbalken"
+  },
+  {
+   "de": "Brautpaar.",
+   "fr": null,
+   "lage": "oben Mitte, unter „Ehrenplätze.“, über Platz 1 (schwarz) und Platz 1 (rot)"
+  }
+ ],
+ "sitzplan": {
+  "legende": "Arabische Ziffern = Reihenfolge beim ersten Gang, Beginn am Pfeil mit Stern; römische Ziffern = Reihenfolge beim zweiten Gang (Wechseln des Services), Beginn am Pfeil mit Punkt; Servicegruppen durch Rot- bzw. Schwarzdruck unterschieden. Trapeze = Sitze, Doppelkreise = Gedecke.",
+  "services": [
+   {
+    "farbe": "schwarz",
+    "lage": "Querbalken links der Mitte, linkes Ende, linke Außenseite oben",
+    "plaetze": "1, 2, 3, 4 (Querbalken von der Mitte nach links), 5 (linkes Ende), 6, 7, 8, 9, 10, 11 (linke Außenseite von oben nach unten) – ohne römische Ziffern",
+    "pfeile": "Stern-Pfeil bei 1 nach links"
+   },
+   {
+    "farbe": "rot",
+    "lage": "Querbalken rechts der Mitte, rechtes Ende, rechte Außenseite oben",
+    "plaetze": "1, 2, 3, 4 (Querbalken von der Mitte nach rechts), 5 (rechtes Ende), 6, 7, 8, 9, 10, 11 (rechte Außenseite von oben nach unten) – ohne römische Ziffern",
+    "pfeile": "Stern-Pfeil bei 1 nach rechts"
+   },
+   {
+    "farbe": "rot",
+    "lage": "linker Schenkel: Innenseite unten, Schenkelende, Außenseite unten (von unten nach oben)",
+    "plaetze": "1/XI, 2/X (Innenseite unten), 3/IX (Schenkelende), 4/VIII, 5/VII, 6/VI, 7/V, 8/IV, 9/III, 10/II, 11/I (Außenseite von unten nach oben)",
+    "pfeile": "Stern-Pfeil bei 1/XI nach unten; Punkt-Pfeil bei I 11 nach unten"
+   },
+   {
+    "farbe": "schwarz",
+    "lage": "linker Schenkel, Innenseite, von oben nach unten",
+    "plaetze": "1/XI, 2/X, 3/IX, 4/VIII, 5/VII, 6/VI, 7/V, 8/IV, 9/III, 10/II, 11/I",
+    "pfeile": "Stern-Pfeil bei 1/XI nach unten; Punkt-Pfeil bei 11/I nach oben"
+   },
+   {
+    "farbe": "rot",
+    "lage": "rechter Schenkel, Innenseite, von unten nach oben",
+    "plaetze": "1/XI, 2/X, 3/IX, 4/VIII, 5/VII, 6/VI, 7/V, 8/IV, 9/III, 10/II, 11/I",
+    "pfeile": "Stern-Pfeil bei XI 1 nach oben; Punkt-Pfeil bei I 11 nach unten"
+   },
+   {
+    "farbe": "schwarz",
+    "lage": "rechter Schenkel: Außenseite unten, Schenkelende, Innenseite unten (von oben nach unten)",
+    "plaetze": "1/XI, 2/X, 3/IX, 4/VIII, 5/VII, 6/VI, 7/V, 8/IV (Außenseite von oben nach unten), 9/III (Schenkelende), 10/II, 11/I (Innenseite unten)",
+    "pfeile": "Stern-Pfeil bei 1/XI nach unten; Punkt-Pfeil bei I 11 nach unten"
+   }
+  ]
+ },
+ "unsicher": []
+}

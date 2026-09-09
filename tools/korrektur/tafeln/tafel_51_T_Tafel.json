@@ -1,0 +1,61 @@
+{
+ "file": "tafel_51_T_Tafel.jpg",
+ "tafel": "51",
+ "seite": "142",
+ "titel": "Tafel in T-Form für 36 Personen",
+ "beschriftungen": [
+  {
+   "de": "Tafel in T-Form für 36 Personen.",
+   "fr": null,
+   "gruppe": true
+  },
+  {
+   "de": "(4 Services à 9 Personen.)",
+   "fr": null
+  },
+  {
+   "de": "[Annahme: 1 Ehrenplatz und 1 Platz für eine hochstehende Persönlichkeit.]",
+   "fr": null
+  },
+  {
+   "de": "Ehrenplatz.",
+   "fr": null,
+   "lage": "oben Mitte, mit Stern darüber und Pfeil nach unten auf den Querbalken zwischen Platz 1 (schwarz) und Platz 1 (rot)"
+  },
+  {
+   "de": "Die mit * bezeichneten Sitze werden nur im Falle dringenden Bedarfes besetzt (eventuell für Nachzügler freigehalten).",
+   "fr": null,
+   "lage": "Fußnote unter der Bildunterschrift"
+  }
+ ],
+ "sitzplan": {
+  "legende": "Arabische Ziffern = Reihenfolge beim ersten Gang, Beginn am Pfeil mit Stern; römische Ziffern = Reihenfolge beim zweiten Gang (Wechseln des Services), Beginn am Pfeil mit Punkt; Servicegruppen durch Rot- bzw. Schwarzdruck unterschieden. Trapeze = Sitze, Doppelkreise = Gedecke.",
+  "services": [
+   {
+    "farbe": "schwarz",
+    "lage": "Querbalken links der Mitte, linkes Ende, unter dem Querbalken links vom Stiel, linke Stielseite oben",
+    "plaetze": "1/IX, 2/VIII, 3/VII, 4/VI (Querbalken von der Mitte nach links), 5/V (linkes Ende), 6*/IV, 7*/III (unter dem Querbalken), 8/II, 9/I (linke Stielseite)",
+    "pfeile": "Stern-Pfeil bei 1 nach links; Punkt-Pfeil bei 9/I nach oben"
+   },
+   {
+    "farbe": "rot",
+    "lage": "Querbalken rechts der Mitte, rechtes Ende, unter dem Querbalken rechts vom Stiel, rechte Stielseite oben",
+    "plaetze": "1, 2, 3, 4, 5 (Querbalken von der Mitte nach rechts), 6 (rechtes Ende), 7*, 8* (unter dem Querbalken; 8* näher am Stiel), 9 (rechte Stielseite) – ohne römische Ziffern",
+    "pfeile": "Stern-Pfeil bei 1 nach rechts"
+   },
+   {
+    "farbe": "schwarz",
+    "lage": "rechte Stielseite, von oben nach unten",
+    "plaetze": "1/IX, 2/VIII, 3/VII, 4/VI, 5/V, 6/IV, 7/III, 8/II, 9/I",
+    "pfeile": "Stern-Pfeil bei 1 nach unten; Punkt-Pfeil bei 9/I nach oben"
+   },
+   {
+    "farbe": "rot",
+    "lage": "Stielende unten und linke Stielseite, von unten nach oben",
+    "plaetze": "1/IX (Stielende), 2/VIII, 3/VII, 4/VI, 5/V, 6/IV, 7/III, 8/II, 9/I",
+    "pfeile": "Stern-Pfeil links unter dem Stielende nach oben; Punkt-Pfeil bei 9/I nach unten"
+   }
+  ]
+ },
+ "unsicher": []
+}

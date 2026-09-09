@@ -1,0 +1,37 @@
+{
+ "file": "tafel_06_Mocca_und_Kaffeezubehoer.jpg",
+ "tafel": "6",
+ "seite": "88",
+ "titel": "Chocolade-, Mocca- und Kaffee-Geschirr; Feines Porzellan-Service",
+ "beschriftungen": [
+  {
+   "de": "Chocolade-Schale.",
+   "fr": "Tasse à chocolat."
+  },
+  {
+   "de": "Mocca-Schalen.",
+   "fr": "Tasses à mocca."
+  },
+  {
+   "de": "Chocolade-Kanne.",
+   "fr": "Pot à chocolat."
+  },
+  {
+   "de": "Kaffee-Einsatzkanne.",
+   "fr": "Pot à café (cafetière)."
+  },
+  {
+   "de": "Eis-Cylinder.",
+   "fr": "Boîte à glace."
+  },
+  {
+   "de": "Kaffee-Maschine.",
+   "fr": "Machine à café (cafetière)."
+  },
+  {
+   "de": "Feines Porzellan-Service.",
+   "fr": "Service de table en porcelaine décorée."
+  }
+ ],
+ "unsicher": []
+}

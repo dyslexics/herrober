@@ -1,0 +1,43 @@
+{
+ "file": "tafel_11_Dessertbesteck.jpg",
+ "tafel": "11",
+ "seite": "98",
+ "titel": "Dessert- und Krebsen-Besteck",
+ "beschriftungen": [
+  {
+   "de": "Dessert-Besteck.",
+   "fr": "Service à dessert.",
+   "gruppe": true
+  },
+  {
+   "de": "Dessert-Messer.",
+   "fr": "Couteau à dessert."
+  },
+  {
+   "de": "Dessert-Gabel.",
+   "fr": "Fourchette à dessert."
+  },
+  {
+   "de": "Dessert-Löffel.",
+   "fr": "Cuiller à dessert."
+  },
+  {
+   "de": "Kaffee-Löffel.",
+   "fr": "Cuiller à café."
+  },
+  {
+   "de": "Krebsen-Messer.",
+   "fr": "Couteau à écrevisses."
+  },
+  {
+   "de": "Krebsen-Gabel.",
+   "fr": "Fourchette à écrevisses."
+  },
+  {
+   "de": "Krebsen-Besteck.",
+   "fr": "Service de table à écrevisses.",
+   "gruppe": true
+  }
+ ],
+ "unsicher": []
+}

@@ -1,0 +1,189 @@
+import SwiftUI
+
+/// Die Lesespalte ist die Hauptsache.
+struct ChapterView: View {
+    let chapter: Chapter
+    private let blocks: [MDBlock]
+    @EnvironmentObject private var repo: ContentRepository
+    @EnvironmentObject private var progress: ProgressStore
+    @EnvironmentObject private var settings: Settings
+    @EnvironmentObject private var nav: Navigator
+    @State private var leseBlatt = false
+    @StateObject private var vorleser = Vorleser()
+
+    init(chapter: Chapter) {
+        self.chapter = chapter
+        blocks = MarkdownParser.parse(chapter.body)
+    }
+
+    var body: some View {
+        let loc = repo.location(of: chapter.id)
+        let result = progress.result(chapter.id)
+        ScrollViewReader { proxy in
+        ScrollView {
+            VStack(alignment: .leading, spacing: 0) {
+                if let loc {
+                    HStack(spacing: 8) {
+                        Lesezeichen(farbe: Theme.farbe(loc.thema), groesse: 16)
+                        Text(loc.thema.name)
+                            .font(Schrift.label)
+                            .foregroundStyle(Theme.farbe(loc.thema))
+                    }
+                    .padding(.top, 10)
+                }
+                Text(markiert(chapter.title, block: -2))
+                    .font(Schrift.titel)
+                    .foregroundStyle(Theme.tinte)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .padding(.top, 10)
+                    .accessibilityAddTraits(.isHeader)
+                    .id("block--2")
+                if let loc {
+                    Text(T("chapter.of", loc.position + 1, loc.thema.chapters.count, chapter.minutes))
+                        .font(Schrift.meta)
+                        .foregroundStyle(Theme.leise)
+                        .padding(.top, 6)
+                }
+                if chapter.audio != nil && vorleser.bereit {
+                    VorleseZeile(vorleser: vorleser)
+                        .padding(.top, 16)
+                }
+                HaarLinie()
+                    .padding(.vertical, 18)
+
+                if !chapter.description.isEmpty {
+                    Text(markiert(chapter.description, block: -1))
+                        .font(Schrift.bold(CGFloat(settings.fontSize)))
+                        .foregroundStyle(Theme.tinte)
+                        .lineSpacing(settings.lineSpacing)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .padding(.bottom, 14)
+                        .id("block--1")
+                }
+
+                MarkdownView(blocks: blocks)
+                    .environment(\.leseMarkierung, vorleser.markierung)
+
+                if let quelle = repo.quelle(for: chapter) {
+                    QuellenKarte(quelle: quelle)
+                        .padding(.top, 28)
+                        .onAppear { progress.markRead(chapter.id) }
+                }
+
+                if let r = result {
+                    Text(T("quiz.best", r.best, r.total))
+                        .font(Schrift.meta)
+                        .foregroundStyle(r.passed ? Theme.erfolg : Theme.leise)
+                        .padding(.top, 16)
+                        .padding(.bottom, 8)
+                } else {
+                    Spacer().frame(height: 16)
+                }
+                if !chapter.questions.isEmpty {
+                    PrimaerKnopf(titel: T("quiz.button", chapter.questions.count)) {
+                        progress.markRead(chapter.id)
+                        nav.open(.quiz(chapter.id))
+                    }
+                } else {
+                    Text(T("quiz.none")).font(Schrift.meta).foregroundStyle(Theme.leise)
+                }
+
+                if let n = repo.next(after: chapter.id) {
+                    ZeilenKnopf(aktion: { nav.replaceTop(with: .chapter(n.id)) }) {
+                        EmptyView()
+                    } inhalt: {
+                        Text(T("chapter.next") + ": " + n.title)
+                            .font(Schrift.regular(15))
+                            .foregroundStyle(Theme.akzent)
+                            .multilineTextAlignment(.leading)
+                    }
+                    .padding(.top, 8)
+                }
+            }
+            .seitenRand()
+            .padding(.bottom, 24)
+            .leseSpalte()
+        }
+        .onChange(of: vorleser.markierung?.block) { _, block in
+            guard let block else { return }
+            withAnimation(.easeInOut(duration: 0.35)) { proxy.scrollTo("block-\(block)", anchor: .center) }
+        }
+        }
+        .background(Theme.bg)
+        .navigationTitle(T("chapter.back"))
+        .ohneLeistenTitel()
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button { leseBlatt = true } label: {
+                    Text(T("chapter.textsize"))
+                        .font(Schrift.bold(19))
+                        .foregroundStyle(Theme.akzent)
+                        .frame(minWidth: Theme.mindestTouch, minHeight: Theme.mindestTouch)
+                }
+                .accessibilityLabel(T("settings.reading"))
+            }
+        }
+        .sheet(isPresented: $leseBlatt) { LeseBlatt().environmentObject(settings) }
+        .onAppear {
+            progress.touch(chapter.id)
+            if let stem = chapter.audio, let url = repo.audioURL(stem), let daten = repo.vorleseDaten(stem), !vorleser.bereit {
+                vorleser.laden(url: url, daten: daten)
+                if Launch.vorlesen { vorleser.start() }
+            }
+        }
+        .onDisappear { vorleser.stop() }
+    }
+}
+
+extension ChapterView {
+    /// Überschrift (Block -2) und Vorspann (Block -1) bekommen beim Vorlesen denselben Textmarker wie der Lesetext.
+    fileprivate func markiert(_ text: String, block: Int) -> AttributedString {
+        var a = AttributedString(text)
+        if let m = vorleser.markierung, m.block == block, m.item == -1, m.start < m.end, m.end <= a.characters.count {
+            let von = a.characters.index(a.startIndex, offsetBy: m.start)
+            let bis = a.characters.index(a.startIndex, offsetBy: m.end)
+            a[von..<bis].backgroundColor = Theme.markierung
+        }
+        return a
+    }
+}
+
+/// Play/Pause, Stimme, Fortschritt und Tempo (0,8 / 1 / 1,2) unter der Überschrift.
+struct VorleseZeile: View {
+    @ObservedObject var vorleser: Vorleser
+
+    var body: some View {
+        HStack(spacing: 14) {
+            Button { vorleser.umschalten() } label: {
+                Image(systemName: vorleser.laeuft ? "pause.circle.fill" : "play.circle.fill")
+                    .font(.system(size: 44))
+                    .foregroundStyle(Theme.akzent)
+                    .frame(minWidth: Theme.mindestTouch, minHeight: Theme.mindestTouch)
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel(T("read.aloud"))
+            VStack(alignment: .leading, spacing: 5) {
+                Text(T("read.aloud"))
+                    .font(Schrift.zeile)
+                    .foregroundStyle(Theme.tinte)
+                Text(T("read.voice"))
+                    .font(Schrift.klein)
+                    .foregroundStyle(Theme.leise)
+                Band(anteil: vorleser.fortschritt, hoehe: 4)
+                    .padding(.top, 2)
+            }
+            Button { vorleser.naechsteRate() } label: {
+                Text(vorleser.rateText + "×")
+                    .font(Schrift.bold(15))
+                    .foregroundStyle(Theme.akzent)
+                    .frame(minWidth: 52, minHeight: Theme.mindestTouch)
+                    .background(Theme.flaeche, in: RoundedRectangle(cornerRadius: Theme.radius, style: .continuous))
+                    .overlay(RoundedRectangle(cornerRadius: Theme.radius, style: .continuous).stroke(Theme.linie, lineWidth: 1))
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel(T("read.rate") + " " + vorleser.rateText)
+        }
+        .padding(14)
+        .background(Theme.weich, in: RoundedRectangle(cornerRadius: Theme.radius, style: .continuous))
+    }
+}

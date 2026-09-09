@@ -1,0 +1,64 @@
+{
+ "file": "tafel_50_Laengstafel.jpg",
+ "tafel": "50",
+ "seite": "141",
+ "titel": "Längstafel für 32 Personen",
+ "beschriftungen": [
+  {
+   "de": "Längstafel für 32 Personen.",
+   "fr": null,
+   "gruppe": true
+  },
+  {
+   "de": "(4 Services à 8 Personen.) [Annahme: 1 Ehrenplatz.]",
+   "fr": null
+  },
+  {
+   "de": "Fensterseite.",
+   "fr": null,
+   "lage": "links, quer gestellt"
+  },
+  {
+   "de": "Wandseite.",
+   "fr": null,
+   "lage": "rechts, quer gestellt"
+  },
+  {
+   "de": "Jubilar (Ehrenplatz).",
+   "fr": null,
+   "lage": "rechts, quer gestellt, mit Pfeil auf Platz 1 des roten Services an der Wandseite"
+  }
+ ],
+ "sitzplan": {
+  "legende": "Arabische Ziffern = Reihenfolge beim ersten Gang, Beginn am Pfeil mit Stern; römische Ziffern = Reihenfolge beim zweiten Gang (Wechseln des Services), Beginn am Pfeil mit Punkt; Servicegruppen durch Rot- bzw. Schwarzdruck unterschieden. Trapeze = Sitze, Doppelkreise = Gedecke.",
+  "services": [
+   {
+    "farbe": "schwarz",
+    "lage": "Kopfende oben und Wandseite (rechts) oben, von oben nach unten",
+    "plaetze": "1/VIII (Kopfende oben), 2/VII, 3/VI, 4/V, 5/IV, 6/III, 7/II, 8/I",
+    "pfeile": "Stern-Pfeil rechts neben dem Kopfende nach unten; Punkt-Pfeil bei 8/I nach oben"
+   },
+   {
+    "farbe": "rot",
+    "lage": "Fensterseite (links) oben, von unten nach oben",
+    "plaetze": "1/VIII, 2/VII, 3/VI, 4/V, 5/IV, 6/III, 7/II, 8/I",
+    "pfeile": "Stern-Pfeil bei 1/VIII nach oben; Punkt-Pfeil bei 8/I nach unten"
+   },
+   {
+    "farbe": "schwarz",
+    "lage": "Kopfende unten und Fensterseite (links) unten, von unten nach oben",
+    "plaetze": "1/VIII (Kopfende unten), 2/VII, 3/VI, 4/V, 5/IV, 6/III, 7/II, 8/I",
+    "pfeile": "Stern-Pfeil links neben dem Kopfende nach oben; Punkt-Pfeil bei 8/I nach unten"
+   },
+   {
+    "farbe": "rot",
+    "lage": "Wandseite (rechts) unten, von oben nach unten",
+    "plaetze": "1 (Jubilar, Ehrenplatz), 2, 3, 4, 5, 6, 7, 8 – ohne römische Ziffern (kein Wechseln des Services)",
+    "pfeile": "Stern-Pfeil bei 1 nach unten"
+   }
+  ]
+ },
+ "unsicher": [
+  "Seitenzahl im Bildkopf nicht sichtbar (nur „Tafel 50“); 141 aus der OCR-Rohfassung/Seitenfolge übernommen."
+ ]
+}

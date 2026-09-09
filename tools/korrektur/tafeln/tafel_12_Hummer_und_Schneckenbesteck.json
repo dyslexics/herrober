@@ -1,0 +1,29 @@
+{
+ "file": "tafel_12_Hummer_und_Schneckenbesteck.jpg",
+ "tafel": "12",
+ "seite": "99",
+ "titel": "Hummer-Besteck, Schnecken- und Austern-Gabel",
+ "beschriftungen": [
+  {
+   "de": "Hummer-Spatel mit Picker.",
+   "fr": "Service à homard."
+  },
+  {
+   "de": "Hummer-Picker.",
+   "fr": "Fourchette à homard."
+  },
+  {
+   "de": "Hummer-Spatel.",
+   "fr": "Couteau à homard."
+  },
+  {
+   "de": "Schnecken-Gabel.",
+   "fr": "Fourchette à escargots."
+  },
+  {
+   "de": "Austern-Gabel.",
+   "fr": "Fourchette à huîtres."
+  }
+ ],
+ "unsicher": []
+}

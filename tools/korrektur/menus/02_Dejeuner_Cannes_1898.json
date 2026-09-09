@@ -1,0 +1,16 @@
+{"file": "02_Dejeuner_Cannes_1898.jpg", "titel": "Déjeuner à la fourchette.", "ort_datum": "Hôtel de la Grande Bretagne, Cannes. Menu du 5 Janvier 1898.",
+ "sprache": "fr",
+ "zeilen": [
+  {"text": "Hôtel de la Grande Bretagne Cannes.", "art": "sonstiges"},
+  {"text": "Déjeuner à la fourchette.", "art": "titel"},
+  {"text": "Menu", "art": "ueberschrift"},
+  {"text": "du 5 Janvier 1898.", "art": "sonstiges"},
+  {"text": "Omelette aux fines herbes", "art": "gang"},
+  {"text": "Émincée de volaille à la Grenobloise", "art": "gang"},
+  {"text": "Filet de boeuf piqué au cresson", "art": "gang"},
+  {"text": "Pommes nouvelles rissolées", "art": "gang"},
+  {"text": "Meringues à la Chantilly", "art": "gang"},
+  {"text": "Fruits", "art": "gang"},
+  {"text": "Dessert.", "art": "gang"}
+ ],
+ "unsicher": []}

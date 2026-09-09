@@ -1,0 +1,25 @@
+{
+ "file": "tafel_44_Schokolade_und_Kaffee.jpg",
+ "tafel": "44",
+ "seite": "134",
+ "titel": "Chocolade, einfach (Kaffeehaus-Service und Zimmer-Service)",
+ "beschriftungen": [
+  {
+   "de": "Chocolade, einfach (Kaffeehaus-Service).",
+   "fr": "Service pour chocolat dans un café."
+  },
+  {
+   "de": "Chocolade, einfach (Zimmer-Service).",
+   "fr": "Service pour un chocolat simple dans une chambre d'hôtel."
+  },
+  {
+   "de": "Gastwirte-Fachschule Wien",
+   "fr": null
+  }
+ ],
+ "unsicher": [
+  "Vor „Chocolade“ der zweiten Beschriftung steht ein kleines Druckzeichen (wie „[“ oder „|“), vermutlich Druckfehler/Spießchen – nicht übernommen.",
+  "Der Dateiname nennt „Kaffee“, die Tafel zeigt aber zweimal Chocolade (Kaffeehaus- und Zimmer-Service).",
+  "„Gastwirte-Fachschule Wien“ ist der Schriftzug auf der Serviette im unteren Bild."
+ ]
+}

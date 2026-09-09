@@ -1,0 +1,47 @@
+{
+ "file": "tafel_42_Diner_Gedeck.jpg",
+ "tafel": "42",
+ "seite": "132",
+ "titel": "Gedeck zu einem Mittag-Essen zu festem Preise (mit Fisch-Besteck und fünf Gläsern)",
+ "beschriftungen": [
+  {
+   "de": "Gedeck zu einem Mittag-Essen zu festem Preise (mit Fisch-Besteck und fünf Gläsern).",
+   "fr": "Couvert pour un dîner à prix fixe (avec service à poisson et cinq verres).",
+   "gruppe": true
+  },
+  {
+   "de": "Champagner Glas",
+   "fr": null
+  },
+  {
+   "de": "Rothwein-Glas",
+   "fr": null
+  },
+  {
+   "de": "Weisswein-Glas",
+   "fr": null
+  },
+  {
+   "de": "Wasser-Glas",
+   "fr": null
+  },
+  {
+   "de": "Sherry-Glas",
+   "fr": null
+  },
+  {
+   "de": "Bier Glas",
+   "fr": null,
+   "handschriftlich": true
+  },
+  {
+   "de": "Gastwirte-Fachschule Wien",
+   "fr": null
+  }
+ ],
+ "unsicher": [
+  "„Bier Glas“ ist eine handschriftliche Tinten-Ergänzung (dicker Kreis, links neben dem Champagner-Glas), kein Druck – bei Bedarf streichen.",
+  "„Champagner Glas“ steht im Kreis dreizeilig „Cham- / pagner / Glas“ ohne Bindestrich zwischen „pagner“ und „Glas“; die übrigen Gläser sind mit Bindestrich gesetzt (Roth- / wein- / Glas usw.).",
+  "Keine nummerierte Legende auf dieser Tafel."
+ ]
+}

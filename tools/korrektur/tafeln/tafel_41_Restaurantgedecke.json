@@ -1,0 +1,49 @@
+{
+ "file": "tafel_41_Restaurantgedecke.jpg",
+ "tafel": "41",
+ "seite": "131",
+ "titel": "Gedeck für einen Restaurant-Tisch, einfach; Gedeck zu einem Mittag-Essen zu festem Preise (mit vier Gläsern)",
+ "beschriftungen": [
+  {
+   "de": "Gedeck für einen Restaurant-Tisch, einfach.",
+   "fr": "Couvert pour une table simple.",
+   "gruppe": true
+  },
+  {
+   "de": "Gastwirte-Fachschule Wien",
+   "fr": null
+  },
+  {
+   "de": "Gedeck zu einem Mittag-Essen zu festem Preise (mit vier Gläsern).",
+   "fr": "Couvert pour un dîner à prix fixe (avec quatre verres).",
+   "gruppe": true
+  },
+  {
+   "de": "Menu.",
+   "fr": null
+  },
+  {
+   "de": "Rothwein-Glas",
+   "fr": null
+  },
+  {
+   "de": "Champagner-Glas",
+   "fr": null
+  },
+  {
+   "de": "Weisswein-Glas",
+   "fr": null
+  },
+  {
+   "de": "Wasser-Glas",
+   "fr": null
+  },
+  {
+   "de": "Gastwirte-Fachschule Wien",
+   "fr": null
+  }
+ ],
+ "unsicher": [
+  "Keine nummerierte Legende auf dieser Tafel. „Gastwirte-Fachschule Wien“ ist der Schriftzug auf der Serviette (Schreibschrift), „Menu.“ steht auf der Menükarte links; die Gläser sind als beschriftete Kreise gezeichnet (Antiqua, nicht Fraktur)."
+ ]
+}

@@ -1,0 +1,13 @@
+{"file": "tafel_26_Kaffee_Milch_und_Zucker.jpg", "tafel": "26", "seite": "113",
+ "titel": "Milch-Kanne, Kaffee-Kanne, Zucker-, Honig- und Butter-Dose",
+ "beschriftungen": [
+   {"de": "Milch-Kanne.", "fr": "Pot à lait."},
+   {"de": "Kaffee-Kanne.", "fr": "Cafetière."},
+   {"de": "Zucker-Tasserl.", "fr": "Sucrier."},
+   {"de": "Zucker-Vase.", "fr": "Sucrier."},
+   {"de": "Zucker-Tasserl.", "fr": "Sucrier."},
+   {"de": "Honig-Dose.", "fr": "Vase à miel."},
+   {"de": "Butter-Dose.", "fr": "Beurrier."},
+   {"de": "Butterkühler mit Eisbehälter.", "fr": "Beurrier avec fond pour glace."}
+ ],
+ "unsicher": ["„Butterkühler“: OCR las „Butterfühler“; im Bild ist das Fraktur-k in „kühler“ nach Wortsinn (Eisbehälter) und Buchstabenform als k gelesen."]}

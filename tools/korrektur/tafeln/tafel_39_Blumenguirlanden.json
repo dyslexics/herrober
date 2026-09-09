@@ -1,0 +1,51 @@
+{
+ "file": "tafel_39_Blumenguirlanden.jpg",
+ "tafel": "39",
+ "seite": "126",
+ "titel": "Tafel-Aufsätze zur Zusammenstellung verschiedener Blumen-Guirlanden",
+ "beschriftungen": [
+  {
+   "de": "Tafel-Aufsätze zur Zusammenstellung verschiedener Blumen-Guirlanden.",
+   "fr": "Surtout de table pour combiner des guirlandes de fleurs.",
+   "gruppe": true
+  },
+  {
+   "de": "Fig. 1.",
+   "fr": null
+  },
+  {
+   "de": "Fig. 2.",
+   "fr": null
+  },
+  {
+   "de": "Fig. 3.",
+   "fr": null
+  },
+  {
+   "de": "Fig. 4.",
+   "fr": null
+  },
+  {
+   "de": "Complete Zusammenstellung.",
+   "fr": "Combinaison complète."
+  },
+  {
+   "nr": "A",
+   "de": "A",
+   "fr": null
+  },
+  {
+   "nr": "B",
+   "de": "B",
+   "fr": null
+  },
+  {
+   "nr": "C",
+   "de": "C",
+   "fr": null
+  }
+ ],
+ "unsicher": [
+  "Bild ist im Scan um 90° gedreht (Querformat). Die Buchstaben A, B, C stehen in Fig. 4 als Kennzeichnung der Teilstücke (A gerade Stücke, B halbrunde Endstücke, C Eckstücke); sie sind keine Legende mit Text."
+ ]
+}

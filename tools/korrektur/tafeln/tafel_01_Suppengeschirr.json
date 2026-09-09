@@ -1,0 +1,41 @@
+{
+ "file": "tafel_01_Suppengeschirr.jpg",
+ "tafel": "1",
+ "seite": "83",
+ "titel": "Suppen-Schalen, Suppen-Tassen und Suppen-Topf",
+ "beschriftungen": [
+  {
+   "de": "Suppen-Schale.",
+   "fr": "Bol à potage."
+  },
+  {
+   "de": "Suppen-Schale.",
+   "fr": "Bol à potage."
+  },
+  {
+   "de": "Suppen-Topf.",
+   "fr": "Soupière."
+  },
+  {
+   "de": "Suppen-Tasse.",
+   "fr": "Tasse à potage."
+  },
+  {
+   "de": "Suppen-Tasse.",
+   "fr": "Tasse à potage."
+  },
+  {
+   "de": "Suppen-Schale.",
+   "fr": "Bol à potage."
+  },
+  {
+   "de": "Bouillon-Schale.",
+   "fr": "Tasse à bouillon."
+  },
+  {
+   "de": "Bouillon-Schale.",
+   "fr": "Tasse à bouillon."
+  }
+ ],
+ "unsicher": []
+}

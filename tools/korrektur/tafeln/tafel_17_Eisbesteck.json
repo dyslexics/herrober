@@ -1,0 +1,25 @@
+{
+ "file": "tafel_17_Eisbesteck.jpg",
+ "tafel": "17",
+ "seite": "104",
+ "titel": "Gefrornes-Besteck",
+ "beschriftungen": [
+  {
+   "de": "Gefrornes-Messer (glatt).",
+   "fr": "Couteau à glace."
+  },
+  {
+   "de": "Gefrornes-Vorlegelöffel.",
+   "fr": "Grande pelle à glace."
+  },
+  {
+   "de": "Gefrornes-Messer (gerippt).",
+   "fr": "Couteau à glace."
+  },
+  {
+   "de": "Gefrornes-Schäuferl.",
+   "fr": "Petite cuiller à glace."
+  }
+ ],
+ "unsicher": []
+}

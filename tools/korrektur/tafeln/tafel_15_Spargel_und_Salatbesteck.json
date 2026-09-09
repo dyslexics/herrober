@@ -1,0 +1,30 @@
+{
+ "file": "tafel_15_Spargel_und_Salatbesteck.jpg",
+ "tafel": "15",
+ "seite": "102",
+ "titel": "Spargel-Zangen und Salat-Besteck (Metall)",
+ "beschriftungen": [
+  {
+   "de": "Spargel-Zange.",
+   "fr": "Pince à asperge."
+  },
+  {
+   "de": "Spargel-Vorlegezange.",
+   "fr": "Grande pince à asperges."
+  },
+  {
+   "de": "Salat-Besteck (Metall).",
+   "fr": "Service à salade (en métal).",
+   "gruppe": true
+  },
+  {
+   "de": "Gabel.",
+   "fr": "Fourchette."
+  },
+  {
+   "de": "Löffel.",
+   "fr": "Cuiller."
+  }
+ ],
+ "unsicher": []
+}

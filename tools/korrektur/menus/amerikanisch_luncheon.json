@@ -1,0 +1,855 @@
+{
+ "file": "amerikanisch_luncheon.jpg",
+ "titel": "Luncheon",
+ "ort_datum": "Holland House. August 5, 1898.",
+ "sprache": "en",
+ "zeilen": [
+  {
+   "text": "LUNCHEON.",
+   "art": "titel"
+  },
+  {
+   "text": "CLAMS.",
+   "art": "ueberschrift"
+  },
+  {
+   "text": "Little Necks on half shell 25",
+   "art": "gang"
+  },
+  {
+   "text": "Clams stewed 40",
+   "art": "gang"
+  },
+  {
+   "text": "Clams fried 50",
+   "art": "gang"
+  },
+  {
+   "text": "Clam fritters 50",
+   "art": "gang"
+  },
+  {
+   "text": "Clams, shell roast 50",
+   "art": "gang"
+  },
+  {
+   "text": "Clams, escaloped 50",
+   "art": "gang"
+  },
+  {
+   "text": "Mussels, marinières 50",
+   "art": "gang"
+  },
+  {
+   "text": "Clams à la poulette 50",
+   "art": "gang"
+  },
+  {
+   "text": "Stuffed Little-Neck clams, Nantaise 50",
+   "art": "gang"
+  },
+  {
+   "text": "SOUPS.",
+   "art": "ueberschrift"
+  },
+  {
+   "text": "Bouillon in cup 25 iced 25",
+   "art": "gang"
+  },
+  {
+   "text": "Chicken broth in cup 30 iced 30",
+   "art": "gang"
+  },
+  {
+   "text": "Julienne 35",
+   "art": "gang"
+  },
+  {
+   "text": "Chicken gombo 60",
+   "art": "gang"
+  },
+  {
+   "text": "Croûte au pot 40",
+   "art": "gang"
+  },
+  {
+   "text": "Vénitienne 40",
+   "art": "gang"
+  },
+  {
+   "text": "Purée of peas 35",
+   "art": "gang"
+  },
+  {
+   "text": "Tomato 35",
+   "art": "gang"
+  },
+  {
+   "text": "Clam broth in cup 25 iced 25",
+   "art": "gang"
+  },
+  {
+   "text": "SIDE DISHES.",
+   "art": "ueberschrift"
+  },
+  {
+   "text": "Caviar 40",
+   "art": "gang"
+  },
+  {
+   "text": "Sardines 40",
+   "art": "gang"
+  },
+  {
+   "text": "Olives 25",
+   "art": "gang"
+  },
+  {
+   "text": "Stuffed olives 35",
+   "art": "gang"
+  },
+  {
+   "text": "Sterlet, mariné 50",
+   "art": "gang"
+  },
+  {
+   "text": "Turgeon, marinade 50",
+   "art": "gang"
+  },
+  {
+   "text": "Anchovy salad 50",
+   "art": "gang"
+  },
+  {
+   "text": "Tunny 35",
+   "art": "gang"
+  },
+  {
+   "text": "Lyons sausage 40",
+   "art": "gang"
+  },
+  {
+   "text": "Radishes 20",
+   "art": "gang"
+  },
+  {
+   "text": "Chutney 15",
+   "art": "gang"
+  },
+  {
+   "text": "Mackerel in oil 50",
+   "art": "gang"
+  },
+  {
+   "text": "Melon mangoes 30",
+   "art": "gang"
+  },
+  {
+   "text": "Celery 40",
+   "art": "gang"
+  },
+  {
+   "text": "FISH.",
+   "art": "ueberschrift"
+  },
+  {
+   "text": "Salmon broiled, béarnaise 1.00",
+   "art": "gang"
+  },
+  {
+   "text": "Cold salmon, mayonnaise 80",
+   "art": "gang"
+  },
+  {
+   "text": "Coquille of crabs deviled 50",
+   "art": "gang"
+  },
+  {
+   "text": "Bluefish 50",
+   "art": "gang"
+  },
+  {
+   "text": "Striped-bass with shrimp 90",
+   "art": "gang"
+  },
+  {
+   "text": "Filet of sole, Colbert 60",
+   "art": "gang"
+  },
+  {
+   "text": "Soft shell crabs 60",
+   "art": "gang"
+  },
+  {
+   "text": "Lobster broiled à la diable 1.00",
+   "art": "gang"
+  },
+  {
+   "text": "Lobster, American 1.00",
+   "art": "gang"
+  },
+  {
+   "text": "Sea-bass, fine herbs 70",
+   "art": "gang"
+  },
+  {
+   "text": "ENTREES.",
+   "art": "ueberschrift"
+  },
+  {
+   "text": "Emincé of filet, créole 1.25",
+   "art": "gang"
+  },
+  {
+   "text": "Chicken sauté, chasseur 1.25",
+   "art": "gang"
+  },
+  {
+   "text": "Pilaff of chicken livers 1.00",
+   "art": "gang"
+  },
+  {
+   "text": "Veal chop, milanaise 80",
+   "art": "gang"
+  },
+  {
+   "text": "STEAKS AND CHOPS.",
+   "art": "ueberschrift"
+  },
+  {
+   "text": "Beefsteak 60",
+   "art": "gang"
+  },
+  {
+   "text": "„ with bacon 80",
+   "art": "gang"
+  },
+  {
+   "text": "„ béarnaise 85",
+   "art": "gang"
+  },
+  {
+   "text": "„ mushrooms 85",
+   "art": "gang"
+  },
+  {
+   "text": "Sirloin steak 1.00",
+   "art": "gang"
+  },
+  {
+   "text": "„ béarnaise 1 25",
+   "art": "gang"
+  },
+  {
+   "text": "„ mushrooms 1 25",
+   "art": "gang"
+  },
+  {
+   "text": "Extra sirloin 2.00",
+   "art": "gang"
+  },
+  {
+   "text": "Tenderloin 1.00",
+   "art": "gang"
+  },
+  {
+   "text": "„ truffles 1.50",
+   "art": "gang"
+  },
+  {
+   "text": "Porterhouse steak 1.50",
+   "art": "gang"
+  },
+  {
+   "text": "„ „ with mushrooms 2.00",
+   "art": "gang"
+  },
+  {
+   "text": "Extra porterhouse 2.50",
+   "art": "gang"
+  },
+  {
+   "text": "Mutton chops 50",
+   "art": "gang"
+  },
+  {
+   "text": "English mutton chop 50",
+   "art": "gang"
+  },
+  {
+   "text": "Spring lamb chops 80",
+   "art": "gang"
+  },
+  {
+   "text": "Veal chop, plain 60",
+   "art": "gang"
+  },
+  {
+   "text": "„ breaded, tomato sauce 80",
+   "art": "gang"
+  },
+  {
+   "text": "Sweetbread 1.00",
+   "art": "gang"
+  },
+  {
+   "text": "Chicken liver, brochette 75",
+   "art": "gang"
+  },
+  {
+   "text": "„ sauté, mushrooms 90",
+   "art": "gang"
+  },
+  {
+   "text": "Chicken, broiled 1.75, half 1.00",
+   "art": "gang"
+  },
+  {
+   "text": "Squab 80",
+   "art": "gang"
+  },
+  {
+   "text": "Jowl with spinach 60",
+   "art": "gang"
+  },
+  {
+   "text": "Chipped beef with cream 50",
+   "art": "gang"
+  },
+  {
+   "text": "Kidneys en brochette 50",
+   "art": "gang"
+  },
+  {
+   "text": "„ stewed, mushrooms 75",
+   "art": "gang"
+  },
+  {
+   "text": "„ Turbigo 75",
+   "art": "gang"
+  },
+  {
+   "text": "Ham, broiled 40",
+   "art": "gang"
+  },
+  {
+   "text": "Bacon, broiled 40",
+   "art": "gang"
+  },
+  {
+   "text": "Calf’s liver and bacon 50",
+   "art": "gang"
+  },
+  {
+   "text": "Calf’s liver and salt pork 50",
+   "art": "gang"
+  },
+  {
+   "text": "Salt pork special 45",
+   "art": "gang"
+  },
+  {
+   "text": "Corned beef hash special 50",
+   "art": "gang"
+  },
+  {
+   "text": "„ „ with egg 60",
+   "art": "gang"
+  },
+  {
+   "text": "Lamb hash special 60",
+   "art": "gang"
+  },
+  {
+   "text": "„ „ with egg 70",
+   "art": "gang"
+  },
+  {
+   "text": "Chicken hash special 75",
+   "art": "gang"
+  },
+  {
+   "text": "„ „ with egg 85",
+   "art": "gang"
+  },
+  {
+   "text": "„ minced with cream 1.00",
+   "art": "gang"
+  },
+  {
+   "text": "ROAST.",
+   "art": "ueberschrift"
+  },
+  {
+   "text": "Beef 60",
+   "art": "gang"
+  },
+  {
+   "text": "Squab 80",
+   "art": "gang"
+  },
+  {
+   "text": "Leg of mutton 60",
+   "art": "gang"
+  },
+  {
+   "text": "Chicken 1.75 half 1.00",
+   "art": "gang"
+  },
+  {
+   "text": "Lamb 80",
+   "art": "gang"
+  },
+  {
+   "text": "COLD.",
+   "art": "ueberschrift"
+  },
+  {
+   "text": "Beef 60",
+   "art": "gang"
+  },
+  {
+   "text": "Beef à la mode 60",
+   "art": "gang"
+  },
+  {
+   "text": "Lamb 80",
+   "art": "gang"
+  },
+  {
+   "text": "Tongue 40",
+   "art": "gang"
+  },
+  {
+   "text": "Pâté de foie gras 1.00",
+   "art": "gang"
+  },
+  {
+   "text": "Ham 40",
+   "art": "gang"
+  },
+  {
+   "text": "Boned chicken 80",
+   "art": "gang"
+  },
+  {
+   "text": "Chicken 1 75 half 1.00",
+   "art": "gang"
+  },
+  {
+   "text": "VEGETABLES.",
+   "art": "ueberschrift"
+  },
+  {
+   "text": "American asparagus 60",
+   "art": "gang"
+  },
+  {
+   "text": "Green corn 40",
+   "art": "gang"
+  },
+  {
+   "text": "New Lima beans 50",
+   "art": "gang"
+  },
+  {
+   "text": "French peas 50",
+   "art": "gang"
+  },
+  {
+   "text": "String beans 50",
+   "art": "gang"
+  },
+  {
+   "text": "Flageolets 50",
+   "art": "gang"
+  },
+  {
+   "text": "Cèpes, bordelaise 75",
+   "art": "gang"
+  },
+  {
+   "text": "German asparagus 1 00",
+   "art": "gang"
+  },
+  {
+   "text": "Artichokes stuffed 60",
+   "art": "gang"
+  },
+  {
+   "text": "Spaghetti, Italian style 40",
+   "art": "gang"
+  },
+  {
+   "text": "Neapolitan 50",
+   "art": "gang"
+  },
+  {
+   "text": "Egg-plant fried 40",
+   "art": "gang"
+  },
+  {
+   "text": "Cauliflower 60",
+   "art": "gang"
+  },
+  {
+   "text": "Stuffed peppers 60",
+   "art": "gang"
+  },
+  {
+   "text": "Stuffed tomatoes 50",
+   "art": "gang"
+  },
+  {
+   "text": "Braised celery au jus 60",
+   "art": "gang"
+  },
+  {
+   "text": "Artichokes, hollandaise 60",
+   "art": "gang"
+  },
+  {
+   "text": "Artichokes, barigoule 70",
+   "art": "gang"
+  },
+  {
+   "text": "Potatoes mashed 20",
+   "art": "gang"
+  },
+  {
+   "text": "Anna 40",
+   "art": "gang"
+  },
+  {
+   "text": "Parisienne 30",
+   "art": "gang"
+  },
+  {
+   "text": "Boiled 20",
+   "art": "gang"
+  },
+  {
+   "text": "Sautées 25",
+   "art": "gang"
+  },
+  {
+   "text": "Crème au gratin 30",
+   "art": "gang"
+  },
+  {
+   "text": "Croquettes 30",
+   "art": "gang"
+  },
+  {
+   "text": "SALADS.",
+   "art": "ueberschrift"
+  },
+  {
+   "text": "Lettuce 50",
+   "art": "gang"
+  },
+  {
+   "text": "Cucumber 40",
+   "art": "gang"
+  },
+  {
+   "text": "Cress 40",
+   "art": "gang"
+  },
+  {
+   "text": "Tomato 50",
+   "art": "gang"
+  },
+  {
+   "text": "Chicory 50",
+   "art": "gang"
+  },
+  {
+   "text": "Italian 1 00",
+   "art": "gang"
+  },
+  {
+   "text": "Russian 1.00",
+   "art": "gang"
+  },
+  {
+   "text": "Romaine 50",
+   "art": "gang"
+  },
+  {
+   "text": "Celery 50",
+   "art": "gang"
+  },
+  {
+   "text": "Celery mayonnaise 60",
+   "art": "gang"
+  },
+  {
+   "text": "ENTREMETS.",
+   "art": "ueberschrift"
+  },
+  {
+   "text": "Assorted cakes 20",
+   "art": "gang"
+  },
+  {
+   "text": "Meringue with cream 40",
+   "art": "gang"
+  },
+  {
+   "text": "Charlotte russe 35",
+   "art": "gang"
+  },
+  {
+   "text": "Pie 25",
+   "art": "gang"
+  },
+  {
+   "text": "FANCY ICE CREAM:",
+   "art": "ueberschrift"
+  },
+  {
+   "text": "Nesselrode pudding 40",
+   "art": "gang"
+  },
+  {
+   "text": "Coupe, St. Jacques 50",
+   "art": "gang"
+  },
+  {
+   "text": "Tutti frutti 35",
+   "art": "gang"
+  },
+  {
+   "text": "Biscuit glacé 30",
+   "art": "gang"
+  },
+  {
+   "text": "Neapolitan 30",
+   "art": "gang"
+  },
+  {
+   "text": "ICE CREAM:",
+   "art": "ueberschrift"
+  },
+  {
+   "text": "Vanilla 30",
+   "art": "gang"
+  },
+  {
+   "text": "Coffee 30",
+   "art": "gang"
+  },
+  {
+   "text": "Chocolate 30",
+   "art": "gang"
+  },
+  {
+   "text": "Pistache 30",
+   "art": "gang"
+  },
+  {
+   "text": "Strawberry 30",
+   "art": "gang"
+  },
+  {
+   "text": "Peach 40",
+   "art": "gang"
+  },
+  {
+   "text": "WATER ICE:",
+   "art": "ueberschrift"
+  },
+  {
+   "text": "Lemon 30",
+   "art": "gang"
+  },
+  {
+   "text": "Orange 30",
+   "art": "gang"
+  },
+  {
+   "text": "Pineapple 30",
+   "art": "gang"
+  },
+  {
+   "text": "SORBET:",
+   "art": "ueberschrift"
+  },
+  {
+   "text": "Kirsch 40",
+   "art": "gang"
+  },
+  {
+   "text": "Roman 40",
+   "art": "gang"
+  },
+  {
+   "text": "Maraschino 40",
+   "art": "gang"
+  },
+  {
+   "text": "Curaçao 40",
+   "art": "gang"
+  },
+  {
+   "text": "Lalla Rookh 40",
+   "art": "gang"
+  },
+  {
+   "text": "Russian 40",
+   "art": "gang"
+  },
+  {
+   "text": "PRESERVES:",
+   "art": "ueberschrift"
+  },
+  {
+   "text": "ginger, cherries, pineapple, quince, peach, pear, apricot, reine-claudes 30",
+   "art": "gang"
+  },
+  {
+   "text": "Red currant or Guava jelly 30",
+   "art": "gang"
+  },
+  {
+   "text": "Stewed prunes 30",
+   "art": "gang"
+  },
+  {
+   "text": "Stewed rhubarb 30",
+   "art": "gang"
+  },
+  {
+   "text": "Brandy pears, figs, green gages or cherries 40",
+   "art": "gang"
+  },
+  {
+   "text": "peaches 50",
+   "art": "gang"
+  },
+  {
+   "text": "CHEESE.",
+   "art": "ueberschrift"
+  },
+  {
+   "text": "Roquefort 30",
+   "art": "gang"
+  },
+  {
+   "text": "Brie 30",
+   "art": "gang"
+  },
+  {
+   "text": "Gruyère 25",
+   "art": "gang"
+  },
+  {
+   "text": "Gorgonzola 30",
+   "art": "gang"
+  },
+  {
+   "text": "Neufchâtel 30",
+   "art": "gang"
+  },
+  {
+   "text": "English cream 25",
+   "art": "gang"
+  },
+  {
+   "text": "Camembert 30",
+   "art": "gang"
+  },
+  {
+   "text": "Stilton 30",
+   "art": "gang"
+  },
+  {
+   "text": "English 25",
+   "art": "gang"
+  },
+  {
+   "text": "FRUITS.",
+   "art": "ueberschrift"
+  },
+  {
+   "text": "Oranges 25",
+   "art": "gang"
+  },
+  {
+   "text": "Peaches and cream 50",
+   "art": "gang"
+  },
+  {
+   "text": "Watermelon 40",
+   "art": "gang"
+  },
+  {
+   "text": "Apples 20",
+   "art": "gang"
+  },
+  {
+   "text": "Bananas 20",
+   "art": "gang"
+  },
+  {
+   "text": "Niagara grapes 40",
+   "art": "gang"
+  },
+  {
+   "text": "Blackberries and cream 50",
+   "art": "gang"
+  },
+  {
+   "text": "Cantaloupe 50",
+   "art": "gang"
+  },
+  {
+   "text": "Plums 40",
+   "art": "gang"
+  },
+  {
+   "text": "Bartlett pears 40",
+   "art": "gang"
+  },
+  {
+   "text": "Concord grapes 40",
+   "art": "gang"
+  },
+  {
+   "text": "Tea 25",
+   "art": "gang"
+  },
+  {
+   "text": "Coffee 25",
+   "art": "gang"
+  },
+  {
+   "text": "Turkish coffee 25",
+   "art": "gang"
+  },
+  {
+   "text": "Demi-tasse 15",
+   "art": "gang"
+  },
+  {
+   "text": "Cocoa 25",
+   "art": "gang"
+  },
+  {
+   "text": "Holland House",
+   "art": "sonstiges"
+  },
+  {
+   "text": "AUGUST 5, 1898.",
+   "art": "sonstiges"
+  }
+ ],
+ "unsicher": [
+  "Cold salmon, mayonnaise 80: die Ziffer 8 ist beschädigt gedruckt, Lesung 80 wahrscheinlich.",
+  "Striped-bass with shrimp 90: die Ziffer 9 ist nur teilweise gedruckt, Lesung 90 wahrscheinlich.",
+  "Fußzeile schwach gedruckt: „Holland House“ ohne erkennbaren Punkt; Datum „AUGUST 5, 1898.“ nach den drei anderen Karten gelesen.",
+  "Preise mit Leerzeichen statt Punkt („1 25“, „1 00“, „1 75“) sind so gedruckt und belassen.",
+  "Abschnitt STEAKS AND CHOPS steht dreispaltig mit Punktleitlinien; hier spaltenweise (links, Mitte, rechts) transkribiert, Leitpunkte weggelassen. „ = Wiederholungszeichen des Originals."
+ ]
+}

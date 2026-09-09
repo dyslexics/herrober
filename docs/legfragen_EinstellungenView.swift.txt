@@ -1,0 +1,309 @@
+import SwiftUI
+
+/// Lesen persönlich einstellen.
+struct EinstellungenView: View {
+    @EnvironmentObject private var settings: Settings
+    @EnvironmentObject private var progress: ProgressStore
+    @State private var resetFrage = false
+    @Environment(\.colorScheme) private var schema
+
+    var body: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 0) {
+                SeitenKopf(eyebrow: T("app.title"), titel: T("tab.settings"))
+
+                Text(T("settings.reading"))
+                    .font(Schrift.abschnitt)
+                    .foregroundStyle(Theme.tinte)
+                    .padding(.bottom, 14)
+                    .accessibilityAddTraits(.isHeader)
+                LeseEinstellungen()
+
+                VStack(spacing: 0) {
+                    HaarLinie().padding(.top, 22)
+                    Button {
+                        settings.darstellung = schema == .dark ? .hell : .dunkel
+                    } label: {
+                        HStack(spacing: 10) {
+                            Image(systemName: schema == .dark ? "sun.max" : "moon")
+                                .font(.system(size: 16, weight: .medium))
+                                .foregroundStyle(Theme.akzent)
+                                .frame(width: 22)
+                            Text(T("settings.daynight")).font(Schrift.regular(17)).foregroundStyle(Theme.tinte)
+                            Spacer()
+                            Text(schema == .dark ? T("settings.appearance.dark") : T("settings.appearance.light"))
+                                .font(Schrift.regular(15)).foregroundStyle(Theme.leise)
+                        }
+                        .padding(.vertical, 14)
+                        .frame(minHeight: Theme.mindestTouch)
+                        .contentShape(Rectangle())
+                    }
+                    .buttonStyle(.plain)
+                    HaarLinie()
+                    NavigationLink { AuswahlView<AppLang>(titel: T("settings.language"), werte: AppLang.allCases,
+                                                            name: sprachName, auswahl: $settings.lang) } label: {
+                        wertZeile(T("settings.language"), sprachName(settings.lang))
+                    }
+                    .buttonStyle(.plain)
+                    HaarLinie()
+                    NavigationLink { AuswahlView<Darstellung>(titel: T("settings.appearance"), werte: Darstellung.allCases,
+                                                                name: darstellungName, auswahl: $settings.darstellung) } label: {
+                        wertZeile(T("settings.appearance"), darstellungName(settings.darstellung))
+                    }
+                    .buttonStyle(.plain)
+                    HaarLinie()
+                    NavigationLink(value: Route.aboutUs) { wertZeile(T("tab.about"), nil) }
+                        .buttonStyle(.plain)
+                        .accessibilityIdentifier("settings.about-us")
+                    HaarLinie()
+                }
+
+                Button(role: .destructive) { resetFrage = true } label: {
+                    Text(T("settings.reset"))
+                        .font(Schrift.regular(15))
+                        .foregroundStyle(Theme.fehler)
+                        .frame(minHeight: Theme.mindestTouch)
+                }
+                .buttonStyle(.plain)
+                .padding(.top, 14)
+            }
+            .seitenRand()
+            .padding(.bottom, 24)
+            .leseSpalte()
+        }
+        .background(Theme.bg)
+        .navigationTitle(T("tab.settings"))
+        .toolbar(.hidden, for: .navigationBar)
+        .alert(T("settings.reset"), isPresented: $resetFrage) {
+            Button(T("settings.reset.do"), role: .destructive) { progress.reset() }
+            Button(T("common.cancel"), role: .cancel) {}
+        } message: {
+            Text(T("settings.reset.confirm"))
+        }
+    }
+
+    private func wertZeile(_ titel: String, _ wert: String?) -> some View {
+        HStack(spacing: 10) {
+            Text(titel).font(Schrift.regular(17)).foregroundStyle(Theme.tinte)
+            Spacer()
+            if let wert { Text(wert).font(Schrift.regular(15)).foregroundStyle(Theme.leise) }
+            Image(systemName: "chevron.right").font(.system(size: 14, weight: .semibold)).foregroundStyle(Theme.leise)
+        }
+        .padding(.vertical, 14)
+        .frame(minHeight: Theme.mindestTouch)
+        .contentShape(Rectangle())
+    }
+
+    private func sprachName(_ l: AppLang) -> String {
+        switch l {
+        case .system: return T("settings.lang.system")
+        case .de: return "Deutsch"
+        case .en: return "English"
+        }
+    }
+
+    private func darstellungName(_ d: Darstellung) -> String {
+        switch d {
+        case .system: return T("settings.appearance.system")
+        case .hell: return T("settings.appearance.light")
+        case .dunkel: return T("settings.appearance.dark")
+        }
+    }
+}
+
+/// Einfache Auswahlliste mit Häkchen (Sprache, Darstellung).
+struct AuswahlView<W: Hashable & Identifiable>: View {
+    let titel: String
+    let werte: [W]
+    let name: (W) -> String
+    @Binding var auswahl: W
+    @Environment(\.dismiss) private var dismiss
+
+    var body: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 0) {
+                SeitenKopf(titel: titel)
+                ForEach(werte) { w in
+                    Button {
+                        auswahl = w
+                        dismiss()
+                    } label: {
+                        HStack {
+                            Text(name(w)).font(Schrift.regular(17)).foregroundStyle(Theme.tinte)
+                            Spacer()
+                            if w == auswahl {
+                                Image(systemName: "checkmark").font(.system(size: 15, weight: .bold)).foregroundStyle(Theme.akzent)
+                            }
+                        }
+                        .padding(.vertical, 14)
+                        .frame(minHeight: Theme.mindestTouch)
+                        .contentShape(Rectangle())
+                    }
+                    .buttonStyle(.plain)
+                    .accessibilityAddTraits(w == auswahl ? .isSelected : [])
+                    HaarLinie()
+                }
+            }
+            .seitenRand()
+            .leseSpalte()
+        }
+        .background(Theme.bg)
+        .navigationTitle(titel)
+        .ohneLeistenTitel()
+    }
+}
+
+struct UeberView: View {
+    @EnvironmentObject private var repo: ContentRepository
+    @Environment(\.openURL) private var openURL
+
+    private let version = (Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0")
+        + " (" + (Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "1") + ")"
+
+    var body: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 0) {
+                SeitenKopf(titel: T("settings.about"))
+                Text(T("about.text"))
+                    .font(Schrift.regular(17))
+                    .foregroundStyle(Theme.tinte)
+                    .lineSpacing(4)
+                    .fixedSize(horizontal: false, vertical: true)
+                Text(T("about.content", repo.themes.count, repo.chapterCount, repo.questionCount))
+                    .font(Schrift.label)
+                    .foregroundStyle(Theme.akzent)
+                    .padding(.top, 14)
+
+                VStack(spacing: 0) {
+                    HaarLinie().padding(.top, 22)
+                    link(T("about.books"), "books.vertical", Links.shop)
+                    HaarLinie()
+                    link(T("about.softwareBooks"), "books.vertical", Links.lernsoftwareShop)
+                    HaarLinie()
+                    link(T("about.training"), "graduationcap", Links.ausbildung)
+                    HaarLinie()
+                    link(T("about.privacy"), "hand.raised", Links.privacy)
+                    HaarLinie()
+                    link(T("about.contact") + ": marioengel@me.com", "envelope", Links.kontakt)
+                    HaarLinie()
+                    HStack {
+                        Text(T("about.version")).font(Schrift.regular(17)).foregroundStyle(Theme.tinte)
+                        Spacer()
+                        Text(version).font(Schrift.regular(15)).foregroundStyle(Theme.leise)
+                    }
+                    .padding(.vertical, 14)
+                    HaarLinie()
+                }
+                Text(T("about.font"))
+                    .font(Schrift.klein)
+                    .foregroundStyle(Theme.leise)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .padding(.top, 16)
+            }
+            .seitenRand()
+            .padding(.bottom, 24)
+            .leseSpalte()
+        }
+        .background(Theme.bg)
+        .navigationTitle(T("settings.about"))
+        .ohneLeistenTitel()
+    }
+
+    private func link(_ titel: String, _ symbol: String, _ url: URL) -> some View {
+        Button { openURL(url) } label: {
+            HStack(spacing: 12) {
+                Image(systemName: symbol).font(.system(size: 16, weight: .medium)).foregroundStyle(Theme.akzent).frame(width: 22)
+                Text(titel).font(Schrift.regular(17)).foregroundStyle(Theme.akzent).multilineTextAlignment(.leading)
+                Spacer()
+                Image(systemName: "arrow.up.right.square").font(.system(size: 15)).foregroundStyle(Theme.leise)
+            }
+            .padding(.vertical, 14)
+            .frame(minHeight: Theme.mindestTouch)
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(.plain)
+        .accessibilityIdentifier(url.absoluteString)
+    }
+}
+
+struct ImpressumView: View {
+    @Environment(\.openURL) private var openURL
+
+    var body: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 12) {
+                SeitenKopf(titel: T("settings.imprint"))
+                Text(T("imprint.text")).font(Schrift.regular(17)).foregroundStyle(Theme.tinte)
+                Button { openURL(Links.impressum) } label: {
+                    HStack(spacing: 8) {
+                        Text(T("imprint.publisher")).font(Schrift.bold(17)).foregroundStyle(Theme.akzent).multilineTextAlignment(.leading)
+                        Image(systemName: "arrow.up.right.square").font(.system(size: 15)).foregroundStyle(Theme.akzent)
+                    }
+                    .frame(minHeight: Theme.mindestTouch)
+                }
+                .buttonStyle(.plain)
+                Button { openURL(Links.drc) } label: {
+                    VStack(alignment: .leading, spacing: 2) {
+                        HStack(spacing: 8) {
+                            Text(T("imprint.drc")).font(Schrift.bold(17)).foregroundStyle(Theme.akzent)
+                            Image(systemName: "arrow.up.right.square").font(.system(size: 15)).foregroundStyle(Theme.akzent)
+                        }
+                        Text(T("imprint.drc.sub")).font(Schrift.klein).foregroundStyle(Theme.leise)
+                    }
+                    .frame(minHeight: Theme.mindestTouch)
+                }
+                .buttonStyle(.plain)
+                Text(T("imprint.content"))
+                    .font(Schrift.regular(15))
+                    .foregroundStyle(Theme.leise)
+                    .fixedSize(horizontal: false, vertical: true)
+                Button { openURL(Links.kontakt) } label: {
+                    Text(T("about.contact") + ": marioengel@me.com")
+                        .font(Schrift.regular(15)).foregroundStyle(Theme.akzent)
+                        .frame(minHeight: Theme.mindestTouch)
+                }
+                .buttonStyle(.plain)
+            }
+            .seitenRand()
+            .padding(.bottom, 24)
+            .leseSpalte()
+        }
+        .background(Theme.bg)
+        .navigationTitle(T("settings.imprint"))
+        .ohneLeistenTitel()
+    }
+}
+
+/// Infoseite aus den Einstellungen (30 Jahre EÖDL, Dr. Astrid Kopp-Duller): Markdown wie ein Kapitel, Link zum Originalbeitrag.
+struct ExtraView: View {
+    let extra: Extra
+    @Environment(\.openURL) private var openURL
+
+    var body: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 0) {
+                SeitenKopf(titel: extra.title)
+                MarkdownView(blocks: MarkdownParser.parse(extra.body))
+                if let u = extra.sourceURL {
+                    HaarLinie().padding(.top, 24)
+                    ZeilenKnopf(trailing: "arrow.up.right.square", aktion: { openURL(u) }) {
+                        EmptyView()
+                    } inhalt: {
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text(T("extra.source")).font(Schrift.regular(15)).foregroundStyle(Theme.akzent)
+                            if !extra.sourceLabel.isEmpty {
+                                Text(extra.sourceLabel).font(Schrift.klein).foregroundStyle(Theme.leise)
+                            }
+                        }
+                    }
+                }
+            }
+            .seitenRand()
+            .padding(.bottom, 24)
+            .leseSpalte()
+        }
+        .background(Theme.bg)
+        .navigationTitle(extra.name)
+        .ohneLeistenTitel()
+    }
+}

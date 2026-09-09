@@ -1,0 +1,39 @@
+{
+ "file": "tafel_10_Tisch_und_Fischbesteck.jpg",
+ "tafel": "10",
+ "seite": "97",
+ "titel": "Tisch- und Fisch-Besteck",
+ "beschriftungen": [
+  {
+   "de": "Eß-Besteck.",
+   "fr": "Service de table.",
+   "gruppe": true
+  },
+  {
+   "de": "Tisch-Gabel.",
+   "fr": "Fourchette de table."
+  },
+  {
+   "de": "Tisch-Messer.",
+   "fr": "Couteau de table."
+  },
+  {
+   "de": "Tisch-Löffel.",
+   "fr": "Cuiller de table."
+  },
+  {
+   "de": "Fisch-Messer.",
+   "fr": "Couteau à poisson."
+  },
+  {
+   "de": "Fisch-Gabel.",
+   "fr": "Fourchette à poisson."
+  },
+  {
+   "de": "Fisch-Besteck.",
+   "fr": "Service de table à poisson.",
+   "gruppe": true
+  }
+ ],
+ "unsicher": []
+}

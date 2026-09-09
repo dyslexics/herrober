@@ -1,0 +1,543 @@
+{
+ "file": "amerikanisch_supper.jpg",
+ "titel": "Supper",
+ "ort_datum": "Holland House. August 5, 1898.",
+ "sprache": "en",
+ "zeilen": [
+  {
+   "text": "SUPPER.",
+   "art": "titel"
+  },
+  {
+   "text": "CLAMS.",
+   "art": "ueberschrift"
+  },
+  {
+   "text": "Little Necks on half shell 25",
+   "art": "gang"
+  },
+  {
+   "text": "Clams stewed 40",
+   "art": "gang"
+  },
+  {
+   "text": "Clams fried 50",
+   "art": "gang"
+  },
+  {
+   "text": "Clams fritters 50",
+   "art": "gang"
+  },
+  {
+   "text": "Clams, shell roast 40",
+   "art": "gang"
+  },
+  {
+   "text": "Clams escaloped 50",
+   "art": "gang"
+  },
+  {
+   "text": "Clams à la poulette 50",
+   "art": "gang"
+  },
+  {
+   "text": "Stuffed Little Neck clams, Nantaise 50",
+   "art": "gang"
+  },
+  {
+   "text": "Mussels, marinières 50",
+   "art": "gang"
+  },
+  {
+   "text": "Beef bouillon in cup 25 iced 20",
+   "art": "gang"
+  },
+  {
+   "text": "Clam broth in cup 25 iced 20",
+   "art": "gang"
+  },
+  {
+   "text": "Chicken bouillon in cup 30 iced 30",
+   "art": "gang"
+  },
+  {
+   "text": "Cold lobster, sauce tartare 75",
+   "art": "gang"
+  },
+  {
+   "text": "Anchovies 35",
+   "art": "gang"
+  },
+  {
+   "text": "Sardines 40",
+   "art": "gang"
+  },
+  {
+   "text": "Radishes 20",
+   "art": "gang"
+  },
+  {
+   "text": "Olives 25",
+   "art": "gang"
+  },
+  {
+   "text": "Olives stuffed 35",
+   "art": "gang"
+  },
+  {
+   "text": "Melon mangoes 30",
+   "art": "gang"
+  },
+  {
+   "text": "Caviare 40",
+   "art": "gang"
+  },
+  {
+   "text": "Lyon sausage 40",
+   "art": "gang"
+  },
+  {
+   "text": "Turgeon, marinade 50",
+   "art": "gang"
+  },
+  {
+   "text": "Celery 40",
+   "art": "gang"
+  },
+  {
+   "text": "Sterlet, mariné 50",
+   "art": "gang"
+  },
+  {
+   "text": "Broiled lobster à la diable 1.00",
+   "art": "gang"
+  },
+  {
+   "text": "Lobster, Newburg 1.00",
+   "art": "gang"
+  },
+  {
+   "text": "Broiled lobster 75",
+   "art": "gang"
+  },
+  {
+   "text": "Soft shell crabs 60",
+   "art": "gang"
+  },
+  {
+   "text": "Stuffed lobster 60",
+   "art": "gang"
+  },
+  {
+   "text": "Canapé, Holland House 60",
+   "art": "gang"
+  },
+  {
+   "text": "Deviled crabs 60",
+   "art": "gang"
+  },
+  {
+   "text": "Escalope of filet of beef, béarnaise 1.25",
+   "art": "gang"
+  },
+  {
+   "text": "Cutlet of sweetbread, parisienne 1.00",
+   "art": "gang"
+  },
+  {
+   "text": "Lamb kidney, deviled 50",
+   "art": "gang"
+  },
+  {
+   "text": "Squab, crapaudine 1.00",
+   "art": "gang"
+  },
+  {
+   "text": "Chicken croquettes with green peas 1.00",
+   "art": "gang"
+  },
+  {
+   "text": "Broiled chicken 1.75 half 1.00",
+   "art": "gang"
+  },
+  {
+   "text": "Welsh rarebit 50",
+   "art": "gang"
+  },
+  {
+   "text": "Golden buck 60",
+   "art": "gang"
+  },
+  {
+   "text": "Yorkshire buck 70",
+   "art": "gang"
+  },
+  {
+   "text": "Marrow on toast 1.00",
+   "art": "gang"
+  },
+  {
+   "text": "GAME.",
+   "art": "ueberschrift"
+  },
+  {
+   "text": "Squab 80",
+   "art": "gang"
+  },
+  {
+   "text": "English pheasant 3.00",
+   "art": "gang"
+  },
+  {
+   "text": "COLD MEATS.",
+   "art": "ueberschrift"
+  },
+  {
+   "text": "Roast beef 60",
+   "art": "gang"
+  },
+  {
+   "text": "Lamb 80",
+   "art": "gang"
+  },
+  {
+   "text": "Roast mutton 60",
+   "art": "gang"
+  },
+  {
+   "text": "Boned turkey 75",
+   "art": "gang"
+  },
+  {
+   "text": "Beef à la mode 60",
+   "art": "gang"
+  },
+  {
+   "text": "Pâté de foie gras 1.00",
+   "art": "gang"
+  },
+  {
+   "text": "Ham 40",
+   "art": "gang"
+  },
+  {
+   "text": "Tongue 40",
+   "art": "gang"
+  },
+  {
+   "text": "Chicken 1.75",
+   "art": "gang"
+  },
+  {
+   "text": "Chicken (half) 1.00",
+   "art": "gang"
+  },
+  {
+   "text": "Chicken sandwich 30",
+   "art": "gang"
+  },
+  {
+   "text": "Ham sandwich 25",
+   "art": "gang"
+  },
+  {
+   "text": "Tongue sandwich 25",
+   "art": "gang"
+  },
+  {
+   "text": "SALADS.",
+   "art": "ueberschrift"
+  },
+  {
+   "text": "Lettuce 50",
+   "art": "gang"
+  },
+  {
+   "text": "Cucumber 40",
+   "art": "gang"
+  },
+  {
+   "text": "Cress 40",
+   "art": "gang"
+  },
+  {
+   "text": "Tomato 50",
+   "art": "gang"
+  },
+  {
+   "text": "Chicory 50",
+   "art": "gang"
+  },
+  {
+   "text": "Italian 1.00",
+   "art": "gang"
+  },
+  {
+   "text": "Russian 1.00",
+   "art": "gang"
+  },
+  {
+   "text": "Romaine 50",
+   "art": "gang"
+  },
+  {
+   "text": "Celery 50",
+   "art": "gang"
+  },
+  {
+   "text": "Celery mayonnaise 60",
+   "art": "gang"
+  },
+  {
+   "text": "PRESERVES:",
+   "art": "ueberschrift"
+  },
+  {
+   "text": "ginger, cherries, pineapple, quince, peach, pear, apricot, reine-claudes 30",
+   "art": "gang"
+  },
+  {
+   "text": "Red currant or Guava jelly 30",
+   "art": "gang"
+  },
+  {
+   "text": "Stewed prunes 30",
+   "art": "gang"
+  },
+  {
+   "text": "Stewed rhubarb 30",
+   "art": "gang"
+  },
+  {
+   "text": "Brandy pears, figs, green-gages or cherries 40",
+   "art": "gang"
+  },
+  {
+   "text": "peaches 50",
+   "art": "gang"
+  },
+  {
+   "text": "FANCY ICE CREAMS:",
+   "art": "ueberschrift"
+  },
+  {
+   "text": "Biscuit, romaine 40",
+   "art": "gang"
+  },
+  {
+   "text": "Coupe, St. Jacques 50",
+   "art": "gang"
+  },
+  {
+   "text": "Meringues glacées 35",
+   "art": "gang"
+  },
+  {
+   "text": "Tutti frutti 35",
+   "art": "gang"
+  },
+  {
+   "text": "Nesselrode 40",
+   "art": "gang"
+  },
+  {
+   "text": "Charlotte glacée 40",
+   "art": "gang"
+  },
+  {
+   "text": "ICE CREAM:",
+   "art": "ueberschrift"
+  },
+  {
+   "text": "Vanilla 30",
+   "art": "gang"
+  },
+  {
+   "text": "Coffee 30",
+   "art": "gang"
+  },
+  {
+   "text": "Chocolate 30",
+   "art": "gang"
+  },
+  {
+   "text": "Pistache 30",
+   "art": "gang"
+  },
+  {
+   "text": "Strawberry 30",
+   "art": "gang"
+  },
+  {
+   "text": "Peach 40",
+   "art": "gang"
+  },
+  {
+   "text": "Napolitaine 30",
+   "art": "gang"
+  },
+  {
+   "text": "Biscuit glacé 30",
+   "art": "gang"
+  },
+  {
+   "text": "WATER ICES:",
+   "art": "ueberschrift"
+  },
+  {
+   "text": "Lemon 30",
+   "art": "gang"
+  },
+  {
+   "text": "Orange 30",
+   "art": "gang"
+  },
+  {
+   "text": "Pineapple 30",
+   "art": "gang"
+  },
+  {
+   "text": "SORBETS:",
+   "art": "ueberschrift"
+  },
+  {
+   "text": "Kirsch 40",
+   "art": "gang"
+  },
+  {
+   "text": "Roman 40",
+   "art": "gang"
+  },
+  {
+   "text": "Maraschino 40",
+   "art": "gang"
+  },
+  {
+   "text": "Curaçao 40",
+   "art": "gang"
+  },
+  {
+   "text": "Lalla Rookh 40",
+   "art": "gang"
+  },
+  {
+   "text": "Russian 40",
+   "art": "gang"
+  },
+  {
+   "text": "CHEESE.",
+   "art": "ueberschrift"
+  },
+  {
+   "text": "Roquefort 30",
+   "art": "gang"
+  },
+  {
+   "text": "Brie 30",
+   "art": "gang"
+  },
+  {
+   "text": "Gruyère 25",
+   "art": "gang"
+  },
+  {
+   "text": "Gorgonzola 30",
+   "art": "gang"
+  },
+  {
+   "text": "Neufchatel 25",
+   "art": "gang"
+  },
+  {
+   "text": "English cream 25",
+   "art": "gang"
+  },
+  {
+   "text": "Stilton 30",
+   "art": "gang"
+  },
+  {
+   "text": "Camembert 30",
+   "art": "gang"
+  },
+  {
+   "text": "Chester 30",
+   "art": "gang"
+  },
+  {
+   "text": "FRUITS.",
+   "art": "ueberschrift"
+  },
+  {
+   "text": "Oranges 25",
+   "art": "gang"
+  },
+  {
+   "text": "Peaches and cream 50",
+   "art": "gang"
+  },
+  {
+   "text": "Watermelon 40",
+   "art": "gang"
+  },
+  {
+   "text": "Apples 20",
+   "art": "gang"
+  },
+  {
+   "text": "Bananas 20",
+   "art": "gang"
+  },
+  {
+   "text": "Blackberries and cream 50",
+   "art": "gang"
+  },
+  {
+   "text": "Cantaloupe 50",
+   "art": "gang"
+  },
+  {
+   "text": "Concord grapes 40",
+   "art": "gang"
+  },
+  {
+   "text": "Plums 40",
+   "art": "gang"
+  },
+  {
+   "text": "Bartlett pears 40",
+   "art": "gang"
+  },
+  {
+   "text": "Niagara grapes 40",
+   "art": "gang"
+  },
+  {
+   "text": "Tea 25",
+   "art": "gang"
+  },
+  {
+   "text": "French coffee 15",
+   "art": "gang"
+  },
+  {
+   "text": "Turkish coffee 25",
+   "art": "gang"
+  },
+  {
+   "text": "Cocoa 25",
+   "art": "gang"
+  },
+  {
+   "text": "Holland House.",
+   "art": "sonstiges"
+  },
+  {
+   "text": "AUGUST 5, 1898.",
+   "art": "sonstiges"
+  }
+ ],
+ "unsicher": [
+  "Die vier Gruppen zwischen CLAMS und GAME (Bouillons, kalte Vorspeisen, Hummergerichte, warme Gerichte) tragen im Original keine Überschrift, nur Trennlinien."
+ ]
+}

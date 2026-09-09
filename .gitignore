@@ -1,0 +1,12 @@
+raw/
+.venv/
+build/
+*.xcodeproj
+Sources/Info.plist
+fastlane/metadata/review_information/
+fastlane/screenshots/
+fastlane/report.xml
+*.mobileprovision
+__pycache__/
+.DS_Store
+tools/review_site/out/

@@ -1,0 +1,31 @@
+{
+ "file": "tafel_18_Obstbesteck_und_Zuckerloeffel.jpg",
+ "tafel": "18",
+ "seite": "105",
+ "titel": "Obst-Messer, Melonen-Gabeln und Zucker-Streulöffel",
+ "beschriftungen": [
+  {
+   "de": "Obst-Messer.",
+   "fr": "Couteau à fruits."
+  },
+  {
+   "de": "Melonen-Gabeln.",
+   "fr": "Fourchettes à melon."
+  },
+  {
+   "de": "Zucker-Streulöffel (durchlöchert).",
+   "fr": "Cuiller à sucre en poudre (percée). (Passoire à sucre en poudre.)"
+  },
+  {
+   "de": "Zucker-Streuer.",
+   "fr": "Poudrier à sucre."
+  },
+  {
+   "de": "Zucker-Streulöffel (nicht durchlöchert).",
+   "fr": "Cuiller à sucre en poudre (dos)."
+  }
+ ],
+ "unsicher": [
+  "Französisch „(dos)“ beim nicht durchlöcherten Zucker-Streulöffel steht so im Druck (vermutlich Setzfehler für „clos“); wie gedruckt übernommen."
+ ]
+}

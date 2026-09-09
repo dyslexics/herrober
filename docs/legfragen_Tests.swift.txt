@@ -1,0 +1,336 @@
+import XCTest
+import SwiftUI
+@testable import LegFragen
+
+final class LegFragenTests: XCTestCase {
+    func testLibraryLoads() {
+        let repo = ContentRepository()
+        XCTAssertEqual(repo.themes.map(\.slug), ["grundlagen", "vorschulalter", "schulkinder", "erwachsene", "afs-test", "worterarbeitung"])
+        XCTAssertEqual(repo.chapterCount, 34)
+        XCTAssertEqual(repo.books.count, 9)
+        XCTAssertNotNil(repo.thema("grundlagen"))
+        for t in repo.themes {
+            XCTAssertEqual(t.chapters.map(\.number), Array(1...t.chapters.count), t.slug)
+            XCTAssertEqual(t.farbe.count, 6, t.slug)
+            XCTAssertEqual(t.farbeDunkel.count, 6, t.slug)
+        }
+        // Themenfarben in fester Reihenfolge (Designvorlage „Lesezeichen")
+        XCTAssertEqual(repo.themes.map(\.farbe), ["087480", "264398", "925814", "724486", "1F5F7A", "8A3B5C"])
+        XCTAssertEqual(repo.themes.map(\.farbeDunkel), ["82D7DD", "B9CEF4", "F1C47C", "D7B4EB", "9BD0E6", "E9B3CB"])
+    }
+
+    /// Designvorlage: Atkinson Hyperlegible eingebettet, vier Linien-Illustrationen als Template-Assets.
+    func testFontsAndIllustrations() {
+        XCTAssertNotNil(UIFont(name: "AtkinsonHyperlegible-Regular", size: 17), "Regular fehlt (UIAppFonts?)")
+        XCTAssertNotNil(UIFont(name: "AtkinsonHyperlegible-Bold", size: 17), "Bold fehlt (UIAppFonts?)")
+        XCTAssertNotNil(Bundle.main.url(forResource: "OFL", withExtension: "txt", subdirectory: "Fonts"), "OFL-Lizenz fehlt im Bundle")
+        XCTAssertEqual(UIImage(named: "eoedl-logo")?.renderingMode, .alwaysTemplate, "EÖDL-Logo fehlt oder kein Template")
+        let repo = ContentRepository()
+        for t in repo.themes {
+            let img = UIImage(named: t.bild)
+            XCTAssertNotNil(img, "Illustration fehlt: \(t.bild)")
+            XCTAssertEqual(img?.renderingMode, .alwaysTemplate, t.bild)
+        }
+    }
+
+    /// „Über uns“: beide Infoseiten; überall „EÖDL“, nie „EÖDL Verlag“.
+    func testExtrasAndWording() {
+        let repo = ContentRepository()
+        XCTAssertEqual(repo.extras.map(\.slug), ["30-jahre-eoedl", "astrid-kopp-duller"])
+        for e in repo.extras {
+            XCTAssertFalse(e.body.isEmpty, e.slug)
+            XCTAssertNotNil(e.sourceURL, e.slug)
+            XCTAssertTrue(e.body.contains("!["), "Bild fehlt: \(e.slug)")
+        }
+        L10n.lang = "de"
+        XCTAssertEqual(repo.extras[0].name, "30 Jahre EÖDL")
+        XCTAssertFalse(repo.books.contains { $0.publisher.contains("Verlag") }, "„EÖDL Verlag“ → „EÖDL“")
+        for (_, v) in L10n.de.merging(L10n.en, uniquingKeysWith: { a, b in a + b }) {
+            XCTAssertFalse(v.contains("EÖDL Verlag"), v)
+        }
+    }
+
+    /// Fachliche Korrekturen von Mario (6.9.2026) – dürfen nicht zurückfallen.
+    func testFachlicheKorrekturen() {
+        let repo = ContentRepository()
+        let text = repo.allChapters.map { $0.title + "\n" + $0.description + "\n" + $0.body }.joined(separator: "\n")
+            + repo.allChapters.flatMap { $0.questions }.map { $0.q + $0.options.joined() + $0.explanation }.joined()
+        for falsch in ["Dyskalkulietherapeut", "mitentwickelt", "seit über 20 Jahren", "in 20 Jahren",
+                       "seit 20 Jahren", "Wortes \"gibt\""] {
+            XCTAssertFalse(text.contains(falsch), "überholte Formulierung: \(falsch)")
+        }
+        XCTAssertTrue(text.contains("Pädagogische Sinneswahrnehmungstest im Vorschulalter (PSV)"))
+        XCTAssertTrue(text.contains("Am Beispiel des Wortes \"geben\""))
+        // „Mein Lesebuch“: Herausgeber EÖDL, keine Autoren
+        let lesebuch = repo.books.first { $0.slug == "mein-lesebuch" }
+        XCTAssertEqual(lesebuch?.authors, "")
+        XCTAssertEqual(lesebuch?.publisher, "EÖDL")
+        L10n.lang = "de"
+        XCTAssertEqual(lesebuch?.herkunft, "EÖDL")
+        XCTAssertEqual(repo.books.first { $0.slug == "der-legasthene-mensch" }?.herkunft,
+                       "von Dr. Astrid Kopp-Duller · EÖDL")
+    }
+
+    /// Vorlesestimme Conrad (zuerst nur „Legasthenie ist keine Krankheit oder Behinderung“): MP3 + Wortzeiten,
+    /// Segment-Klartext muss exakt dem Swift-Parser entsprechen, sonst sitzt die Markierung daneben.
+    func testVorlesenAlleKapitel() throws {
+        let repo = ContentRepository()
+        XCTAssertEqual(repo.allChapters.filter { $0.audio == nil }.count, 0, "jedes Kapitel hat Vorlesen")
+        for c in repo.allChapters {
+            let stem = try XCTUnwrap(c.audio, c.id)
+            XCTAssertEqual(stem, c.bookSlug + "__" + c.file)
+            XCTAssertNotNil(repo.audioURL(stem), "MP3 fehlt: \(stem)")
+            let d = try XCTUnwrap(repo.vorleseDaten(stem), "Wortzeiten fehlen: \(stem)")
+            XCTAssertEqual(d.voice, "de-DE-ConradNeural")
+            XCTAssertGreaterThan(d.words.count, 300, c.id)
+            XCTAssertGreaterThan(d.duration, 90_000, c.id)
+            // Vorlesen beginnt ganz oben: Überschrift, Vorspann, dann der Text
+            XCTAssertEqual(d.segments.first?.b, -2, c.id)
+            XCTAssertEqual(d.segments.first?.text, c.title, c.id)
+            XCTAssertEqual(d.segments.dropFirst().first?.b, -1, c.id)
+            XCTAssertEqual(d.segments.dropFirst().first?.text, c.description, c.id)
+            let blocks = MarkdownParser.parse(c.body)
+            for seg in d.segments where seg.b >= 0 {
+                var plain = ""
+                switch blocks[seg.b] {
+                case .heading(_, let t), .paragraph(let t), .quote(let t): plain = String(inlineMarkdown(t).characters)
+                case .bullets(let items), .numbered(let items): plain = String(inlineMarkdown(items[seg.i]).characters)
+                default: XCTFail("Segment zeigt auf Block ohne Text: \(seg.b) in \(c.id)")
+                }
+                XCTAssertEqual(plain, seg.text, "Klartext Block \(seg.b) in \(c.id)")
+            }
+            var vorher = -1
+            for w in d.words {
+                XCTAssertGreaterThanOrEqual(w.t, vorher, c.id); vorher = w.t
+                XCTAssertTrue(w.a < w.e && w.e <= d.segments[w.s].text.count, "Wortbereich außerhalb: \(w) in \(c.id)")
+            }
+        }
+        let c = try XCTUnwrap(repo.allChapters.first { $0.file == "02-legasthenie-dyskalkulie-keine-krankheit" })
+        let d = try XCTUnwrap(repo.vorleseDaten(try XCTUnwrap(c.audio)))
+        // Satzende-Markierungen: die Hervorhebung bleibt vor Punkt, Ausrufe- und Fragezeichen stehen
+        let satzenden = d.words.filter { $0.p == true }
+        XCTAssertGreaterThan(satzenden.count, 20)
+        for w in satzenden {
+            let text = d.segments[w.s].text
+            let rest = text.dropFirst(w.e).drop { "“\"»«".contains($0) }
+            XCTAssertTrue(rest.first.map { ".!?".contains($0) } ?? false, "kein Satzende nach: \(text.prefix(w.e).suffix(20))")
+        }
+    }
+
+    func testNoDyskalkulieOrForeignBooks() {
+        let repo = ContentRepository()
+        let slugs = Set(repo.allChapters.map(\.bookSlug))
+        for verboten in ["dyskalkulie-training-afs-methode", "dyskalkulie-im-erwachsenenalter", "mediendidaktiker",
+                         "dyslexia-dyscalculia", "dislexia-discalculia"] {
+            XCTAssertFalse(slugs.contains(verboten), verboten)
+        }
+    }
+
+    func testEveryChapterHasSourceAndNoFooter() {
+        let repo = ContentRepository()
+        for c in repo.allChapters {
+            XCTAssertNotNil(repo.quelle(for: c), "Quelle fehlt: \(c.id)")
+            XCTAssertFalse(c.body.contains("Dieser Artikel basiert"), "Fußzeile nicht entfernt: \(c.id)")
+            XCTAssertFalse(c.body.hasSuffix("---"), c.id)
+        }
+        for q in repo.books {
+            XCTAssertTrue(q.printURL != nil || q.ebookURL != nil || q.webURL != nil, "kein Quellen-Link: \(q.slug)")
+        }
+        XCTAssertEqual(repo.books.filter(\.istWebsite).map(\.slug), ["afs-test", "worterarbeitung"])
+        // Ausbildungs-Hinweis „hin und wieder": ein knappes Drittel der Kapitel
+        let cta = repo.allChapters.filter(\.cta).count
+        XCTAssertEqual(cta, 11)
+    }
+
+    func testEveryChapterHasFiveValidQuestions() {
+        let repo = ContentRepository()
+        for c in repo.allChapters {
+            XCTAssertEqual(c.questions.count, 5, "Kapitel \(c.id)")
+            for q in c.questions {
+                XCTAssertEqual(q.options.count, 4, c.id)
+                XCTAssertTrue((0..<4).contains(q.answer), c.id)
+                XCTAssertEqual(Set(q.options).count, 4, "doppelte Optionen in \(c.id)")
+                XCTAssertFalse(q.q.trimmingCharacters(in: .whitespaces).isEmpty, c.id)
+            }
+        }
+        // Richtige Antworten nicht immer an derselben Position
+        let positions = Set(repo.allChapters.flatMap { $0.questions.map(\.answer) })
+        XCTAssertEqual(positions.count, 4)
+    }
+
+    func testAllImagesResolveAndNoOrphans() {
+        let repo = ContentRepository()
+        var referenced = Set<String>()
+        for c in repo.allChapters {
+            for b in MarkdownParser.parse(c.body) {
+                if case .image(_, let asset) = b {
+                    XCTAssertNotNil(repo.image(asset), "Bild fehlt: \(asset)")
+                    referenced.insert(asset)
+                }
+            }
+        }
+        for e in repo.extras {
+            for b in MarkdownParser.parse(e.body) {
+                if case .image(_, let asset) = b {
+                    XCTAssertNotNil(repo.image(asset), "Bild fehlt: \(asset)")
+                    referenced.insert(asset)
+                }
+            }
+        }
+        XCTAssertFalse(referenced.isEmpty)
+        let bundled = Set((Bundle.main.urls(forResourcesWithExtension: nil, subdirectory: "Content/Images") ?? [])
+            .map(\.lastPathComponent))
+        XCTAssertEqual(bundled.subtracting(referenced), [], "Bilder im Bundle ohne Kapitel (App schlank halten)")
+    }
+
+    func testMarkdownParser() {
+        let md = """
+        # Titel
+        Erster Absatz
+        über zwei Zeilen.
+
+        ## Unter
+        - eins
+        - zwei
+        1. a
+        2. b
+        ![Alt](x__y.jpg)
+        > Zitat
+        | A | B |
+        |---|---|
+        | 1 | 2 |
+        ---
+        """
+        let b = MarkdownParser.parse(md)
+        XCTAssertEqual(b.count, 9)
+        if case .heading(let l, let t) = b[0] { XCTAssertEqual(l, 1); XCTAssertEqual(t, "Titel") } else { XCTFail() }
+        if case .paragraph(let t) = b[1] { XCTAssertEqual(t, "Erster Absatz über zwei Zeilen.") } else { XCTFail() }
+        if case .bullets(let i) = b[3] { XCTAssertEqual(i, ["eins", "zwei"]) } else { XCTFail() }
+        if case .numbered(let i) = b[4] { XCTAssertEqual(i, ["a", "b"]) } else { XCTFail() }
+        if case .image(let alt, let asset) = b[5] { XCTAssertEqual(alt, "Alt"); XCTAssertEqual(asset, "x__y.jpg") } else { XCTFail() }
+        if case .quote(let t) = b[6] { XCTAssertEqual(t, "Zitat") } else { XCTFail() }
+        if case .table(let rows) = b[7] { XCTAssertEqual(rows, [["A", "B"], ["1", "2"]]) } else { XCTFail() }
+        if case .rule = b[8] {} else { XCTFail() }
+    }
+
+    func testGenderStarStaysLiteral() {
+        let a = inlineMarkdown("Trainer\\*innen und **fett**")
+        XCTAssertEqual(String(a.characters), "Trainer*innen und fett")
+    }
+
+    func testProgressStore() {
+        let d = UserDefaults(suiteName: "test.\(UUID().uuidString)")!
+        let s = ProgressStore(defaults: d)
+        XCTAssertFalse(s.isRead("a/b"))
+        s.record("a/b", correct: 4, total: 5)
+        XCTAssertTrue(s.isRead("a/b"))
+        XCTAssertTrue(s.result("a/b")!.passed)
+        s.record("a/b", correct: 2, total: 5)
+        XCTAssertEqual(s.result("a/b")!.best, 4)
+        XCTAssertEqual(s.result("a/b")!.last, 2)
+        XCTAssertEqual(s.result("a/b")!.attempts, 2)
+        XCTAssertEqual(s.accuracy!, 0.8, accuracy: 0.001)
+        // Persistenz
+        let s2 = ProgressStore(defaults: d)
+        XCTAssertEqual(s2.result("a/b")!.best, 4)
+        s2.reset()
+        XCTAssertNil(ProgressStore(defaults: d).result("a/b"))
+    }
+
+    func testContinueChapter() {
+        let repo = ContentRepository()
+        let d = UserDefaults(suiteName: "test.\(UUID().uuidString)")!
+        let s = ProgressStore(defaults: d)
+        let first = repo.allChapters[0]
+        XCTAssertEqual(s.continueChapter(repo)?.id, first.id)
+        s.markRead(first.id)
+        s.touch(first.id)
+        XCTAssertEqual(s.continueChapter(repo)?.id, repo.allChapters[1].id)
+        // Letztes Kapitel eines Themas gelesen → nächstes ungelesenes der Übersicht
+        let last = repo.themes[0].chapters.last!
+        s.markRead(last.id); s.touch(last.id)
+        XCTAssertEqual(s.continueChapter(repo)?.id, repo.allChapters[1].id)
+    }
+
+    /// Bug Build 1: ein Pfad für alle Tabs – Quiz/Nächstes Kapitel aus dem Fortschritt-Tab liefen ins Leere.
+    func testNavigatorUsesPathOfVisibleTab() {
+        let nav = Navigator()
+        nav.tab = 1
+        nav.open(.thema("schulkinder"))
+        nav.open(.chapter("a/b"))
+        XCTAssertEqual(nav.progressPath.count, 2)
+        XCTAssertEqual(nav.libraryPath.count, 0)
+        nav.open(.quiz("a/b"))
+        XCTAssertEqual(nav.progressPath.count, 3)
+        nav.replace(last: 2, with: .chapter("a/c"))
+        XCTAssertEqual(nav.progressPath.count, 2)
+        XCTAssertEqual(nav.libraryPath.count, 0)
+
+        nav.tab = 0
+        nav.open(.thema("grundlagen"))
+        XCTAssertEqual(nav.libraryPath.count, 1)
+        XCTAssertEqual(nav.progressPath.count, 2)
+        nav.back(5)
+        XCTAssertEqual(nav.libraryPath.count, 0)
+        XCTAssertEqual(nav.progressPath.count, 2)
+        nav.tab = 2
+        nav.open(.extra("30-jahre-eoedl"))
+        XCTAssertEqual(nav.settingsPath.count, 1)
+        XCTAssertEqual(nav.libraryPath.count, 0)
+        nav.tab = 3
+        nav.open(.aboutApp)
+        nav.open(.imprint)
+        XCTAssertEqual(nav.aboutPath.count, 2)
+        XCTAssertEqual(nav.settingsPath.count, 1)
+        XCTAssertEqual(nav.progressPath.count, 2)
+        nav.back()
+        XCTAssertEqual(nav.aboutPath.count, 1)
+        nav.tab = 2
+        nav.open(.aboutUs)
+        XCTAssertEqual(nav.settingsPath.count, 2)
+        XCTAssertEqual(nav.aboutPath.count, 1)
+        nav.tab = 3
+        nav.back(10)
+        XCTAssertEqual(nav.aboutPath.count, 0)
+        XCTAssertEqual(nav.settingsPath.count, 2)
+    }
+
+    func testBookshopDestinationAndNewArt() throws {
+        XCTAssertEqual(Links.lernsoftwareShop.absoluteString, "https://www.lernsoftware-shop.com/")
+        for name in ["illu-afs-test", "illu-worterarbeitung"] {
+            let image = try XCTUnwrap(UIImage(named: name))
+            let bitmap = try XCTUnwrap(image.cgImage, "PNG fehlt: \(name)")
+            XCTAssertEqual(image.renderingMode, .alwaysTemplate)
+            XCTAssertTrue([CGImageAlphaInfo.premultipliedLast, .premultipliedFirst, .last, .first].contains(bitmap.alphaInfo))
+            XCTAssertGreaterThan(bitmap.width, bitmap.height)
+        }
+    }
+
+    func testSettingsDefaultsAndLineSpacing() {
+        let d = UserDefaults(suiteName: "test.\(UUID().uuidString)")!
+        let s = Settings(defaults: d)
+        XCTAssertEqual(s.fontSize, Settings.standardGroesse)
+        XCTAssertEqual(s.lineFactor, 1.5)
+        XCTAssertEqual(s.darstellung, .system)
+        // 20 pt / Faktor 1,5 → 30 pt Zeilenhöhe = natürliche 25 + 5 Zusatz
+        s.fontSize = 20; s.lineFactor = 1.5
+        XCTAssertEqual(s.lineSpacing, 5, accuracy: 0.01)
+        s.lineFactor = 1.3
+        XCTAssertEqual(s.lineSpacing, 1, accuracy: 0.01)
+        XCTAssertEqual(Settings(defaults: d).fontSize, 20)
+    }
+
+    func testStringsComplete() {
+        XCTAssertEqual(Set(L10n.de.keys), Set(L10n.en.keys))
+        L10n.lang = "de"
+        XCTAssertEqual(T("quiz.question", 2, 5), "Frage 2 von 5")
+        XCTAssertEqual(T("chapter.of", 5, 6, 4), "Kapitel 5 von 6 · 4 Min.")
+        XCTAssertEqual(T("result.count.many", L10n.zahlwort(4)), "Vier Antworten sind richtig.")
+        XCTAssertEqual(Links.ausbildung.host, "www.legastheniefernstudium.com")
+        L10n.lang = "en"
+        XCTAssertEqual(T("quiz.question", 2, 5), "Question 2 of 5")
+        XCTAssertEqual(T("result.count.many", L10n.zahlwort(4)), "Four answers are correct.")
+        XCTAssertEqual(Links.ausbildung.host, "www.dyslexiacertificate.com")
+        L10n.lang = "de"
+    }
+}

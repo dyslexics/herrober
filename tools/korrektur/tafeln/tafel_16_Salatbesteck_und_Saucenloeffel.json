@@ -1,0 +1,30 @@
+{
+ "file": "tafel_16_Salatbesteck_und_Saucenloeffel.jpg",
+ "tafel": "16",
+ "seite": "103",
+ "titel": "Salat-Bestecke (Horn) und Sauce-Vorlegelöffel",
+ "beschriftungen": [
+  {
+   "de": "Löffel.",
+   "fr": "Cuiller."
+  },
+  {
+   "de": "Schere.",
+   "fr": "Ciseaux."
+  },
+  {
+   "de": "Gabel.",
+   "fr": "Fourchette."
+  },
+  {
+   "de": "Salat-Bestecke (Horn).",
+   "fr": "Service à salade (en corne).",
+   "gruppe": true
+  },
+  {
+   "de": "Sauce-Vorlegelöffel (mit Ausguß).",
+   "fr": "Cuiller à sauce (à bec)."
+  }
+ ],
+ "unsicher": []
+}

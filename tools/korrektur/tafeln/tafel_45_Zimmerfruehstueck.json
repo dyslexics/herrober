@@ -1,0 +1,24 @@
+{
+ "file": "tafel_45_Zimmerfruehstueck.jpg",
+ "tafel": "45",
+ "seite": "135",
+ "titel": "Kaffee, complet (Zimmer-Service) und Waggon-Service",
+ "beschriftungen": [
+  {
+   "de": "Kaffee, complet (Zimmer-Service).",
+   "fr": "Service pour un café complet dans une chambre d'hôtel."
+  },
+  {
+   "de": "Waggon-Service.",
+   "fr": "Service en waggon."
+  },
+  {
+   "de": "Gastwirte-Fachschule Wien",
+   "fr": null
+  }
+ ],
+ "unsicher": [
+  "Serviette im unteren Bild: Schriftzug „Gastwirte-Fachschule Wien“ teilweise vom Brötchen verdeckt, nur „Gastw…schule / Wien“ lesbar; Ergänzung analog Tafel 41/42/44.",
+  "Links unten im Stich die Signatur des Holzschneiders, etwa „J. J. MALCHER IV. WIEN.“ – keine Beschriftung, nicht übernommen."
+ ]
+}

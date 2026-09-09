@@ -1,0 +1,54 @@
+{
+ "file": "tafel_08_Bierglaeser_und_Karaffen.jpg",
+ "tafel": "8",
+ "seite": "92",
+ "titel": "Bier-Gläser, Wein-Flaschen und Bier-Krug",
+ "beschriftungen": [
+  {
+   "de": "Stutzen f. einfachen Tischwein.",
+   "fr": "Verre à vin de table."
+  },
+  {
+   "de": "Stutzen für besseren Tischwein.",
+   "fr": "Verre à vin de table."
+  },
+  {
+   "de": "½ Liter Bier-Krügeln.",
+   "fr": "Verres à bière."
+  },
+  {
+   "de": "Deckel-Glas.",
+   "fr": "Verre à bière avec un couvercle."
+  },
+  {
+   "de": "Bier-Pokal.",
+   "fr": "Boc."
+  },
+  {
+   "de": "Bier-Tumbler.",
+   "fr": "Tumblers."
+  },
+  {
+   "de": "Bier-Flöte.",
+   "fr": "Flûte à bière."
+  },
+  {
+   "de": "Wein-Flaschen.",
+   "fr": "Carafes à vin.",
+   "gruppe": true
+  },
+  {
+   "de": "Rothwein-Caraffe.",
+   "fr": "Carafe à vin rouge."
+  },
+  {
+   "de": "Bier-Krug.",
+   "fr": "Cruche à bière."
+  },
+  {
+   "de": "Bier-Stiefel.",
+   "fr": "Botte à bière."
+  }
+ ],
+ "unsicher": []
+}
