@@ -16,6 +16,33 @@ Lade das große Manifest mit einem Programm, zum Beispiel `json.load()` in Pytho
 nur den aktuellen Auftrag oder eine knappe Übersicht in deinen LLM-Kontext; die vollständigen
 Wortpositionen aller Aufträge müssen dort nicht gleichzeitig stehen.
 
+## Verbindliche Stimmen und Wortausrichtung
+
+Marios Vorgabe vom 10.09.2026:
+
+| Sprache | Aktueller Bestand | Stimme |
+|---|---:|---|
+| Deutsch (`de-AT`) | 970 Aufträge | **Charon** für sämtliche deutschen Texte |
+| Französisch (`fr-FR`) | 225 Aufträge | Eine passende französische Muttersprach-Stimme |
+| Englisch (`en-US`) | 9 Aufträge | Eine passende englische Muttersprach-Stimme |
+
+Der zuerst übergebene Export enthielt 937 deutsche Aufträge. Das hinzugefügte Kapitel
+„Warum dieses Buch“ ergänzt 33 deutsche Texte; auch für diese ist Charon verbindlich.
+Die bisherigen 1.171 Aufträge behalten ihre IDs und Job-Hashes. Der aktuelle Export umfasst
+**1.204 Aufträge** und hat einen neuen Gesamt-Hash. Verwende die Auftragsliste und den Hash
+des mitgelieferten Manifests. Bereits erzeugte Aufnahmen unveränderter Aufträge können
+weiterverwendet werden; prüfe ihre Job-Hashes und ergänze die neuen Aufträge.
+
+Wähle einen TTS-/Alignment-Dienst, der echte Wortzeitmarken liefert, oder führe **Forced
+Alignment auf den fertigen WAV-Dateien** durch. Die Zeitmarken müssen zur tatsächlich
+gelieferten Aufnahme gehören. Wenn der für Charon verwendete TTS-Dienst keine Wortzeiten
+ausgibt, richte die fertige Charon-Aufnahme nachträglich aus; die gewählte Stimme bleibt
+erhalten. Keine Zeitmarken aus einer anderen Aufnahme und keine Schätzung anhand der Textlänge.
+
+Dokumentiere die tatsächlich verwendete Stimme für jede Datei in `recordings[].voice`.
+Nenne den TTS-Dienst und das Modell gemäß Liefervertrag; dokumentiere den Alignment-Dienst,
+das Modell bzw. Verfahren und die Zuordnung zu den fertigen Audiodateien im Prüfbericht.
+
 ## Ergebnis
 
 Liefere ein Verzeichnis mit **delivery.json**, den darin genannten Audiodateien und einem
@@ -29,20 +56,23 @@ offen; gib keine unvollständige Sammlung als fertig aus.
 1. Prüfe, ob du tatsächlich Audiodateien erzeugen und speichern kannst. Wenn dir ein
    Audiowerkzeug fehlt, nenne die benötigte Fähigkeit. Text oder eine Beschreibung einer
    Stimme sind keine Audiodatei.
-2. Nutze Marios verfügbare und freigegebene Sprachwerkzeuge. Falls Stimme, Zugang oder
-   Kostenrahmen für deinen Dienst fehlen, kläre das mit Mario. Verrate keine Schlüssel und
+2. Nutze Marios verfügbare und freigegebene Sprachwerkzeuge. Die deutsche Stimme Charon ist
+   festgelegt. Wähle für Französisch und Englisch je eine passende Muttersprach-Stimme.
+   Falls Zugang oder Kostenrahmen für deinen Dienst fehlen, kläre das mit Mario. Verrate keine Schlüssel und
    schreibe sie weder in das Repository noch in Lieferdateien.
 3. Lies die Aufträge aus `manifest.json`; `texts.jsonl` eignet sich zur Stapelverarbeitung,
    `TEXTS.md` zur Gegenprüfung. Die Abschnitte in `segments` bilden die Lesereihenfolge.
-4. Erzeuge zuerst vier kurze, echte Proben: einen deutschen Absatz, einen französischen
-   Menütext, eine Abkürzung wie „etc.“ und eine Fibel-Stelle mit langem ſ. Lass Mario die
-   Stimme und Aussprache beurteilen, bevor du die vollständige Sammlung erzeugst.
+4. Erzeuge zuerst kurze, echte Proben: einen deutschen Absatz mit Charon, einen französischen
+   Menütext und einen englischen Text mit den jeweiligen Muttersprach-Stimmen sowie eine
+   Abkürzung wie „etc.“ und eine Fibel-Stelle mit langem ſ. Bereits freigegebene Proben musst
+   du nicht erneut erzeugen. Lass Mario noch offene Aussprache-/Fremdstimmenproben beurteilen,
+   bevor du diese Stimme für die vollständige Sammlung verwendest; Charon ist bereits festgelegt.
 5. Bearbeite die Aufträge danach in überschaubaren Paketen. Speichere deinen Fortschritt
    anhand der Job-ID, ihres Hashs und des Dateihashs. Ein fehlgeschlagener Auftrag darf
    bereits fertige Aufnahmen nicht überschreiben. Nutze geprüfte Ergebnisse bei Fortsetzung erneut.
 6. Erzeuge echte Wortzeitmarken für genau das fertige Audio, einschließlich Pausen und
-   Anfangsstille. Verwende die Grenzen des Generators oder führe eine Wortausrichtung am
-   fertigen Audio durch. Ordne jede exportierte Token-ID genau einmal zu.
+   Anfangsstille. Verwende die Wortgrenzen des TTS-/Alignment-Dienstes oder Forced Alignment
+   auf den fertigen WAVs. Ordne jede exportierte Token-ID genau einmal zu.
 7. Prüfe die Lieferung mit dem beigefügten Importer. Liefere am Ende alle Dateien sowie
    Anzahl, Sprachen, verwendete Stimmen/Modelle, Audiodauer und Prüfergebnis. Überlasse Mario
    die Prüfung der späteren App-Fassung; veröffentliche oder lade nichts ohne entsprechenden Auftrag hoch.
@@ -54,8 +84,8 @@ offen; gib keine unvollständige Sammlung als fertig aus.
   Bildbeschreibungen und Menükarten behalten ihre historische Schreibweise.
 - Verwende die Sprache aus `language`: `de-AT`, `fr-FR` oder `en-US`. Deutsche Erklärungen zu
   französischen Menüs bleiben deutsch; die französischen Zitate sprichst du französisch.
-- Sprich Deutsch ruhig, klar und natürlich, mit gut verständlicher österreichischer Aussprache
-  sofern verfügbar. Wähle passende Muttersprachlichkeit für Französisch und Englisch. Stimme
+- Sprich Deutsch mit Charon ruhig, klar und natürlich, mit gut verständlicher österreichischer
+  Aussprache sofern verfügbar. Wähle passende Muttersprach-Stimmen für Französisch und Englisch. Stimme
   und Sprechweise sollen innerhalb derselben Sprache zusammenpassen. Keine Musik, Effekte,
   Begrüßungen, Abschlussfloskeln oder zusätzlichen gesprochenen Überschriften.
 - `spoken_text` und `tokens[].spoken` enthalten Aussprachevorschläge der vorhandenen Pipeline.
@@ -89,8 +119,8 @@ der Audiodatei. Liefere alle Tokens, auch einzelne Buchstaben, Ziffern und Bruch
 
 Nutze WAV, MP3 oder M4A mit einer Audiospur. Bewahre die erzeugte Qualität in deiner Lieferung;
 der Importer erstellt das App-Format. Lege Modell, Anbieter, Stimme und die maßgeblichen
-Nutzungsangaben in `producer` offen. Abweichende Stimmen je Datei gehören zusätzlich in
-`recordings[].voice`. Keine künstlichen oder erfundenen Herkunftsangaben.
+Nutzungsangaben in `producer` offen. Gib zusätzlich in jeder Aufnahme `recordings[].voice`
+an; für Deutsch ist das Charon. Keine künstlichen oder erfundenen Herkunftsangaben.
 
 ## Befehle zur Prüfung
 

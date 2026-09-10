@@ -6,9 +6,13 @@ Website: https://appsthrum.com/herrober/
 
 ## Vertonung durch eine andere LLM
 
-Der vollständige Textbestand ist als **1.171 Sprechaufträge** vorbereitet, mit festen IDs,
+Der vollständige Textbestand ist als **1.204 Sprechaufträge** vorbereitet, mit festen IDs,
 Sprachen und Wortzuordnung. Eine andere LLM kann die Aufnahmen mit ihrem Audiowerkzeug
 erzeugen und über die geprüfte Schnittstelle zurückliefern.
+
+**Stimmen:** 970 deutsche Aufträge mit Charon, 225 französische und 9 englische Aufträge mit
+je einer passenden Muttersprach-Stimme. Wortzeitmarken kommen vom TTS-/Alignment-Dienst
+oder aus echtem Forced Alignment der fertigen WAV-Dateien.
 
 **[Arbeitsauftrag kopieren](docs/VERTONUNG_PROMPT.md)** ·
 **[Übergabepaket als ZIP](narration/HerrOber-Vertonung.zip)** ·
@@ -27,16 +31,16 @@ Weitere Hörtexte“ zugänglich. Ein neuer App-Build ist nach dem Import erford
 
 ## App-Stand
 
-**TestFlight: 1.0 (3)**, am 10.09.2026 für „Mario intern“ geprüft und von Mario angenommen.
-Der Quellbestand enthält zusätzlich die vorbereitete Audio-Schnittstelle für einen nächsten
-Build. Die vollständige neue Vertonung durch eine andere LLM steht noch aus.
+**TestFlight: 1.0 (4)**, am 10.09.2026 für „Mario intern“ bereitgestellt.
+Die Audio-Schnittstelle ist vorbereitet. Die vollständige neue Vertonung durch eine andere
+LLM steht noch aus; gelieferte Aufnahmen brauchen anschließend einen neuen App-Build.
 
 Die Lesetexte verwenden heutige deutsche Rechtschreibung in beiden Schriftansichten. Historische
 Quelldateien, Bildbeschreibungen und Menükarten bleiben erhalten.
 Die redaktionellen Ersetzungen und ihre Abgrenzung stehen in `docs/rechtschreibung.md`.
 Der Einband auf der Startseite öffnet sich beim Antippen bildschirmfüllend mit Zoom.
 
-Build 4 (10.09.2026, lokal): Kapitel „Warum ein Legasthenieverband ein Kellnerbuch von 1899 vertont hat“
+Build 4 (10.09.2026): Kapitel „Warum ein Legasthenieverband ein Kellnerbuch von 1899 vertont hat“
 (DVLD, nach Dr. Astrid Kopp-Duller) aus `tools/warum.md` → `content.json` „warum“, in „Über das Buch“ als Karte
 mit eigener Seite in beiden Schriften (`-screen warum`); App-Icon hellblau statt grün (`tools/gen_icon.py`);
 Vertonungsexport um die 33 Kapitelblöcke ergänzt (1.204 Aufträge). Landingpage neu: `/home/mario/appsthrum-herrober/build.py`.

@@ -16,9 +16,20 @@ ein Import in die Paketkopie allein aktualisiert keine App. Das Paket lässt sic
 
 ## Umfang des Exports
 
-Stand 10.09.2026: **1.171 Sprechaufträge**, davon 87 vorhandene Audioteile und 1.084 ergänzende
-Texte. Sprachen: 937 Deutsch, 225 Französisch, 9 Englisch. Die Zahl der Dateien ist keine
+Stand 10.09.2026, einschließlich „Warum dieses Buch“: **1.204 Sprechaufträge**, davon 87
+vorhandene Audioteile und 1.117 ergänzende Texte. Sprachen: 970 Deutsch, 225 Französisch,
+9 Englisch. Die Zahl der Dateien ist keine
 Zahl von Buchseiten: Ein Auftrag kann einen einzelnen Begriff oder mehrere Buchseiten enthalten.
+
+**Verbindliche Stimmen:** Charon für alle deutschen Aufträge; für Französisch und Englisch
+je eine passende Muttersprach-Stimme. Gegenüber dem ersten Export mit 937 deutschen Aufträgen
+sind 33 deutsche Texte hinzugekommen. Die bisherigen Job-IDs und Job-Hashes bleiben gleich.
+Für die aktuelle Lieferung gilt der neue Gesamt-Hash aus `manifest.json`.
+
+**Wortausrichtung:** echte Wortzeitmarken des TTS-/Alignment-Dienstes oder Forced Alignment
+auf den fertigen WAV-Dateien. Liefert der Charon-TTS-Dienst keine Wortzeiten, wird die fertige
+Charon-Aufnahme ausgerichtet. Die Stimme und die Zeitbasis der Aufnahme bleiben erhalten.
+Stimme je Datei in `recordings[].voice`, Alignment-Verfahren und Werkzeug im Prüfbericht nennen.
 
 | Inhalt | Export und Verwendung |
 |---|---|
@@ -28,7 +39,7 @@ Zahl von Buchseiten: Ein Auftrag kann einen einzelnen Begriff oder mehrere Buchs
 | Tabellen | Textzellen in Leserichtung; deutsche und französische Spalte der Gang-Tabelle getrennt |
 | Fibel | Einführung, Alphabet, Hinweise, Stolpersteine und Übungswörter |
 | Lernen | Glossar, Wortformen, Beispiele, Fragen, Antwortoptionen, Erklärungen, Touren, Bildaufgaben, Leseübungen, historische Einordnung, Menüführer und Quellenzitate |
-| Buchangaben | Titel, Autoren, Vorsatz, Inhaltsverzeichnis und „Über das Buch“ |
+| Buchangaben | Titel, Autoren, Vorsatz, Inhaltsverzeichnis, „Über das Buch“ und „Warum dieses Buch“ |
 
 Maßgeblich sind die aktuellen `Content/content.json` und `Content/lernen.json`. Der Export
 erfasst deren lesbare Textfelder. Er führt identische Texte derselben Sprache zusammen und
@@ -67,9 +78,9 @@ Ordner `narration/` neu; die App-Texte und Audiodateien bleiben dabei unverände
 | [`delivery.schema.json`](../narration/delivery.schema.json) | Maschinenlesbares Rückgabeformat |
 | [`VERTONUNG_PROMPT.md`](VERTONUNG_PROMPT.md) | Kopierfertiger Arbeitsauftrag einschließlich Aussprache und Qualitätsprüfung |
 
-GitHub stellt große JSON-Dateien eventuell nur zum Herunterladen bereit. Mit einem Clone
-oder „Code → Download ZIP“ erhält die andere LLM den vollständigen Bestand. Für ein privates
-Repository braucht sie den vorhandenen Zugriff oder eine von Mario bereitgestellte Kopie.
+Das Repository und die Übergabedateien sind öffentlich zugänglich. GitHub stellt große
+JSON-Dateien eventuell nur zum Herunterladen bereit. Mit einem Clone oder „Code → Download ZIP“
+erhält die andere LLM den vollständigen Bestand.
 
 ## Was die andere LLM zurückgibt
 
@@ -92,7 +103,7 @@ liegen innerhalb des Lieferverzeichnisses; relative Unterordner sind erlaubt.
       "job_id": "ID aus jobs[].id",
       "job_sha256": "Hash aus jobs[].sha256",
       "audio": "audio/datei.wav",
-      "voice": "optionale tatsächliche Stimme dieser Aufnahme",
+      "voice": "Charon für Deutsch; tatsächlich gewählte Muttersprach-Stimme für FR/EN",
       "words": [
         {"token_id": 0, "start_ms": 100, "end_ms": 420},
         {"token_id": 1, "start_ms": 460, "end_ms": 950}
@@ -119,9 +130,10 @@ die exportierten Tokens abbilden. Eine rechnerische Verteilung über die Audioda
 
 ## Prüfen und einlesen
 
-Zunächst eine kleine echte Hörprobe aus Deutsch, Französisch, einer Abkürzung und einem
-Fibel-Beispiel zurückliefern. Mario beurteilt Stimme und Aussprache, bevor die andere LLM
-den gesamten Bestand vertont. Technische Teilpakete sind ausdrücklich möglich:
+Zunächst kleine echte Hörproben aus Deutsch mit Charon, Französisch, Englisch, einer Abkürzung
+und einem Fibel-Beispiel zurückliefern. Bereits freigegebene Proben brauchen keine Wiederholung.
+Mario beurteilt noch offene Aussprache-/Fremdstimmenproben; Charon ist für Deutsch festgelegt.
+Technische Teilpakete sind ausdrücklich möglich:
 
 ```sh
 .venv/bin/python tools/narration.py validate \
@@ -132,7 +144,7 @@ den gesamten Bestand vertont. Technische Teilpakete sind ausdrücklich möglich:
 ```
 
 Eine vollständige Lieferung lässt sich ohne `--partial` prüfen und importieren. Dann müssen
-alle 1.171 Aufträge im Paket stehen. Auch nach mehreren Teilimporten sollte die andere LLM
+alle 1.204 Aufträge im Paket stehen. Auch nach mehreren Teilimporten sollte die andere LLM
 eine vollständige `delivery.json` samt Dateien für diese Abschlussprüfung liefern.
 
 ```sh

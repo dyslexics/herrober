@@ -1,5 +1,11 @@
 # Prüfung der Vertonungsschnittstelle · 10.09.2026
 
+Die folgende Testtabelle dokumentiert die ursprüngliche Schnittstellenprüfung mit 1.171
+Aufträgen. Der aktuelle Export enthält zusätzlich 33 deutsche Texte aus „Warum dieses Buch“
+und damit 1.204 Aufträge. Alle bisherigen Job-IDs und Job-Hashes bleiben unverändert.
+Marios anschließende Stimmenvorgabe steht im [aktuellen Prompt](VERTONUNG_PROMPT.md): Charon
+für Deutsch, Muttersprach-Stimmen für Französisch/Englisch, echte Wortzeiten oder Forced Alignment.
+
 Die Schnittstelle exportiert den vorhandenen Buch- und Lernbestand, prüft fremd erzeugte
 Aufnahmen und liest sie in die App-Ressourcen ein. Die Vorbereitung hat keine neue Sprache
 erzeugt. Für die Prüfung wurden vorhandene Buchaufnahmen verwendet.
@@ -26,4 +32,5 @@ diese Testreferenz gehört nicht zum ausgelieferten `Content/Audio`-Ordner.
 
 Die Tests prüfen Format, Zuordnung, Sicherung und Wiedergabe. Die Aussprache und Vollständigkeit
 einer späteren LLM-Lieferung muss zusätzlich am tatsächlichen Audio gegengehört werden.
-TestFlight enthält weiterhin Build 1.0 (3); für gelieferte Aufnahmen ist ein neuer App-Build nötig.
+Zum Zeitpunkt dieser ursprünglichen Prüfung enthielt TestFlight Build 1.0 (3). Inzwischen
+steht Build 1.0 (4) bereit; für gelieferte Aufnahmen ist ein weiterer App-Build nötig.
