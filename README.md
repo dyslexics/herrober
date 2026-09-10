@@ -4,15 +4,22 @@ iOS-App (SwiftUI, iOS 17+) zum Lesen und Hören des gemeinfreien Wiener Lehrbuch
 
 Website: https://appsthrum.com/herrober/
 
+Die Lesetexte verwenden heutige deutsche Rechtschreibung in beiden Schriftansichten. Historische
+Quelldateien, Bildbeschreibungen und Menükarten bleiben erhalten.
+Die redaktionellen Ersetzungen und ihre Abgrenzung stehen in `docs/rechtschreibung.md`.
+Der Einband auf der Startseite öffnet sich beim Antippen bildschirmfüllend mit Zoom.
+
 ## Aufbau
 
 - `Sources/` – SwiftUI-App (Models, Data, Design, Views), `Tests/` – Unit-Tests
+- `UITests/` – Einband öffnen, zoomen, drehen, schließen; Ideenhinweis und Dunkelmodus
 - `Content/` – `content.json`, restaurierte Bilder (`Images/`, `Originals/`, `Thumbs/`), Audio mit Wortzeiten (`Audio/`)
 - `Fonts/` – UnifrakturMaguntia, UnifrakturCook, Atkinson Hyperlegible (SIL OFL 1.1)
 - `tools/` – Inhaltspipeline (Python, venv):
   - `korrektur/` – OCR-korrigierte Kapitel und aus den Bildern transkribierte Tafeln/Menus
   - `fraktur.py` – ſ-Regeln (Trennmuster 1901, Heyse-ſs, ꝛc.), `tests/test_fraktur.py`
   - `build_content.py` → `Content/content.json`
+  - `rechtschreibung.py`, `rechtschreibung_woerter.json` – geprüfte Modernisierung nur der Lesetexte
   - `enhance_images.py` – farberhaltende Restaurierung der Scans
   - `build_audio.py` – edge-tts mit WordBoundary, Alignment auf Anzeigetext, AAC
   - `review_site/` – Prüfseiten (Text roh/neu/alt, Bilder vorher/nachher, Hörproben)

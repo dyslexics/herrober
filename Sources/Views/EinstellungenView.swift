@@ -46,6 +46,11 @@ struct EinstellungenView: View {
             Section {
                 Button { nav.open(.ueber) } label: { Label(T("settings.about"), systemImage: "book.closed") }
                 Button(role: .destructive) { resetFrage = true } label: { Label(T("settings.reset"), systemImage: "arrow.counterclockwise") }
+            } footer: {
+                Text(T("settings.idea"))
+                    .font(Schrift.meta)
+                    .foregroundStyle(Theme.leise)
+                    .accessibilityIdentifier("settings.idea")
             }
         }
         .scrollContentBackground(.hidden)

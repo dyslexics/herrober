@@ -112,7 +112,7 @@ struct KapitelView: View {
         VStack(spacing: 12) {
             Divider().padding(.top, 30)
             if progress.istGelesen(kapitel) {
-                Label(T("chapter.done"), systemImage: "checkmark.circle.fill").font(Schrift.meta).foregroundStyle(Theme.erfolg)
+                Label(T("chapter.done"), systemImage: "checkmark.circle.fill").font(Schrift.meta).foregroundStyle(Theme.akzent)
             }
             HStack(spacing: 12) {
                 if let v = repo.vorheriges(vor: kapitel.slug) {

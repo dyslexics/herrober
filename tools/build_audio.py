@@ -21,6 +21,7 @@ import os
 import re
 import subprocess
 import sys
+from concurrent.futures import ThreadPoolExecutor
 
 import edge_tts
 
@@ -184,9 +185,11 @@ def vertonen(stem, segs, voice, force=False):
     js = os.path.join(OUT, stem + '.json'); m4a = os.path.join(OUT, stem + '.m4a'); mp3 = os.path.join(OUT, stem + '.mp3')
     text = gesprochener_text(segs)
     h = hash_von(text, voice)
+    segments = [{'seite': si, 'block': bi, 'item': ii, 'text': t, 'nr': nr} for si, bi, ii, t, nr in segs]
     if not force and os.path.exists(js) and os.path.exists(m4a):
         alt = json.load(open(js, encoding='utf-8'))
-        if alt.get('hash') == h:
+        # Gleiche Aussprache kann andere Zeichenbereiche haben (z. B. Local → Lokal).
+        if alt.get('hash') == h and alt.get('segments') == segments:
             return alt, False
     audio, bounds = asyncio.run(synth(text, voice))
     if not audio or not bounds:
@@ -197,7 +200,7 @@ def vertonen(stem, segs, voice, force=False):
     joined, words, verloren = align(segs, bounds)
     words = alt_bereiche(words, segs)
     daten = {'voice': voice, 'duration': dauer, 'hash': h, 'verloren': verloren,
-             'segments': [{'seite': si, 'block': bi, 'item': ii, 'text': t, 'nr': nr} for si, bi, ii, t, nr in segs],
+             'segments': segments,
              'words': words}
     json.dump(daten, open(js, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
     letztes = words[-1]['t'] + words[-1]['d'] if words else 0
@@ -214,23 +217,34 @@ def main():
     ap.add_argument('--tafeln', action='store_true')
     ap.add_argument('--menus', action='store_true')
     ap.add_argument('--kapitel', action='store_true')
+    ap.add_argument('--jobs', type=int, choices=range(1, 5), default=1,
+                    help='Parallele Kapitelteile (1–4); Index wird anschließend zentral geschrieben')
     a = ap.parse_args()
     alles = not (a.tafeln or a.menus or a.kapitel)
     lib = json.load(open(CONTENT, encoding='utf-8'))
     ipfad = os.path.join(OUT, 'index.json')
     index = json.load(open(ipfad, encoding='utf-8')) if os.path.exists(ipfad) else {'kapitel': {}, 'tafeln': {}, 'menus': {}}
     if alles or a.kapitel:
+        jobs = []
         for k in lib['kapitel']:
             if a.only and a.only != k['slug']:
                 continue
             segs = segmente_kapitel(k)
-            eintraege = []
             for n, stueck in enumerate(teile(segs), 1):
                 stem = f"{k['slug']}-{n}"
-                daten, _ = vertonen(stem, stueck, a.voice, a.force)
-                eintraege.append({'stem': stem, 'seiten': [stueck[0][4], stueck[-1][4]], 'duration': daten['duration']})
-            index['kapitel'][k['slug']] = eintraege
-            json.dump(index, open(ipfad, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+                jobs.append((k['slug'], stem, stueck))
+
+        def kapitelteil(job):
+            slug, stem, stueck = job
+            daten, _ = vertonen(stem, stueck, a.voice, a.force)
+            return slug, {'stem': stem, 'seiten': [stueck[0][4], stueck[-1][4]], 'duration': daten['duration']}
+
+        aktualisiert = {}
+        with ThreadPoolExecutor(max_workers=a.jobs) as pool:
+            for slug, eintrag in pool.map(kapitelteil, jobs):
+                aktualisiert.setdefault(slug, []).append(eintrag)
+        index['kapitel'].update(aktualisiert)
+        json.dump(index, open(ipfad, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     if alles or a.tafeln:
         for g in lib['tafeln']:
             for t in g['tafeln']:

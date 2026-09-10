@@ -6,7 +6,7 @@ Das Buch ist gemeinfrei. Die Abbildungen stammen aus den Musterbüchern der Wien
 
 # Über diese App
 
-Ein Exemplar des Buches wurde Seite für Seite digitalisiert, der Text neu abgeschrieben und mit einer Vorlesestimme versehen. Du kannst jede Seite in der Originalschrift von 1899 (Fraktur, mit langem ſ) oder in einer heutigen, gut lesbaren Schrift lesen, dir alles vorlesen lassen und dabei den Wörtern mit dem Auge folgen. Die Schreibweise von 1899 bleibt erhalten: Thür, Local, Capitel, dass.
+Ein Exemplar des Buches wurde Seite für Seite digitalisiert, der Text neu abgeschrieben und mit einer Vorlesestimme versehen. Du kannst jede Seite in Fraktur mit langem ſ oder in einer heutigen, gut lesbaren Schrift lesen, dir alles vorlesen lassen und dabei den Wörtern mit dem Auge folgen. Die Lesetexte verwenden in beiden Schriftansichten heutige deutsche Rechtschreibung. Bildbeschreibungen und Menükarten behalten ihre historische Schreibweise.
 
 Die Bildtafeln wurden vorsichtig bereinigt (Beleuchtung, Papierton, Durchschein der Rückseite), ohne den Stich zu verändern. Der Original-Scan ist bei jeder Tafel weiterhin sichtbar.
 

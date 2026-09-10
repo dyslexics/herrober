@@ -112,6 +112,23 @@ final class HerrOberTests: XCTestCase {
         for key in L10n.de.keys { XCTAssertNotNil(L10n.en[key], "EN fehlt: \(key)") }
         for key in L10n.en.keys { XCTAssertNotNil(L10n.de[key], "DE fehlt: \(key)") }
     }
+
+    func testZoomNachGroessenwechselPasstBildEin() {
+        let scroll = ZoomScrollView(frame: CGRect(x: 0, y: 0, width: 390, height: 700))
+        let coordinator = ZoomBild.Coordinator()
+        scroll.delegate = coordinator
+        scroll.minimumZoomScale = 1
+        scroll.maximumZoomScale = 5
+        scroll.addSubview(scroll.imageView)
+        scroll.layoutIfNeeded()
+        scroll.setZoomScale(3, animated: false)
+        XCTAssertEqual(scroll.zoomScale, 3, accuracy: 0.01)
+        scroll.bounds.size = CGSize(width: 700, height: 300)
+        scroll.layoutIfNeeded()
+        XCTAssertEqual(scroll.zoomScale, 1, accuracy: 0.01)
+        XCTAssertEqual(scroll.imageView.frame, CGRect(x: 0, y: 0, width: 700, height: 300))
+        XCTAssertEqual(scroll.contentOffset, .zero)
+    }
 }
 
 /// Marker, um das App-Bundle aus dem Test-Bundle zu erreichen.

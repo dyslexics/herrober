@@ -14,18 +14,19 @@ struct HerrOberApp: App {
         let s = Settings()
         if let l = Launch.lang, let al = AppLang(rawValue: l) { s.lang = al }
         if let a = Launch.alt { s.altSchrift = a }
+        if let d = Launch.darstellung { s.darstellung = d }
         _repo = StateObject(wrappedValue: r)
         _progress = StateObject(wrappedValue: p)
         _settings = StateObject(wrappedValue: s)
         HerrOberApp.tabLeiste()
     }
 
-    /// Tab-Leiste in Papier mit Flaschengrün für den aktiven Tab.
+    /// Tab-Leiste in Papier mit Blau für den aktiven Tab.
     private static func tabLeiste() {
         let a = UITabBarAppearance()
         a.configureWithOpaqueBackground()
-        a.backgroundColor = UIColor { $0.userInterfaceStyle == .dark ? UIColor(rgb: 0x1D2621) : UIColor(rgb: 0xFDF9F0) }
-        a.shadowColor = UIColor { $0.userInterfaceStyle == .dark ? UIColor(rgb: 0x33413A) : UIColor(rgb: 0xD9CDB2) }
+        a.backgroundColor = UIColor(Theme.flaeche)
+        a.shadowColor = UIColor(Theme.linie)
         let leise = UIColor { $0.userInterfaceStyle == .dark ? UIColor(rgb: 0xB5AA95) : UIColor(rgb: 0x6E5F4B) }
         for item in [a.stackedLayoutAppearance, a.inlineLayoutAppearance, a.compactInlineLayoutAppearance] {
             item.normal.iconColor = leise

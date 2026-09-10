@@ -174,10 +174,17 @@ struct DetailBild: View {
 /// weil die Bounds beim ersten updateUIView noch 0 sind.
 final class ZoomScrollView: UIScrollView {
     let imageView = UIImageView()
+    private var viewportSize = CGSize.zero
     override func layoutSubviews() {
         super.layoutSubviews()
+        guard bounds.width > 0, bounds.height > 0 else { return }
+        if bounds.size != viewportSize {
+            viewportSize = bounds.size
+            setZoomScale(1, animated: false)
+            contentOffset = .zero
+        }
         if zoomScale == 1 {
-            imageView.frame = bounds
+            imageView.frame = CGRect(origin: .zero, size: bounds.size)
             contentSize = bounds.size
         }
     }
@@ -192,6 +199,7 @@ struct ZoomBild: UIViewRepresentable {
         sv.minimumZoomScale = 1; sv.maximumZoomScale = 5
         sv.showsVerticalScrollIndicator = false; sv.showsHorizontalScrollIndicator = false
         sv.bouncesZoom = true
+        sv.contentInsetAdjustmentBehavior = .never
         sv.imageView.image = image
         sv.imageView.contentMode = .scaleAspectFit
         sv.imageView.isUserInteractionEnabled = true

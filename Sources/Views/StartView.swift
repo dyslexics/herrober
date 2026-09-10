@@ -5,6 +5,7 @@ struct StartView: View {
     @EnvironmentObject private var repo: ContentRepository
     @EnvironmentObject private var progress: ProgressStore
     @EnvironmentObject private var nav: Navigator
+    @State private var zeigtEinband = false
 
     var body: some View {
         ScrollView {
@@ -22,14 +23,29 @@ struct StartView: View {
         .background(Theme.bg)
         .navigationTitle(T("app.title"))
         .navigationBarTitleDisplayMode(.large)
+        .fullScreenCover(isPresented: $zeigtEinband) {
+            if let img = repo.bild(repo.buch.einband) {
+                EinbandView(image: img)
+            }
+        }
     }
 
     private var einband: some View {
         HStack(alignment: .top, spacing: 18) {
             if let img = repo.bild(repo.buch.einband) {
-                Image(uiImage: img).resizable().scaledToFit().frame(width: 120)
-                    .clipShape(RoundedRectangle(cornerRadius: 6)).shadow(color: .black.opacity(0.25), radius: 6, y: 3)
-                    .accessibilityLabel(T("about.cover"))
+                Button { zeigtEinband = true } label: {
+                    VStack(spacing: 8) {
+                        Image(uiImage: img).resizable().scaledToFit().frame(width: 120)
+                            .clipShape(RoundedRectangle(cornerRadius: 6))
+                            .shadow(color: .black.opacity(0.25), radius: 6, y: 3)
+                        Label(T("cover.enlarge"), systemImage: "arrow.up.left.and.arrow.down.right")
+                            .font(Schrift.klein).foregroundStyle(Theme.akzent)
+                    }
+                    .contentShape(Rectangle())
+                }
+                .buttonStyle(.plain)
+                .accessibilityLabel(T("cover.open"))
+                .accessibilityIdentifier("cover.open")
             }
             VStack(alignment: .leading, spacing: 6) {
                 Text(Fraktur.titel(repo.buch.titel)).font(Schrift.fraktur(30)).foregroundStyle(Theme.tinte).accessibilityLabel(repo.buch.titel)
@@ -70,7 +86,7 @@ struct StartView: View {
                     Button { nav.open(.kapitel(k.slug, nil)) } label: {
                         HStack(spacing: 12) {
                             ZStack {
-                                Circle().fill(progress.istGelesen(k) ? Theme.erfolg : Theme.weich).frame(width: 34, height: 34)
+                                Circle().fill(progress.istGelesen(k) ? Theme.akzent : Theme.weich).frame(width: 34, height: 34)
                                 if progress.istGelesen(k) {
                                     Image(systemName: "checkmark").font(.system(size: 14, weight: .bold)).foregroundStyle(Theme.aufAkzent)
                                 } else {

@@ -11,6 +11,7 @@ import Foundation
 ///   -screen fibel|quiz|ueber|toc|settings
 ///   -lang de|en       UI-Sprache
 ///   -demoProgress     Beispiel-Lesestand
+///   -darstellung hell|dunkel|system
 enum Launch {
     #if DEBUG
     private static let args = ProcessInfo.processInfo.arguments
@@ -38,4 +39,5 @@ enum Launch {
     static var menu: String? { wert("-menu") }
     static var screen: String? { wert("-screen") }
     static var demoProgress: Bool { hat("-demoProgress") }
+    static var darstellung: Darstellung? { wert("-darstellung").flatMap(Darstellung.init(rawValue:)) }
 }

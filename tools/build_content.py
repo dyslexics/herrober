@@ -26,6 +26,7 @@ import regex as uregex
 HIER = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HIER)
 from fraktur import frakturisieren  # noqa: E402
+from rechtschreibung import modernisieren  # noqa: E402
 
 ROOT = os.path.dirname(HIER)
 KORR = os.path.join(HIER, 'korrektur')
@@ -73,8 +74,10 @@ def grapheme_ok(s):
     return len(uregex.findall(r'\X', s)) == len(s) and not re.search('[​‌‍\r­]', s)
 
 
-def textblock(typ, neu, **extra):
+def textblock(typ, neu, modern=False, **extra):
     neu = plain(neu)
+    if modern:
+        neu = modernisieren(neu)
     if not neu:
         return None
     assert grapheme_ok(neu), f'Grapheme/Steuerzeichen in: {neu[:60]}'
@@ -97,7 +100,7 @@ def abschnitt_datei(praefix):
     return r[0], True
 
 
-def seiten_parsen(text):
+def seiten_parsen(text, modern=False):
     """Abschnittstext → Liste von Seiten {nr, titel, bild, bloecke:[...]}."""
     seiten = []
     seite = None
@@ -110,17 +113,17 @@ def seiten_parsen(text):
             return
         if para:
             if not transkription:
-                b = textblock('absatz', ' '.join(para))
+                b = textblock('absatz', ' '.join(para), modern=modern)
                 if b: seite['bloecke'].append(b)
             para = []
         if liste:
-            items = [textblock('item', it) for it in liste['items']]
+            items = [textblock('item', it, modern=modern) for it in liste['items']]
             items = [i for i in items if i]
             if items and not transkription:
                 seite['bloecke'].append({'typ': 'liste', 'nummeriert': liste['nummeriert'], 'items': items})
             liste = None
         if tabelle:
-            zeilen = [[plain(c) for c in row] for row in tabelle]
+            zeilen = [[modernisieren(plain(c)) if modern else plain(c) for c in row] for row in tabelle]
             if not transkription:
                 seite['bloecke'].append({'typ': 'tabelle', 'zeilen': zeilen})
             tabelle = []
@@ -133,6 +136,8 @@ def seiten_parsen(text):
             t = s[4:].strip()
             m = re.match(r'^Seite (\d+(?:[–-]\d+)?)(?: · (.*))?$', t)
             seite = {'nr': m.group(1) if m else '', 'titel': (m.group(2) if m else t) or '', 'bloecke': []}
+            if modern:
+                seite['titel'] = modernisieren(seite['titel'])
             seiten.append(seite)
             statistik['kontext'] = f"Seite {seite['nr'] or seite['titel']}"
             transkription = False
@@ -155,22 +160,22 @@ def seiten_parsen(text):
         if s.startswith('#'):
             flush()
             lvl = len(s) - len(s.lstrip('#'))
-            b = textblock('ueberschrift', s[lvl:].strip(), ebene=lvl)
+            b = textblock('ueberschrift', s[lvl:].strip(), modern=modern, ebene=lvl)
             if b and not transkription: seite['bloecke'].append(b)
             continue
         if s.startswith('@@'):
             flush()
-            b = textblock('randtitel', s[2:].strip())
+            b = textblock('randtitel', s[2:].strip(), modern=modern)
             if b and not transkription: seite['bloecke'].append(b)
             continue
         if re.match(r'^\*{1,3}\)', s):
             flush()
-            b = textblock('fussnote', s)
+            b = textblock('fussnote', s, modern=modern)
             if b and not transkription: seite['bloecke'].append(b)
             continue
         if s.startswith('>'):
             flush()
-            b = textblock('zitat', s[1:].strip())
+            b = textblock('zitat', s[1:].strip(), modern=modern)
             if b and not transkription: seite['bloecke'].append(b)
             continue
         if s.startswith('|'):
@@ -199,8 +204,8 @@ def kapitel_bauen():
     for praefix, slug, nummer, titel in KAPITEL:
         pfad, fallback = abschnitt_datei(praefix)
         text = open(pfad, encoding='utf-8').read()
-        seiten = [s for s in seiten_parsen(text) if s['bloecke']]
-        out.append({'slug': slug, 'nummer': nummer, 'titel': titel, 'seiten': seiten,
+        seiten = [s for s in seiten_parsen(text, modern=True) if s['bloecke']]
+        out.append({'slug': slug, 'nummer': modernisieren(nummer), 'titel': modernisieren(titel), 'seiten': seiten,
                     'woerter': sum(len(re.findall(r'\w+', b.get('neu', ''))) for s in seiten for b in s['bloecke'])
                     + sum(len(re.findall(r'\w+', i['neu'])) for s in seiten for b in s['bloecke'] if b['typ'] == 'liste' for i in b['items']),
                     'quelle_fallback': fallback})
@@ -209,7 +214,7 @@ def kapitel_bauen():
 
 def vorsatz_bauen():
     pfad, _ = abschnitt_datei('03_')
-    return [s for s in seiten_parsen(open(pfad, encoding='utf-8').read()) if s['bloecke'] or s.get('bild')]
+    return [s for s in seiten_parsen(open(pfad, encoding='utf-8').read(), modern=True) if s['bloecke'] or s.get('bild')]
 
 
 def inhaltsverzeichnis():
@@ -220,7 +225,9 @@ def inhaltsverzeichnis():
             if b['typ'] == 'tabelle':
                 for z in b['zeilen']:
                     if len(z) >= 2 and z[0] != 'Inhalt':
-                        eintraege.append({'titel': z[0], 'seite': z[1]})
+                        # Kapitelverweise folgen der Lesefassung; Titel zu Bildtafeln bleiben historisch.
+                        kapiteltext = z[1].isdigit() and 5 <= int(z[1]) <= 80
+                        eintraege.append({'titel': modernisieren(z[0]) if kapiteltext else z[0], 'seite': z[1]})
     return eintraege
 
 
@@ -330,9 +337,9 @@ def ueber():
         a = absatz.strip()
         if not a: continue
         if a.startswith('#'):
-            b = textblock('ueberschrift', a.lstrip('#').strip(), ebene=2)
+            b = textblock('ueberschrift', a.lstrip('#').strip(), modern=True, ebene=2)
         else:
-            b = textblock('absatz', ' '.join(a.split('\n')))
+            b = textblock('absatz', ' '.join(a.split('\n')), modern=True)
         if b: bloecke.append(b)
     return bloecke
 
@@ -359,7 +366,7 @@ def main():
         'version': 1,
         'buch': {'titel': 'Servierkunde', 'untertitel': 'Ein Hilfsbuch zur Unterstützung des Unterrichtes in der praktischen und theoretischen Servierkunde',
                  'autoren': 'Adolf Fr. Heß, unter Mitwirkung von Karl Scheichelbauer und Anton Sirowy',
-                 'ort_jahr': 'Wien, 1899. Selbstverlag der Schuldirection.',
+                 'ort_jahr': 'Wien, 1899. Selbstverlag der Schuldirektion.',
                  'einband': 'Servierkunde_1899_Einband.jpg', 'titelblatt': 'Servierkunde_1899_Titelblatt.jpg'},
         'vorsatz': vorsatz_bauen(),
         'kapitel': kapitel_bauen(),

@@ -19,25 +19,25 @@ extension Color {
     }
 }
 
-/// Wiener Kaffeehaus 1899: Papier, Tinte, Flaschengrün, Gold. Farbe ist nie das einzige Signal.
+/// Wiener Kaffeehaus 1899: Papier, Tinte, Blau, Gold. Farbe ist nie das einzige Signal.
 enum Theme {
-    static let bg       = Color.adaptiv(hell: 0xF6EEDC, dunkel: 0x141A16)
-    static let flaeche  = Color.adaptiv(hell: 0xFDF9F0, dunkel: 0x1D2621)
+    static let bg       = Color.adaptiv(hell: 0xF6EEDC, dunkel: 0x141B26)
+    static let flaeche  = Color.adaptiv(hell: 0xFDF9F0, dunkel: 0x1D2939)
     static let tinte    = Color.adaptiv(hell: 0x2B2118, dunkel: 0xEEE6D4)
     static let leise    = Color.adaptiv(hell: 0x6E5F4B, dunkel: 0xB5AA95)
-    static let akzent   = Color.adaptiv(hell: 0x2F5D46, dunkel: 0x9FD1B4)
+    static let akzent   = Color.adaptiv(hell: 0x234F7D, dunkel: 0xA8CBF0)
     static let gold     = Color.adaptiv(hell: 0xB08D3C, dunkel: 0xE2C57A)
-    static let weich    = Color.adaptiv(hell: 0xE9E0C8, dunkel: 0x2A3630)
-    static let linie    = Color.adaptiv(hell: 0xD9CDB2, dunkel: 0x33413A)
+    static let weich    = Color.adaptiv(hell: 0xE9E0C8, dunkel: 0x2A394D)
+    static let linie    = Color.adaptiv(hell: 0xD9CDB2, dunkel: 0x364960)
     static let fehler   = Color.adaptiv(hell: 0x9A3838, dunkel: 0xF4B2AE)
     static let erfolg   = Color.adaptiv(hell: 0x236344, dunkel: 0x98D7B2)
     /// Textmarker für das mitlaufende Wort beim Vorlesen
     static let markierung = Color.adaptiv(hell: 0xFFE500, dunkel: 0x8C7A1F)
     static let markierungUI = UIColor { $0.userInterfaceStyle == .dark ? UIColor(rgb: 0x8C7A1F) : UIColor(rgb: 0xFFE500) }
     static let tinteUI = UIColor { $0.userInterfaceStyle == .dark ? UIColor(rgb: 0xEEE6D4) : UIColor(rgb: 0x2B2118) }
-    static let akzentUI = UIColor { $0.userInterfaceStyle == .dark ? UIColor(rgb: 0x9FD1B4) : UIColor(rgb: 0x2F5D46) }
+    static let akzentUI = UIColor { $0.userInterfaceStyle == .dark ? UIColor(rgb: 0xA8CBF0) : UIColor(rgb: 0x234F7D) }
     /// Text auf Akzent-Flächen (Primärbutton)
-    static let aufAkzent = Color.adaptiv(hell: 0xFFFFFF, dunkel: 0x141A16)
+    static let aufAkzent = Color.adaptiv(hell: 0xFFFFFF, dunkel: 0x141B26)
 
     static let radius: CGFloat = 12
     static let seite: CGFloat = 24
