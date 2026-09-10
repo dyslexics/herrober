@@ -196,6 +196,7 @@ def offen_seite(status):
     for u in status.get('unsicher', []):
         teile.append(f'<tr><td>{esc(u["wo"])}</td><td><b>{esc(u["wort"])}</b></td><td>{esc(u["umfeld"])}</td></tr>')
     teile.append('</table>')
+    teile.append('<h2>Berichte der Agenten</h2><p>Entscheidungen und Rekonstruktionen je Kapitel/Tafel/Menu: <a href="berichte.html">berichte.html</a></p>')
     teile.append('<h2>Fehlendes Material</h2><ul><li>20 Quell-PDFs (Textseiten) aus Apple Notes → <code>/var/www/html/HERROBER/IDEE/sources/</code></li><li>21 Bilder der Beilage 1936 → <code>/var/www/html/HERROBER/IDEE/pictures/1936/</code></li></ul>')
     teile.append(FUSS)
     return '\n'.join(teile)
@@ -227,6 +228,8 @@ def main():
     status = json.load(open(os.path.join(HIER, 'out', 'text_status.json'), encoding='utf-8')) if os.path.exists(os.path.join(HIER, 'out', 'text_status.json')) else {}
     seiten = {'index.html': index_seite(kennz, status), 'text.html': text_seite(), 'tafeln.html': tafeln_seite(kennz),
               'menus.html': menus_seite(kennz), 'woerter.html': woerter_seite(), 'offen.html': offen_seite(status)}
+    bericht = open(os.path.join(TOOLS, 'korrektur', 'BERICHTE.md'), encoding='utf-8').read() if os.path.exists(os.path.join(TOOLS, 'korrektur', 'BERICHTE.md')) else ''
+    seiten['berichte.html'] = kopf('Berichte') + '<pre style="white-space:pre-wrap;font:15px/1.5 system-ui">' + esc(bericht) + '</pre>' + FUSS
     for name, inhalt in seiten.items():
         open(os.path.join(OUT, name), 'w', encoding='utf-8').write(inhalt)
     os.makedirs(os.path.join(OUT, 'fonts'), exist_ok=True)
