@@ -10,3 +10,5 @@ fastlane/report.xml
 __pycache__/
 .DS_Store
 tools/review_site/out/
+.narration-audio-stage-*/
+narration-incoming/

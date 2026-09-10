@@ -91,6 +91,11 @@ struct UeberView: View {
                     }
                 }
                 .frame(maxWidth: .infinity)
+                if AufnahmenKatalog.shared.eintraege.values.contains(where: \.supplement) {
+                    NavigationLink { HoertexteView() } label: {
+                        Label(LT("Weitere Hörtexte", "More recordings"), systemImage: "headphones")
+                    }.accessibilityIdentifier("narration.library")
+                }
                 ForEach(Array(repo.bibliothek.ueber.enumerated()), id: \.offset) { i, b in
                     BlockView(block: b, seite: -1, index: i, alt: false)
                 }

@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "manifest_sha256": "ce78d1c1b4fb9e6031ef1b7d631922724681d32fe5318987b18fc8d4795240f5",
+  "producer": {
+    "provider": "REQUIRED",
+    "model": "REQUIRED",
+    "voice": "REQUIRED",
+    "usage_rights": "REQUIRED"
+  },
+  "recordings": []
+}

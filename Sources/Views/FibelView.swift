@@ -236,15 +236,18 @@ struct FibelQuizView: View {
 /// Einzelne Wörter/Buchstaben sprechen (Fibel): AVSpeechSynthesizer, beste installierte deutsche Stimme.
 final class Sprecher {
     private let synth = AVSpeechSynthesizer()
+    private let aufnahme = AufnahmePlayer()
     private static let stimme: AVSpeechSynthesisVoice? = {
         let de = AVSpeechSynthesisVoice.speechVoices().filter { $0.language.hasPrefix("de") }
         return de.first { $0.quality == .premium } ?? de.first { $0.quality == .enhanced } ?? AVSpeechSynthesisVoice(language: "de-AT") ?? AVSpeechSynthesisVoice(language: "de-DE")
     }()
 
     func sprich(_ text: String) {
+        aufnahme.stop()
         synth.stopSpeaking(at: .immediate)
         try? AVAudioSession.sharedInstance().setCategory(.playback, mode: .spokenAudio)
         try? AVAudioSession.sharedInstance().setActive(true)
+        if aufnahme.lesen(text, sprache: "de-AT", markierung: { _ in }, fertig: {}) { return }
         let u = AVSpeechUtterance(string: text)
         u.voice = Sprecher.stimme
         u.rate = 0.42

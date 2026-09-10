@@ -4,6 +4,33 @@ iOS-App (SwiftUI, iOS 17+) zum Lesen und Hören des gemeinfreien Wiener Lehrbuch
 
 Website: https://appsthrum.com/herrober/
 
+## Vertonung durch eine andere LLM
+
+Der vollständige Textbestand ist als **1.171 Sprechaufträge** vorbereitet, mit festen IDs,
+Sprachen und Wortzuordnung. Eine andere LLM kann die Aufnahmen mit ihrem Audiowerkzeug
+erzeugen und über die geprüfte Schnittstelle zurückliefern.
+
+**[Arbeitsauftrag kopieren](docs/VERTONUNG_PROMPT.md)** ·
+**[Übergabepaket als ZIP](narration/HerrOber-Vertonung.zip)** ·
+**[Audio prüfen und einlesen](docs/VERTONUNG.md)**
+
+```sh
+.venv/bin/python tools/narration.py export
+.venv/bin/python tools/narration.py validate --delivery narration-incoming/gesamt/delivery.json
+.venv/bin/python tools/narration.py import --delivery narration-incoming/gesamt/delivery.json
+```
+
+Export und Import erzeugen selbst keine Sprache. Der Import übernimmt Audio samt echten
+Wortzeiten und sichert den vorherigen Stand. Kapitel behalten ihren Player; Lerntexte und
+Fibel nutzen passende importierte Aufnahmen. Zusätzliche Texte werden unter „Über das Buch →
+Weitere Hörtexte“ zugänglich. Ein neuer App-Build ist nach dem Import erforderlich.
+
+## App-Stand
+
+**TestFlight: 1.0 (3)**, am 10.09.2026 für „Mario intern“ geprüft und von Mario angenommen.
+Der Quellbestand enthält zusätzlich die vorbereitete Audio-Schnittstelle für einen nächsten
+Build. Die vollständige neue Vertonung durch eine andere LLM steht noch aus.
+
 Die Lesetexte verwenden heutige deutsche Rechtschreibung in beiden Schriftansichten. Historische
 Quelldateien, Bildbeschreibungen und Menükarten bleiben erhalten.
 Die redaktionellen Ersetzungen und ihre Abgrenzung stehen in `docs/rechtschreibung.md`.
@@ -29,6 +56,7 @@ lassen sich mit Wortmarkierung anhören. Originales Appsthrum-Banner mit Link am
   - `rechtschreibung.py`, `rechtschreibung_woerter.json` – geprüfte Modernisierung nur der Lesetexte
   - `enhance_images.py` – farberhaltende Restaurierung der Scans
   - `build_audio.py` – edge-tts mit WordBoundary, Alignment auf Anzeigetext, AAC
+  - `narration.py` – anbieterneutraler Textexport und geprüfter Audioimport; [Anleitung](docs/VERTONUNG.md)
   - `review_site/` – Prüfseiten (Text roh/neu/alt, Bilder vorher/nachher, Hörproben)
   - `sync.sh`, `sim_shots.sh`, `mac_release.sh` – Build auf dem Mac (xcodegen, Simulator, Archiv, Upload)
 - `project.yml` – xcodegen-Projekt

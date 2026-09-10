@@ -1,13 +1,14 @@
 import AVFoundation
 import SwiftUI
 
-/// Die Ergänzungen sprechen mit der installierten deutschen Systemstimme, auch offline.
+/// Importierte Aufnahmen mit Wortzeiten; ohne passende Aufnahme spricht die Systemstimme.
 /// Ein Sprecher pro Lernziel verhindert gleichzeitig laufende Erklärungen.
 final class LernStimme: NSObject, ObservableObject, AVSpeechSynthesizerDelegate {
     @Published private(set) var aktiv: String?
     @Published private(set) var bereich: NSRange?
-    @Published var langsam = true
+    @Published var langsam = true { didSet { aufnahme.langsam = langsam } }
     private let synth = AVSpeechSynthesizer()
+    private let aufnahme = AufnahmePlayer()
     private var aktuell: AVSpeechUtterance?
     override init() { super.init(); synth.delegate = self }
     func lesen(_ text: String, id: String, sprache: String = "de-AT") {
@@ -15,13 +16,17 @@ final class LernStimme: NSObject, ObservableObject, AVSpeechSynthesizerDelegate 
         stop()
         try? AVAudioSession.sharedInstance().setCategory(.playback, mode: .spokenAudio)
         try? AVAudioSession.sharedInstance().setActive(true)
+        aktiv = id
+        aufnahme.langsam = langsam
+        if aufnahme.lesen(text, sprache: sprache, markierung: { [weak self] in self?.bereich = $0 },
+                          fertig: { [weak self] in self?.aktiv = nil; self?.bereich = nil }) { return }
         let u = AVSpeechUtterance(string: text)
         u.voice = AVSpeechSynthesisVoice(language: sprache) ?? AVSpeechSynthesisVoice(language: "de-DE")
         u.rate = langsam ? 0.40 : 0.50
         aktuell = u; aktiv = id
         synth.speak(u)
     }
-    func stop() { aktuell = nil; synth.stopSpeaking(at: .immediate); aktiv = nil; bereich = nil }
+    func stop() { aktuell = nil; aufnahme.stop(); synth.stopSpeaking(at: .immediate); aktiv = nil; bereich = nil }
     func markierung(_ text: String, id: String) -> Range<Int>? {
         guard aktiv == id, let bereich, let r = Range(bereich, in: text) else { return nil }
         return text.distance(from: text.startIndex, to: r.lowerBound)..<text.distance(from: text.startIndex, to: r.upperBound)
