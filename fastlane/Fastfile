@@ -1,0 +1,44 @@
+default_platform(:ios)
+
+platform :ios do
+  before_all do
+    app_store_connect_api_key(
+      key_id: "V7L56GN3N8",
+      issuer_id: "69a6de82-3ffb-47e3-e053-5b8c7c11a4d1",
+      key_filepath: File.expand_path("~/.appstoreconnect/private_keys/AuthKey_V7L56GN3N8.p8")
+    )
+  end
+
+  desc "App in Dev-Portal + App Store Connect anlegen (braucht FASTLANE_PASSWORD)"
+  lane :createapp do
+    create_app_online(
+      app_identifier: "de.dvld.herrober",
+      app_name: "Herr Ober!",
+      language: "de-DE",
+      sku: "de.dvld.herrober",
+      app_version: "1.0",
+      skip_devcenter: true
+    )
+  end
+
+  desc "App-Store-Provisioning-Profil ziehen und installieren"
+  lane :profile do
+    sigh(app_identifier: "de.dvld.herrober", output_path: "build")
+  end
+
+  desc "Privacy-Label: keine Datenerfassung (braucht FASTLANE_PASSWORD, itc team)"
+  lane :privacy do
+    upload_app_privacy_details_to_app_store(
+      username: "marioengel@me.com",
+      team_id: "347437",
+      app_identifier: "de.dvld.herrober",
+      json_path: "fastlane/app_privacy_details.json"
+    )
+  end
+
+  desc "Metadaten hochladen (ohne Binary, ohne Screenshots)"
+  lane :meta do
+    deliver(app_identifier: "de.dvld.herrober", force: true, skip_binary_upload: true,
+            skip_screenshots: true, run_precheck_before_submit: false)
+  end
+end

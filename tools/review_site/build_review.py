@@ -207,12 +207,16 @@ def index_seite(kennzahlen, status):
                      for v in ('de-AT-JonasNeural', 'de-AT-IngridNeural', 'de-DE-ConradNeural'))
     probe_text = open(os.path.join(HIER, 'out', 'audio', 'probe_text.txt'), encoding='utf-8').read() if os.path.exists(os.path.join(HIER, 'out', 'audio', 'probe_text.txt')) else ''
     gesamt = sum(k.get('bytes', [0])[0] for k in kennzahlen.values())
+    shot_dir = os.path.join(HIER, 'out', 'shots')
+    shots = ''.join(f'<div class="karte"><img src="shots/{f}" style="width:100%;border-radius:8px" alt="{esc(f)}"><div class="kennzahl">{esc(f)}</div></div>'
+                    for f in sorted(os.listdir(shot_dir)) if f.endswith('.png')) if os.path.isdir(shot_dir) else ''
     return f'''{kopf('Übersicht')}<h1>Herr Ober! – Servierkunde 1899 · Prüfseiten</h1>
 <p class="hinweis">Stand wird bei jedem Build neu erzeugt. Entscheidungen bitte an Henry: Stimme, Bildvarianten, Korrekturen.</p>
 <h2>Hörprobe: Welche Stimme?</h2><p>Text: „{esc(probe_text[:160])}…“</p><div class="karten">{proben}</div>
 <h2>Text</h2><table class="stat"><tr><th>Nr.</th><th>Kapitel</th><th>Seiten</th><th>Wörter</th><th>Status</th></tr>{kap}</table>
 <p>{len(status.get("unsicher", []))} unsichere Wörter → <a href="offen.html">Offene Stellen</a> · <a href="text.html">Text dreispaltig</a> · <a href="woerter.html">ſ-Wortliste</a></p>
 <h2>Bilder</h2><p>{len(kennzahlen)} Bilder bereinigt, App-Fassung gesamt {gesamt / 1e6:.1f} MB → <a href="tafeln.html">Tafeln</a> · <a href="menus.html">Menus</a></p>
+<h2>App-Screenshots (Simulator, aktueller Build)</h2><div class="karten">{shots}</div>
 {FUSS}'''
 
 
@@ -232,8 +236,9 @@ def main():
         d = os.path.join(OUT, ziel); os.makedirs(d, exist_ok=True)
         for f in os.listdir(os.path.join(ROOT, 'Content', sub)):
             shutil.copy(os.path.join(ROOT, 'Content', sub, f), os.path.join(d, f))
-    if os.path.isdir(os.path.join(HIER, 'out', 'audio')):
-        shutil.copytree(os.path.join(HIER, 'out', 'audio'), os.path.join(OUT, 'audio'), dirs_exist_ok=True)
+    for sub in ('audio', 'shots'):
+        if os.path.isdir(os.path.join(HIER, 'out', sub)):
+            shutil.copytree(os.path.join(HIER, 'out', sub), os.path.join(OUT, sub), dirs_exist_ok=True)
     print('Prüfseiten in', OUT, sorted(seiten))
     if a.deploy:
         os.makedirs(DEPLOY, exist_ok=True)
