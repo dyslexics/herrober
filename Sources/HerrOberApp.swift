@@ -68,6 +68,7 @@ enum Route: Hashable {
     case fibelQuiz
     case toc
     case ueber
+    case warum
     case lernen(String, String)    // Art, stabile Inhalts-ID
 }
 
@@ -131,6 +132,7 @@ struct RootView: View {
         case "fibel": nav.tab = 2
         case "quiz": nav.tab = 2; nav.open(.fibelQuiz)
         case "ueber": nav.tab = 3; nav.open(.ueber)
+        case "warum": nav.tab = 3; nav.open(.ueber); nav.open(.warum)
         case "toc": nav.tab = 0; nav.open(.toc)
         case "settings": nav.tab = 3
         default: break
@@ -162,6 +164,7 @@ struct RouteView: View {
         case .fibelQuiz: FibelQuizView()
         case .toc: InhaltsverzeichnisView()
         case .ueber: UeberView()
+        case .warum: WarumView()
         case .lernen(let art, let id): LernRouteView(art: art, id: id)
         }
     }

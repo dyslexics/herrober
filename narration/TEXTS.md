@@ -7596,6 +7596,204 @@ ueber · de-AT
 
 UnifrakturMaguntia (SIL Open Font License 1.1), Atkinson Hyperlegible (SIL Open Font License 1.1). Vorlesestimme: neuronale Sprachsynthese. App-Code: GPL-3.0.
 
+## narr-f2687e4d3c6baa822658a12af097b7a1c81033a1340d533ec5384687476f05d8
+
+warum · de-AT
+
+Warum ein Legasthenieverband ein Kellnerbuch von 1899 vertont hat
+
+## narr-abe1b41ac1ff1ab5a6049b3df1930c9dc74cdd772c0581f1a00a4ded7ab3e6b8
+
+warum · de-AT
+
+Ein Lehrbuch für Kellner-Lehrlinge, gedruckt in Wien im Jahr 1899, in Frakturschrift, mit Bildtafeln zu Gläsern, Bestecken und Festtafeln. Und der Dachverband Legasthenie Deutschland macht daraus eine App. Auf den ersten Blick passt das nicht zusammen. Auf den zweiten Blick ist es genau das, was ein Verband tun muss, der seit Jahren erklärt, was Lesen ist und warum es manchen Menschen schwerfällt.
+
+## narr-c48e5eea17f376c309fcfe1aef54e6c35c19021cedf74cfad4a9691bb6cf726d
+
+warum · de-AT
+
+Lesen ist eine Kulturtechnik, keine Selbstverständlichkeit
+
+## narr-5659a5bcbc71d8367c4aac9ce314dc9c052b90f7d519314912b0fcea0687a89e
+
+warum · de-AT
+
+Lesen, Schreiben und Rechnen sind Kulturtechniken. Kein Mensch bringt sie mit auf die Welt. Jedes Kind muss sie erlernen, Symbol für Symbol, bis das Erkennen und Verstehen von selbst läuft. Wer als Erwachsener flüssig liest, hat vergessen, wie viel Arbeit dahintersteckt. Die Buchstaben sind so vertraut, dass sie durchsichtig geworden sind. Man sieht nicht mehr die Zeichen, man sieht die Bedeutung.
+
+## narr-cad1f14a3e40b28325ffddec38a3024ca08b7a384b3060766a0db0ff9bc7fafa
+
+warum · de-AT
+
+Dr. Astrid Kopp-Duller, die Entwicklerin der AFS-Methode, beschreibt in ihrem Buch „Legasthenie – Training nach der AFS-Methode“, was diesem Vorgang zugrunde liegt: Intakte Sinneswahrnehmungen sind die Voraussetzung für die Kulturtechniken. Das Auge muss ähnliche Formen unterscheiden, das Gedächtnis muss Wortbilder speichern und abrufen, und die Reihenfolge der Buchstaben muss sicher erfasst werden. Erst wenn diese Teilleistungen zusammenspielen, wird aus einer Zeile voller Zeichen ein Satz mit Sinn. Sie erinnert dabei an einen alten Satz, der auf Aristoteles zurückgeht: Nichts ist im Verstand, was nicht zuvor in den Sinnen war.
+
+## narr-3a1a03a050fe66731adef6d92b00b6d57f7730937262fc20a7c8b3122a5596fd
+
+warum · de-AT
+
+Ein zweiter Gedanke aus ihrer Arbeit ist für dieses Projekt entscheidend. Alle Texte dieser Welt bestehen aus einer beschränkten Anzahl von Symbolen. Für ein Kind, dem das Lesen schwerfällt, wirkt ein Text oft unendlich und nicht bewältigbar. Sobald es begreift, dass hinter jedem noch so langen Buch nur ein paar Dutzend Zeichen stehen, verliert der Text seinen Schrecken. Dieses Bewusstsein steht am Anfang jedes Lesenlernens.
+
+## narr-f30fc08ced806e533be67c7715dd8a490d4b99d5ff15ec7ea1777865e212524f
+
+warum · de-AT
+
+Was legasthene Menschen erleben
+
+## narr-677178fa431f99f4a0eadd03907460b922392d52218b5007ece162c0c684ae6a
+
+warum · de-AT
+
+Etwa 15 Prozent aller Menschen sind legasthen. Legasthenie ist keine Krankheit, keine Schwäche und keine Störung. Sie ist biogenetisch bedingt und äußert sich in einer differenten Sinneswahrnehmung: Diese Menschen nehmen Symbole anders wahr als die Mehrheit. Dr. Astrid Kopp-Duller spricht deshalb von „differenten“ Menschen. Sie sind anders, nicht weniger. Ihre Intelligenz hat mit der Beherrschung der Kulturtechniken nichts zu tun.
+
+## narr-22303a7120449c7976125f4fc09bc2e0afab8d9cc276e341397aa2dd5018eac9
+
+warum · de-AT
+
+Im Alltag zeigt sich das so: Ähnliche Buchstaben lassen sich schwer auseinanderhalten, etwa b und d. Wortbilder bleiben nicht im Gedächtnis, obwohl das Kind sie gestern noch geschrieben hat. Beim Lesen verrutscht die Zeile. Und bei der Arbeit mit Symbolen lässt die Aufmerksamkeit zeitweise nach, während dasselbe Kind beim Spielen oder beim Zuhören voll dabei ist. Die Fehler, die dabei entstehen, sind Wahrnehmungsfehler, keine Fehler aus Faulheit oder mangelndem Regelwissen. Dasselbe Wort steht in einem Text dreimal unterschiedlich falsch, während ein schwieriges Wort daneben gelingt.
+
+## narr-238d78b642946a99bf0e5375222c35d40ae8afdc5c7cdb383125957ca339bbf0
+
+warum · de-AT
+
+Dazu kommt der Zeitfaktor. Legasthene Menschen brauchen mehr Zeit, um Buchstaben, Wörter und Zahlen dauerhaft zu verankern. Für eine einzige Art von Buchstaben, etwa die Druckschrift, rechnet Dr. Astrid Kopp-Duller mit bis zu zwei Jahren. Dieser Aufwand wird von außen unterschätzt, weil der Rest der Klasse längst weiter ist. Genau hier setzt unser Buch von 1899 an.
+
+## narr-7aed09b218008b3404ec38e864f262fd33f567691f9dd469bbee0deae6197d09
+
+warum · de-AT
+
+Ein neues Alphabet für alle
+
+## narr-a66fbfd27e4c97f1b5498828648fe03cd21a80ff2528f368da1d6c1685c9638a
+
+warum · de-AT
+
+Wer die App öffnet und die alte Schriftansicht wählt, liest den Satz, mit dem das erste Kapitel beginnt: „Tritt ein Gast in das Lokal, so haben ihn die anwesenden Kellner stehend zu begrüßen.“ Die meisten Buchstaben sind vertraut. Ein paar sind es nicht. Das lange s sieht aus wie ein f. Das große A ähnelt einem U, das B einem V, und k, t und f unterscheiden sich in dieser Schrift nur durch einen Bogen oder einen Querstrich. Buchstaben wie ch, ck und tz sind zu einem Zeichen verbunden. Nach ein paar Zeilen merkt jeder Leser, was passiert: Das Tempo fällt, die Augen springen zurück, man rät, man verliert die Zeile, man muss ein Wort zweimal ansehen, bis es Sinn ergibt.
+
+## narr-998284371606d65091ae09f121937dd4032baa3f5d55c55007727bb7943228ec
+
+warum · de-AT
+
+Das ist die Erfahrung, die wir allen Menschen zugänglich machen wollen. Für ein paar Minuten steht ein geübter Leser dort, wo ein legasthenes Kind jeden Schultag steht: vor Zeichen, die es kennt und doch nicht sicher erkennt. Die Wörter sind da, die Bedeutung ist da, aber der Weg vom Zeichen zum Sinn ist plötzlich lang und anstrengend. Fraktur ist dafür ein ehrliches Werkzeug, weil sie kein Kunstprodukt ist. Millionen Menschen haben diese Schrift gelesen und geschrieben. Ihre Urgroßeltern konnten sie lesen. Sie selbst müssen sie neu lernen, Buchstabe für Buchstabe, und das dauert.
+
+## narr-d57a6ec51c61e0637d241796c39c951a344c10d3186ec0f00d0a5e2043f20021
+
+warum · de-AT
+
+Wir sagen dabei ehrlich, wo diese Erfahrung endet. Eine differente Sinneswahrnehmung lässt sich durch einen Schriftwechsel nicht nachstellen. Wer Fraktur lernt, hat nach einigen Stunden eine neue Buchstabenform verankert und liest wieder flüssig. Ein legasthener Mensch trägt seine Wahrnehmung ein Leben lang mit sich und braucht dafür pädagogische Hilfe, Zeit und Anerkennung. Die App ersetzt kein Legasthenietraining und keine Abklärung durch diplomierte Legasthenietrainer. Aber sie schafft etwas, das kein Vortrag schafft: Verständnis aus eigener Erfahrung. Ein Vater, der sich zehn Minuten durch eine Frakturseite gearbeitet hat, hört seinem Kind anders zu. Eine Mitschülerin, die an „Wasser“ hängen geblieben ist, lacht beim nächsten Vorlesen nicht mehr.
+
+## narr-2f4d76a24141bfe38c16b3338d4febdfdd9ad6c1e461ffe9a870540aeaa80bbb
+
+warum · de-AT
+
+Alte Wörter, alte Sätze
+
+## narr-e9b12bb5b444366ca030e270792544121e0929ebae290a1c70da5b89eb584f47
+
+warum · de-AT
+
+Die Schrift ist die eine Hürde. Die Sprache von 1899 ist die zweite. Das Buch spricht vom Kuvert, das hier das Gedeck meint, von der Kredenz, vom Réchaud und von der Menage, vom Gabelfrühstück und von der Table d’hôte. Die Sätze sind länger als heute, die Anrede ist förmlich, die Rangordnung im Hotel wird ausführlich erklärt. Wer diese Texte liest, erlebt eine zweite Erkenntnis aus der Arbeit von Dr. Astrid Kopp-Duller: Ein Wort gelangt nur dann ins Langzeitgedächtnis, wenn der Leser es in seiner Form sieht, es deutlich hört und seine Bedeutung versteht. Fehlt einer dieser drei Schritte, bleibt das Wort fremd. Man kann es entziffern und trotzdem nichts damit anfangen.
+
+## narr-0752facb78abcc17b273036ab17bdc8d4b4b11f6c41b442720997f37552dad48
+
+warum · de-AT
+
+Deshalb haben wir die App nach genau diesem Muster gebaut, ohne daraus ein Training zu machen. Die Wort-Lupe zeigt jedes Wort groß in heutiger Schrift, das ist das Wortbild. Die Vorlesestimme spricht es aus und markiert es gelb im laufenden Text, das ist der Wortklang. Die Begriffserklärungen unter „Heute erklärt“ sagen, was ein Kuvert im Jahr 1899 bezeichnete und wo es im Buch vorkommt, das ist die Wortbedeutung. Sehen, hören, verstehen, in dieser Reihenfolge und für jedes Wort, das der Leser antippt.
+
+## narr-667841d699da235cc83de3a1895f723cda50b9ba47df7f009b4f3c3335109416
+
+warum · de-AT
+
+Die Lesetexte verwenden heutige Rechtschreibung, damit die Schrift und der Wortschatz die Hürde bilden und nicht die Orthographie von 1899. Die Bildbeschreibungen und die Menükarten behalten die historische Schreibweise, damit das Original sichtbar bleibt. So kann jeder selbst entscheiden, wie viel Fremdheit er sich zumutet.
+
+## narr-ec3a03ba97a7f24e901f7e46085ac242bfb37bf81d3cdc37f9f60d2b9bedafd4
+
+warum · de-AT
+
+Wie die App der AFS-Denkweise folgt
+
+## narr-251d3b76a38be7e9b530759683ccda0273922666be521b9d70915d461fc855b9
+
+warum · de-AT
+
+Die Fraktur-Fibel beginnt beim Buchstaben. Das entspricht dem Grundsatz „vom Buchstaben zum Wort“: Erst wenn die Symbole sicher sitzen, kann man Wortbilder aufbauen. Die Fibel zeigt das Alphabet in Fraktur, benennt die Stolpersteine und lässt den Leser üben, das richtige Wort unter ähnlichen Formen zu finden, etwa „Gast“ neben „Gaft“ und „Gart“. Das ist eine Übung der optischen Differenzierung, wie sie in jedem Legasthenietraining vorkommt, hier mit Wörtern aus einem echten Buch.
+
+## narr-9aa229af97f8c4e3cbe76bff2db3c06c508af8d844136fa6ddad4f45261fdf2b
+
+warum · de-AT
+
+Danach kommen Wortgruppen, dann ganze Sätze aus dem Buch, und dann die Kapitel selbst. Das Vorlesen mit Mitlesemarkierung verbindet Wortbild und Wortklang im selben Moment. Wer will, liest langsamer mit, stellt die Schrift größer und den Zeilenabstand weiter. Die neue Schrift der App, Atkinson Hyperlegible, wurde für gute Lesbarkeit entworfen. Die Bildtafeln zeigen die Gegenstände, von denen der Text spricht, damit Bedeutung auch über das Auge entsteht.
+
+## narr-350f1d4f9c9ac137530928f3bf1ff9ce069782f6d9caf22e179750082ee3a5a5
+
+warum · de-AT
+
+Und die App bewertet nicht. Es gibt keine Punkte, keine Rangliste, keinen Zeitdruck und keinen Vergleich mit anderen Lesern. Das ist kein Zufall. Dr. Astrid Kopp-Duller nennt den Lobesfaktor als Rahmenbedingung jedes Erfolgs: Jede kleine Leistung verdient Anerkennung, und Leistungen werden nie an anderen gemessen, nur am eigenen Fortschritt. Wer eine Frakturseite geschafft hat, hat etwas geschafft. Mehr muss die App dazu nicht sagen.
+
+## narr-16bf33741c8179aa30b38b2321375e63b9e800300bb02aa0dcde5094df367246
+
+warum · de-AT
+
+Mehr als Nachrichten auf dem Telefon
+
+## narr-d0a2592308897c9a7e49f852d9fad1f4e15faed5f5c3e9e0cbf6cf2045311042
+
+warum · de-AT
+
+Menschen lesen heute viel, aber kurz. Nachrichten, Untertitel, Kommentare, Überschriften. Diese Texte sind so gebaut, dass sie ohne Anstrengung verstanden werden. Das ist bequem, und es hat einen Preis: Die Fähigkeit, sich in einen längeren, fremden Text hineinzuarbeiten, wird selten gebraucht und darum selten geübt. Kinder wachsen mit Bildschirmen auf, auf denen jedes Wort in derselben Schrift, derselben Größe und demselben Ton erscheint.
+
+## narr-509900360d30dbd7c63438276e3ca32207c985d513f347a93271ee5a07949b5d
+
+warum · de-AT
+
+Ein Buch von 1899 verlangt etwas anderes. Es verlangt Geduld, Aufmerksamkeit und die Bereitschaft, ein Wort nachzuschlagen. Dafür gibt es etwas zurück, das kein Kurzvideo bietet: Man betritt eine Welt, die es nicht mehr gibt. Ein Wiener Hotel, eine Festtafel für 32 Personen, die Frage, welches Glas zu welchem Wein gehört, und die Menükarte zum Johann-Strauss-Jubiläum vom 15. Oktober 1894. Man liest, wie ein Lehrling vor mehr als 125 Jahren lernte, einen Gast zu begrüßen. Das ist Geschichte zum Anfassen, und sie steht nur dem offen, der lesen kann. Alte Texte, alte Briefe, alte Schriften bleiben verschlossen, wenn niemand mehr die Schrift und die Sprache versteht. Lesen zu können heißt auch, diese Türen öffnen zu können.
+
+## narr-4e8883b22ae6097ba953c716fa06dccbbf4739b9578f40e94b873f9581c7da56
+
+warum · de-AT
+
+Wir wollen zeigen, dass es sich lohnt, und dass es Freude macht. Fraktur zu lesen ist ein kleines Abenteuer. Man lernt sie in kurzer Zeit, und danach kann man etwas, was die wenigsten Mitschüler können. Für legasthene Kinder ist das eine besondere Erfahrung: Hier starten alle bei null. Niemand hat einen Vorsprung, und wer die Stolperbuchstaben einmal verstanden hat, liest genauso gut wie die anderen.
+
+## narr-f0b0f76a8eea5c0be7d0771b7135b4c87c1a75e0e3120cc8e45f354a160a85c4
+
+warum · de-AT
+
+Warum gerade der DVLD
+
+## narr-cf6f4ec2e1cfb04a9f3c275b3e77c10b9c973c6bfdabd59f00611ec8e6212613
+
+warum · de-AT
+
+Der Dachverband Legasthenie Deutschland e. V. beschreibt sein Ziel in wenigen Worten: Aufklärung, Beratung und Perspektiven, damit Talente nicht verloren gehen. Wir tun das seit Jahren mit Texten, Ausbildungen, Vorträgen und mit unserem österreichischen Kooperationspartner, dem Ersten Österreichischen Dachverband Legasthenie, kurz EÖDL, dessen Gründerin Dr. Astrid Kopp-Duller die AFS-Methode entwickelt hat. Nach dieser Methode arbeiten diplomierte Legasthenietrainer in über 60 Ländern.
+
+## narr-16d6506c6efc082997baf535c32088e59c173da9b057c12576d6545a1571f751
+
+warum · de-AT
+
+Erklären kann man mit Worten. Verstehen entsteht durch Erfahrung. Eine App, die jeden Leser für kurze Zeit in die Lage eines legasthenen Kindes versetzt, erreicht Menschen, die keinen Ratgeber lesen würden. Sie erreicht Lehrer, die sich fragen, warum ein kluges Kind so langsam liest. Sie erreicht Geschwister und Freunde. Und sie erreicht die Kinder selbst, die zum ersten Mal erleben, dass auch Erwachsene an Buchstaben scheitern können.
+
+## narr-808cf77fd91fa85b1134c7a1ea36d599895105d4c447d636d200eac4462e4644
+
+warum · de-AT
+
+Darum ist „Herr Ober!“ kostenlos, ohne Werbung und ohne Datensammlung, und darum läuft die App vollständig auf dem Gerät. Das Buch ist gemeinfrei, der Code der App steht unter freier Lizenz. Wir haben es Seite für Seite digitalisiert, den Text neu abgeschrieben, die Bildtafeln vorsichtig restauriert und jedes Kapitel vertonen lassen. Die Idee dazu kam von Rainer Ternik. Umgesetzt hat sie der DVLD in Zusammenarbeit mit dem EÖDL, als Beitrag zu einer Aufgabe, die uns beide verbindet.
+
+## narr-7527090c40470e0f902f77d741b346fe89dde99aa4dd89c4d329d5fcfa36f261
+
+warum · de-AT
+
+Eine Einladung
+
+## narr-9623d79156a63b3d85674f8bc16e4161b995c16d2aef77e912df49ff2cdae5d8
+
+warum · de-AT
+
+Lesen und Schreiben sind für alle Menschen wichtig, mit oder ohne Legasthenie. Wer legasthen ist, braucht dafür einen eigenen Weg mit Training der Aufmerksamkeit, der Sinneswahrnehmungen und der Symptome, mit mehr Zeit und mit Lob für jeden Schritt. Diplomierte Legasthenietrainer in Ihrer Nähe finden Sie unter legasthenietrainer.com. Wer nicht legasthen ist, braucht hin und wieder eine Erinnerung daran, dass Lesen eine Leistung ist, die man einmal mühsam erworben hat und die andere noch erwerben.
+
+## narr-6db779a1ae1eaf0af40b769a4e361dd4acec474ce33f09536d27dfdfd3c3aa63
+
+warum · de-AT
+
+Öffnen Sie das erste Kapitel in der alten Schrift. Lesen Sie den ersten Satz laut. Und dann stellen Sie sich vor, das wäre jeder Satz, jeden Tag, in jedem Fach. Danach wissen Sie, warum wir dieses Buch gemacht haben.
+
 ## narr-492c43742b86e2b4aea59be08452c77abd60682a4de9e76f870dc1bebe6a0474
 
 begriffe · de-AT

@@ -14,6 +14,21 @@ final class HerrOberTests: XCTestCase {
         XCTAssertGreaterThan(repo.bibliothek.inhaltsverzeichnis.count, 100)
     }
 
+    func testWarumKapitelVollstaendig() {
+        let w = repo.bibliothek.warum ?? []
+        XCTAssertGreaterThanOrEqual(w.count, 30, "Titel, acht Abschnitte und ihre Absätze")
+        XCTAssertEqual(w.first?.typ, "ueberschrift")
+        XCTAssertEqual(w.first?.ebene, 1)
+        XCTAssertTrue(w.first?.neu?.contains("Legasthenieverband") ?? false)
+        XCTAssertEqual(w.filter { $0.typ == "ueberschrift" && $0.ebene == 2 }.count, 8, "acht Zwischenüberschriften")
+        for b in w {
+            XCTAssertNotNil(b.neu); XCTAssertNotNil(b.alt)
+            XCTAssertFalse(b.neu!.contains("Couvert"), "Wortformen wie im Lesetext (Kuvert)")
+        }
+        XCTAssertTrue(w.last?.neu?.contains("warum wir dieses Buch gemacht haben") ?? false)
+        XCTAssertTrue(w.contains { $0.neu?.contains("legasthenietrainer.com") ?? false })
+    }
+
     func testSeitenfolgeLueckenlos() {
         var erwartet = 5
         for k in repo.kapitel {

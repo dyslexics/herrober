@@ -15,7 +15,9 @@ fi
 xcrun simctl boot "$UDID" 2>/dev/null || true
 xcrun simctl bootstatus "$UDID" -b >/dev/null
 if [ "$1" != "keinbuild" ]; then
-  xcodebuild -scheme HerrOber -destination "id=$UDID" -derivedDataPath build/sim build CODE_SIGNING_ALLOWED=NO 2>&1 | grep -E "error:|BUILD" | sort -u
+  xcodebuild -scheme HerrOber -destination "id=$UDID" -derivedDataPath build/sim build CODE_SIGNING_ALLOWED=NO > build/sim-build.log 2>&1
+  grep -E "error:|BUILD" build/sim-build.log | sort -u
+  grep -q "BUILD SUCCEEDED" build/sim-build.log || { echo "Abbruch: Build fehlgeschlagen, keine Screenshots vom alten Stand."; exit 1; }
 fi
 APP=$(find build/sim/Build/Products -name "HerrOber.app" -maxdepth 2 | head -1)
 xcrun simctl install "$UDID" "$APP"
@@ -39,4 +41,10 @@ shot 07_tafeln 3 -lang de -tab 1
 shot 08_menu 4 -lang de -menu 08_Schneebergfreunde_1898
 shot 09_start_en 3 -lang en
 shot 10_ueber 3 -lang de -screen ueber
+shot 11_lernen 3 -lang de -screen lernen
+shot 12_glossar 3 -lang de -screen glossar
+shot 13_warum_neu 4 -lang de -screen warum -neu
+shot 14_warum_alt 4 -lang de -screen warum -alt
+shot 15_bildaufgabe 4 -lang de -screen bildaufgabe
+shot 16_leseuebung 4 -lang de -screen leseuebungen
 echo "UDID $UDID"

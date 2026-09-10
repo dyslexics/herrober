@@ -7,6 +7,7 @@ Quellen:
   tools/korrektur/menus/*.json        Menükarten
   raw/manifest.json                   Bild ↔ Seite, crop_fraction der Detailausschnitte
   tools/fibel.json, tools/ueber.md    Lernhilfe und Über-Text
+  tools/warum.md                      Kapitel „Warum dieses Buch“ (DVLD, 2026)
   tools/fraktur.py                    neu → alt (ſ, ſs, ꝛc., Antiqua-Bereiche)
 
 Blocktypen im Markdown der Korrektur: Absatz, `#### Überschrift`, `@@ Randtitel`, `*) Fußnote`, `- Liste`, `1. Liste`,
@@ -328,8 +329,10 @@ def fibel():
     return d
 
 
-def ueber():
-    p = os.path.join(HIER, 'ueber.md')
+def markdown_bloecke(dateiname, modern, ebenen=False):
+    """Absätze einer Markdown-Datei als Textblöcke. `ebenen`: Zahl der Rauten wird zur Überschriftsebene,
+    sonst erhält jede Überschrift Ebene 2 (bisheriges Verhalten des Über-Texts)."""
+    p = os.path.join(HIER, dateiname)
     if not os.path.exists(p):
         return []
     bloecke = []
@@ -337,10 +340,23 @@ def ueber():
         a = absatz.strip()
         if not a: continue
         if a.startswith('#'):
-            b = textblock('ueberschrift', a.lstrip('#').strip(), modern=True, ebene=2)
+            ebene = min(len(a) - len(a.lstrip('#')), 6) if ebenen else 2
+            b = textblock('ueberschrift', a.lstrip('#').strip(), modern=modern, ebene=ebene)
         else:
-            b = textblock('absatz', ' '.join(a.split('\n')), modern=True)
+            b = textblock('absatz', ' '.join(a.split('\n')), modern=modern)
         if b: bloecke.append(b)
+    return bloecke
+
+
+def ueber():
+    return markdown_bloecke('ueber.md', modern=True)
+
+
+def warum():
+    """Kapitel „Warum der DVLD dieses Buch gemacht hat“ (tools/warum.md): redaktioneller Text von 2026,
+    keine Buchtranskription – deshalb ohne Rechtschreibmodernisierung; Fraktur-Ableitung wie bei allen Texten."""
+    bloecke = markdown_bloecke('warum.md', modern=False, ebenen=True)
+    assert not bloecke or (bloecke[0]['typ'] == 'ueberschrift' and bloecke[0].get('ebene') == 1), 'warum.md beginnt mit # Titel'
     return bloecke
 
 
@@ -375,6 +391,7 @@ def main():
         'menus': menus_bauen(),
         'fibel': fibel(),
         'ueber': ueber(),
+        'warum': warum(),
     }
     fehlt, waisen = bilder_pruefen(daten)
     os.makedirs(CONTENT, exist_ok=True)

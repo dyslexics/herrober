@@ -177,6 +177,10 @@ enum L10n {
         "about.cover": "Einband",
         "about.titlepage": "Titelblatt",
         "about.local": "Die App ist kostenlos, ohne Werbung und ohne Datensammlung. Dein Lesefortschritt bleibt auf diesem Gerät.",
+        "about.warum.eyebrow": "Ein Wort vom DVLD",
+        "about.warum.read": "Kapitel lesen",
+        "warum.title": "Warum dieses Buch",
+        "warum.note": "Text: DVLD e. V., September 2026. Fachliche Grundlage: Dr. Astrid Kopp-Duller, „Legasthenie – Training nach der AFS-Methode“, EÖDL-Verlag Klagenfurt.",
         "toc.title": "Inhaltsverzeichnis",
         "toc.page": "S. %@",
     ]
@@ -272,6 +276,10 @@ enum L10n {
         "about.cover": "Cover",
         "about.titlepage": "Title page",
         "about.local": "The app is free, has no ads and collects no data. Your reading progress stays on this device.",
+        "about.warum.eyebrow": "A word from the DVLD",
+        "about.warum.read": "Read the chapter (German)",
+        "warum.title": "Why this book",
+        "warum.note": "Text: DVLD e. V., September 2026, in German. Based on Dr. Astrid Kopp-Duller, “Legasthenie – Training nach der AFS-Methode”, EÖDL-Verlag Klagenfurt.",
         "toc.title": "Table of contents",
         "toc.page": "p. %@",
     ]

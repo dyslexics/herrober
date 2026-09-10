@@ -36,6 +36,11 @@ Quelldateien, Bildbeschreibungen und Menükarten bleiben erhalten.
 Die redaktionellen Ersetzungen und ihre Abgrenzung stehen in `docs/rechtschreibung.md`.
 Der Einband auf der Startseite öffnet sich beim Antippen bildschirmfüllend mit Zoom.
 
+Build 4 (10.09.2026, lokal): Kapitel „Warum ein Legasthenieverband ein Kellnerbuch von 1899 vertont hat“
+(DVLD, nach Dr. Astrid Kopp-Duller) aus `tools/warum.md` → `content.json` „warum“, in „Über das Buch“ als Karte
+mit eigener Seite in beiden Schriften (`-screen warum`); App-Icon hellblau statt grün (`tools/gen_icon.py`);
+Vertonungsexport um die 33 Kapitelblöcke ergänzt (1.204 Aufträge). Landingpage neu: `/home/mario/appsthrum-herrober/build.py`.
+
 Build 3 ergänzt „Entdecken & lernen“: 40 Begriffserklärungen auch in der Wort-Lupe, drei Touren,
 30 Kapitelfragen, drei Bildaufgaben, zwölf Fraktur-Leseübungen, ein kommentiertes Strauss-Menü
 und sechs historische Einordnungen. Lernstand und Merkliste bleiben lokal. Die Ergänzungen

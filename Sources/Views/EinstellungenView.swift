@@ -71,6 +71,7 @@ struct EinstellungenView: View {
 struct UeberView: View {
     @EnvironmentObject private var repo: ContentRepository
     @EnvironmentObject private var settings: Settings
+    @EnvironmentObject private var nav: Navigator
 
     private var versionText: String {
         let info = Bundle.main.infoDictionary ?? [:]
@@ -91,6 +92,9 @@ struct UeberView: View {
                     }
                 }
                 .frame(maxWidth: .infinity)
+                if let warum = repo.bibliothek.warum, let titel = warum.first?.neu {
+                    WarumKarte(titel: titel, teaser: warum.dropFirst().first(where: { $0.typ == "absatz" })?.neu ?? "") { nav.open(.warum) }
+                }
                 if AufnahmenKatalog.shared.eintraege.values.contains(where: \.supplement) {
                     NavigationLink { HoertexteView() } label: {
                         Label(LT("Weitere Hörtexte", "More recordings"), systemImage: "headphones")
@@ -144,5 +148,28 @@ struct AppsthrumLink: View {
         .foregroundStyle(Theme.akzent)
         .accessibilityLabel(LT("Appsthrum.com – Website öffnen", "Appsthrum.com — open website"))
         .accessibilityIdentifier("appsthrum.link")
+    }
+}
+
+/// Einstieg zum Kapitel „Warum dieses Buch“ auf der Über-Seite: Titel, erster Absatz, Knopf.
+struct WarumKarte: View {
+    let titel: String
+    let teaser: String
+    let oeffnen: () -> Void
+
+    var body: some View {
+        Karte {
+            VStack(alignment: .leading, spacing: 10) {
+                Text(T("about.warum.eyebrow")).font(Schrift.eyebrow).foregroundStyle(Theme.akzent)
+                Text(titel).font(Schrift.abschnitt).foregroundStyle(Theme.tinte)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .accessibilityAddTraits(.isHeader)
+                if !teaser.isEmpty {
+                    Text(teaser).font(Schrift.text).foregroundStyle(Theme.leise).lineLimit(4)
+                }
+                PrimaerKnopf(titel: T("about.warum.read"), symbol: "text.book.closed", aktion: oeffnen)
+                    .accessibilityIdentifier("about.warum.read")
+            }
+        }
     }
 }

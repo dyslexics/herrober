@@ -11,7 +11,7 @@ final class ContentRepository: ObservableObject {
     init(bundle: Bundle = .main) {
         self.bundle = bundle
         var lib = Bibliothek(version: 0, buch: Buch(titel: "", untertitel: "", autoren: "", ortJahr: "", einband: "", titelblatt: ""),
-                             vorsatz: [], kapitel: [], inhaltsverzeichnis: [], tafeln: [], menus: [], fibel: nil, ueber: [])
+                             vorsatz: [], kapitel: [], inhaltsverzeichnis: [], tafeln: [], menus: [], fibel: nil, ueber: [], warum: nil)
         if let url = bundle.url(forResource: "content", withExtension: "json", subdirectory: "Content"),
            let data = try? Data(contentsOf: url) {
             do { lib = try JSONDecoder().decode(Bibliothek.self, from: data) } catch { print("content.json: \(error)") }

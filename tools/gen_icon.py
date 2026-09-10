@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""App-Icon 1024×1024 „Herr Ober!“: goldene Servierglocke (Cloche) auf Flaschengrün, darunter Fraktur-Schriftzug.
+"""App-Icon 1024×1024 „Herr Ober!“: goldene Servierglocke (Cloche) auf Hellblau, darunter Fraktur-Schriftzug in Tintenblau.
+Marios Auftrag vom 10.09.2026: hellblauer Hintergrund, kein Grün mehr (passend zur blauen Oberfläche seit Build 2).
 Echtes gezeichnetes Motiv (PIL), keine Text-in-PNG-Abkürzung. Ausgabe: Sources/Assets.xcassets/AppIcon.appiconset/icon-1024.png
 und 120-px-Version für die IOSAPPS-Übersicht (tools/review_site/out/icon-120.png)."""
 import math
@@ -15,23 +16,24 @@ FRAKTUR = os.path.join(ROOT, 'Fonts', 'UnifrakturMaguntia-Book.ttf')
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
 os.makedirs(os.path.dirname(KLEIN), exist_ok=True)
 
-GRUEN_H, GRUEN_D = (0x36, 0x6B, 0x51), (0x22, 0x47, 0x36)
+BLAU_H, BLAU_D = (0xD9, 0xEB, 0xF9), (0x9C, 0xC5, 0xEA)   # Hellblau: Mitte heller, Rand satter
+TINTE = (0x23, 0x4F, 0x7D)                                 # Theme.akzent (hell)
 GOLD, GOLD_D, GOLD_H = (0xC9, 0xA4, 0x4E), (0x9A, 0x78, 0x2E), (0xEE, 0xD5, 0x8A)
 PAPIER = (0xF6, 0xEE, 0xDC)
 
-# Hintergrund: radialer Verlauf Flaschengrün
-img = Image.new('RGB', (S, S), GRUEN_D)
+# Hintergrund: radialer Verlauf Hellblau
+img = Image.new('RGB', (S, S), BLAU_D)
 px = img.load()
 for y in range(S):
     for x in range(S):
         d = math.hypot(x - S * 0.5, y - S * 0.42) / (S * 0.75)
         t = min(1.0, d)
-        px[x, y] = tuple(round(GRUEN_H[i] + (GRUEN_D[i] - GRUEN_H[i]) * t) for i in range(3))
+        px[x, y] = tuple(round(BLAU_H[i] + (BLAU_D[i] - BLAU_H[i]) * t) for i in range(3))
 
 # Schatten unter der Glocke
 shadow = Image.new('RGBA', (S, S), (0, 0, 0, 0))
 sd = ImageDraw.Draw(shadow)
-sd.ellipse((200, 640, 824, 720), fill=(0, 0, 0, 110))
+sd.ellipse((200, 640, 824, 720), fill=(0x1A, 0x3A, 0x5C, 80))
 shadow = shadow.filter(ImageFilter.GaussianBlur(30))
 img.paste(shadow, (0, 0), shadow)
 
@@ -60,7 +62,7 @@ draw.ellipse((cx - 44, top - 60, cx + 44, top + 28), fill=GOLD)
 draw.ellipse((cx - 26, top - 46, cx + 4, top - 16), fill=(*GOLD_H, 170))
 draw.rounded_rectangle((cx - 16, top + 10, cx + 16, top + 40), radius=8, fill=GOLD_D)
 
-# Schriftzug „Herr Ober!“ in Fraktur auf Papierton
+# Schriftzug „Herr Ober!“ in Fraktur, Tintenblau auf Hellblau
 try:
     font = ImageFont.truetype(FRAKTUR, 150)
 except OSError:
@@ -69,8 +71,8 @@ text = 'Herr Ober!'
 bbox = draw.textbbox((0, 0), text, font=font)
 tw, th = bbox[2] - bbox[0], bbox[3] - bbox[1]
 tx, ty = cx - tw // 2 - bbox[0], 770 - bbox[1]
-draw.text((tx + 4, ty + 6), text, font=font, fill=(0, 0, 0, 90))
-draw.text((tx, ty), text, font=font, fill=PAPIER)
+draw.text((tx + 3, ty + 4), text, font=font, fill=(0xFF, 0xFF, 0xFF, 110))
+draw.text((tx, ty), text, font=font, fill=TINTE)
 
 img.save(OUT, 'PNG')
 img.resize((120, 120), Image.LANCZOS).save(KLEIN, 'PNG')

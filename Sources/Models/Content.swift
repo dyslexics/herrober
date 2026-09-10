@@ -12,6 +12,8 @@ struct Bibliothek: Codable {
     let menus: [Menugruppe]
     let fibel: Fibel?
     let ueber: [Block]
+    /// Kapitel „Warum dieses Buch“ (tools/warum.md); fehlt in älteren content.json.
+    let warum: [Block]?
 }
 
 struct Buch: Codable {
