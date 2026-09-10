@@ -6,7 +6,7 @@
     {"gross": "C", "klein": "c", "hinweis": ""},
     {"gross": "D", "klein": "d", "hinweis": "Das große D ähnelt dem O mit einem Strich."},
     {"gross": "E", "klein": "e", "hinweis": "Das große E sieht aus wie ein C mit Zunge."},
-    {"gross": "F", "klein": "f", "hinweis": "Das kleine f hat einen Balken in der Mitte. Das lange ſ hat keinen."},
+    {"gross": "F", "klein": "f", "hinweis": "Vergleiche f und ſ nebeneinander: In dieser Schrift reicht der Querstrich beim f weiter nach rechts."},
     {"gross": "G", "klein": "g", "hinweis": "Das große G sieht aus wie ein geschlossenes C."},
     {"gross": "H", "klein": "h", "hinweis": "Das große H ähnelt einem verschlungenen S."},
     {"gross": "I", "klein": "i", "hinweis": "Das große I und das große J sehen fast gleich aus."},
@@ -19,8 +19,8 @@
     {"gross": "P", "klein": "p", "hinweis": ""},
     {"gross": "Q", "klein": "q", "hinweis": ""},
     {"gross": "R", "klein": "r", "hinweis": "Das kleine r hat einen kleinen Haken oben rechts."},
-    {"gross": "S", "klein": "s", "hinweis": "Das runde s steht am Wortende: das, Haus, Gläser."},
-    {"gross": "S", "klein": "ſ", "hinweis": "Das lange ſ steht am Anfang und in der Mitte der Silbe: Gaſt, Tiſch, Waſſer. Es ist kein f – der Balken fehlt."},
+    {"gross": "S", "klein": "s", "hinweis": "Ein rundes s findest du zum Beispiel am Wortende: das, Haus. Auch innerhalb zusammengesetzter Wörter kann es vorkommen."},
+    {"gross": "S", "klein": "ſ", "hinweis": "Ein langes ſ findest du zum Beispiel in Gaſt, Tiſch und Waſſer. Vergleiche es hier mit dem f, dessen Querstrich weiter nach rechts reicht."},
     {"gross": "T", "klein": "t", "hinweis": ""},
     {"gross": "U", "klein": "u", "hinweis": "Das große U hat einen Bogen links oben – vergleiche es mit dem A."},
     {"gross": "V", "klein": "v", "hinweis": "Das große V ähnelt dem B, ist aber unten offen."},
@@ -31,15 +31,15 @@
     {"gross": "Ä", "klein": "ä", "hinweis": ""},
     {"gross": "Ö", "klein": "ö", "hinweis": ""},
     {"gross": "Ü", "klein": "ü", "hinweis": ""},
-    {"gross": "", "klein": "ß", "hinweis": "Das ß ist eine Verbindung aus langem ſ und z."}
+    {"gross": "", "klein": "ß", "hinweis": "Vergleiche das ß mit langem ſ und z. Aus solchen Verbindungen entwickelte sich das Fraktur-ß."}
   ],
   "stolpersteine": [
-    {"alt": "ſ / s", "neu": "s", "titel": "Zwei Arten von s", "erklaerung": "Das lange ſ steht am Anfang und in der Mitte einer Silbe (Gaſt, Tiſch, Waſſer). Das runde s steht am Ende (das, Haus, Gläſer). Das lange ſ ist kein f: ihm fehlt der Querbalken."},
+    {"alt": "ſ / s", "neu": "s", "titel": "Zwei Arten von s", "erklaerung": "Langes ſ und rundes s stehen beide für den Buchstaben s. Vergleiche Gaſt, Tiſch und Waſſer mit das und Haus. Diese Beispiele sind eine Einstiegshilfe; bei Silben und zusammengesetzten Wörtern gibt es weitere Satzregeln. Beim f reicht der Querstrich in dieser Schrift weiter nach rechts."},
     {"alt": "ſs", "neu": "ss", "titel": "dass und muss", "erklaerung": "Dieses Buch schreibt „dass“ und „muss“ mit ſs – so wie es 1899 in Österreichs Schulen üblich war."},
     {"alt": "A / U", "neu": "A und U", "titel": "A oder U?", "erklaerung": "Das große A und das große U sehen sich ähnlich. Das A hat oben links einen offenen Schwung, das U einen geschlossenen Bogen."},
     {"alt": "B / V", "neu": "B und V", "titel": "B oder V?", "erklaerung": "Beide haben links einen Bogen. Das B ist unten geschlossen, das V unten offen."},
     {"alt": "k / t / f", "neu": "k, t und f", "titel": "k, t oder f?", "erklaerung": "Das k hat einen Bogen mit Knick, das t ist kurz mit Querstrich, das f hat einen Querbalken und geht nach unten."},
-    {"alt": "ch ck tz", "neu": "ch, ck, tz", "titel": "Verbundene Buchstaben", "erklaerung": "ch, ck, tz und ſt werden in der Fraktur als ein Zeichen gesetzt (Ligatur). Lies sie als zwei Laute: Tiſch, Beſteck, Platz, Gaſt."},
+    {"alt": "ch ck tz", "neu": "ch, ck, tz", "titel": "Verbundene Buchstaben", "erklaerung": "Manche Buchstaben werden in Frakturschriften eng verbunden gesetzt: zum Beispiel ch, ck, tz und ſt. Solche Verbindungen heißen Ligaturen. Die Zahl der Buchstaben sagt nicht, wie viele Laute du hörst. Vergleiche die neue Schrift und höre das ganze Wort an: Tisch, Besteck, Platz, Gast."},
     {"alt": "ꝛc.", "neu": "etc.", "titel": "Das Zeichen ꝛc.", "erklaerung": "„ꝛc.“ ist die alte Abkürzung für „et cetera“ – und so weiter. Du liest es „et cetera“."},
     {"alt": "Thür, Local", "neu": "Tür, Lokal", "titel": "Alte Schreibweisen", "erklaerung": "1899 schrieb man Thür, Local, Capitel, Doctor. Die Aussprache ist die gleiche wie heute. Die App liest sie dir so vor."}
   ],

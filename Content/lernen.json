@@ -1,0 +1,2983 @@
+{
+  "version": 1,
+  "begriffe": [
+    {
+      "id": "couvert",
+      "titel": "Couvert / Kuvert",
+      "formen": [
+        "Couvert",
+        "Kuvert",
+        "Couverts",
+        "Kuverts"
+      ],
+      "text": "Das Gedeck für eine Person. Bei Preisangaben meint das Wort auch den Anteil einer Person an einer Mahlzeit.",
+      "anwendung": "Achte auf den Zusammenhang: Ein Couvert decken und einen Preis pro Couvert nennen sind zwei verschiedene Verwendungen.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-03",
+        "seite": "25",
+        "titel": "3. Kapitel · S. 25",
+        "zitat": "Einfluss des Kuvertpreises"
+      }
+    },
+    {
+      "id": "kredenz",
+      "titel": "Kredenz",
+      "formen": [
+        "Credenz",
+        "Kredenz",
+        "Credenzen",
+        "Kredenzen"
+      ],
+      "text": "Ein Beistellmöbel oder Serviertisch, auf dem benötigte Gegenstände bereitstehen.",
+      "anwendung": "Im Buch sollen etwa Senf, Essig und Öl auf der Kredenz bereitgehalten werden.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-07",
+        "seite": "48",
+        "titel": "7. Kapitel · S. 48",
+        "zitat": "Senftiegel, Essig- und Ölständer etc. gehören nicht auf den Tisch, sondern sind auf der Kredenz oder dem Serviertisch in Bereitschaft zu halten. Im Übrigen ist bezüglich des Aufstellens des Inventars wie der Gedecke der im Restaurant eingeführte Usus und der Wunsch des Prinzipals oder dessen Vertreters entscheidend."
+      }
+    },
+    {
+      "id": "rechaud",
+      "titel": "Réchaud",
+      "formen": [
+        "Rechaud",
+        "Rechauds",
+        "Réchaud",
+        "Réchauds"
+      ],
+      "text": "Eine Vorrichtung zum Warmhalten. Im Buch bezeichnet das Wort auch einen Tellerwärmer.",
+      "anwendung": "Welche Dinge warmgehalten werden, ergibt sich aus der jeweiligen Textstelle.",
+      "quelle": {
+        "art": "tafel",
+        "id": "32",
+        "seite": "119",
+        "titel": "Tafel 32 · S. 119",
+        "zitat": null
+      }
+    },
+    {
+      "id": "menage",
+      "titel": "Menage",
+      "formen": [
+        "Menage",
+        "Menagen"
+      ],
+      "text": "Eine Zusammenstellung kleiner Gefäße für Tischzutaten, beispielsweise Essig und Öl.",
+      "anwendung": "Die Tafel zeigt Gefäße, die gemeinsam auf den Tisch oder einen Serviertisch gehören.",
+      "quelle": {
+        "art": "tafel",
+        "id": "34",
+        "seite": "121",
+        "titel": "Tafel 34 · S. 121",
+        "zitat": null
+      }
+    },
+    {
+      "id": "hangerl",
+      "titel": "Hangerl",
+      "formen": [
+        "Hangerl",
+        "Serviertuch",
+        "Serviertuches",
+        "Serviertuche"
+      ],
+      "text": "Österreichische Bezeichnung für das Serviertuch des Kellners.",
+      "anwendung": "Kapitel 2 beschreibt das Nachpolieren bereits gereinigter Gläser und Teller mit diesem Tuch.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-02",
+        "seite": "22",
+        "titel": "2. Kapitel · S. 22",
+        "zitat": "Das Serviertuch, das sogenannte „Hangerl“, dient dazu, beim Servieren Gläser, Platten, Teller etc., bevor man diese dem Gaste zur Verfügung stellt oder etwas darauf anrichten oder einschenken lässt, nochmals nachzuwischen, wiewohl alle diese Gegenstände selbstverständlich schon auf das Sorgfältigste gereinigt in Bereitschaft stehen sollen."
+      }
+    },
+    {
+      "id": "plateau",
+      "titel": "Plateau",
+      "formen": [
+        "Plateau",
+        "Plateaux",
+        "Auftragbrett",
+        "Auftragbrettern"
+      ],
+      "text": "Ein Tablett oder Auftragbrett, auf dem mehrere Dinge getragen werden.",
+      "anwendung": "Das Buch empfiehlt es, wenn viele Serviergegenstände gleichzeitig zu tragen sind.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-02",
+        "seite": "23",
+        "titel": "2. Kapitel · S. 23",
+        "zitat": "Verwendung von Auftragbrettern (Plateaux)"
+      }
+    },
+    {
+      "id": "service",
+      "titel": "Service",
+      "formen": [
+        "Service",
+        "Services",
+        "Servicegegenstände",
+        "Serviergegenstände"
+      ],
+      "text": "Hier die zum Servieren verwendeten Gegenstände, etwa Geschirr und Besteck.",
+      "anwendung": "Das Wort bezeichnet in diesen Abschnitten die Ausstattung; lies es im Zusammenhang mit Reinigung und Bereitstellung.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-06",
+        "seite": "41",
+        "titel": "6. Kapitel · S. 41",
+        "zitat": "6. Kapitel. Reinigung und Instandhaltung des Services."
+      }
+    },
+    {
+      "id": "serviette",
+      "titel": "Serviette",
+      "formen": [
+        "Serviette",
+        "Servietten"
+      ],
+      "text": "Ein Tuch am Gedeck für den Gast; im Buch werden auch Tücher bei der Handhabung von Geschirr so genannt.",
+      "anwendung": "Achte darauf, ob der Text vom Gedeck des Gastes oder von einem Arbeitstuch spricht.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-07",
+        "seite": "48",
+        "titel": "7. Kapitel · S. 48",
+        "zitat": "aus einer großen Gabel und einem großen Messer, dem Speiseteller und der ungefalteten Serviette."
+      }
+    },
+    {
+      "id": "karaffe",
+      "titel": "Karaffe",
+      "formen": [
+        "Karaffe",
+        "Karaffen"
+      ],
+      "text": "Ein Gefäß zum Bereitstellen und Einschenken von Getränken.",
+      "anwendung": "Auf Tafel 8 sind Karaffen zusammen mit Biergläsern dargestellt.",
+      "quelle": {
+        "art": "tafel",
+        "id": "08",
+        "seite": "92",
+        "titel": "Tafel 08 · S. 92",
+        "zitat": null
+      }
+    },
+    {
+      "id": "bouteille",
+      "titel": "Bouteille",
+      "formen": [
+        "Bouteille",
+        "Bouteillen",
+        "Bouteilles"
+      ],
+      "text": "Französisch geprägte Bezeichnung für eine Flasche.",
+      "anwendung": "Beim Öffnen einer Weinbouteille soll der Bodensatz nach dem Buch ungestört bleiben.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-05",
+        "seite": "38",
+        "titel": "5. Kapitel · S. 38",
+        "zitat": "Leichtere Weißweine können frischer gegeben werden wie alte Jahrgänge, da bei letzteren, wenn sie zu kalt serviert werden, die feine Blume (Bouquet) verloren geht. Da man beim Servieren die Weine nicht mit dem Thermometer messen kann, muss man durch Anfühlen der Bouteille mit der Hand beurteilen können, ob der Wein mundgerecht ist."
+      }
+    },
+    {
+      "id": "terrine",
+      "titel": "Terrine",
+      "formen": [
+        "Terrine",
+        "Terrinen",
+        "Suppenterrine",
+        "Suppenterrinen"
+      ],
+      "text": "Ein größeres Gefäß zum Anrichten und Servieren, hier besonders für Suppe.",
+      "anwendung": "Vergleiche die Terrinen mit den Tellern, in die am Tisch verteilt wird.",
+      "quelle": {
+        "art": "tafel",
+        "id": "27",
+        "seite": "114",
+        "titel": "Tafel 27 · S. 114",
+        "zitat": null
+      }
+    },
+    {
+      "id": "sauciere",
+      "titel": "Sauciere",
+      "formen": [
+        "Sauciere",
+        "Saucieren",
+        "Saucière"
+      ],
+      "text": "Ein Gefäß, aus dem Sauce zu einer Speise gereicht wird.",
+      "anwendung": "Die Tafeln zeigen Saucieren als eigene Teile des Services.",
+      "quelle": {
+        "art": "tafel",
+        "id": "04",
+        "seite": "86",
+        "titel": "Tafel 04 · S. 86",
+        "zitat": null
+      }
+    },
+    {
+      "id": "speisenstuerze",
+      "titel": "Speisenstürze",
+      "formen": [
+        "Speisenstürze",
+        "Speisenstürzen",
+        "Stürze",
+        "Stürzen"
+      ],
+      "text": "Eine Haube, die über angerichtete Speisen gestellt wird.",
+      "anwendung": "Auf der Tafel erkennst du den Unterschied zwischen einem Gefäß und seiner Abdeckung.",
+      "quelle": {
+        "art": "tafel",
+        "id": "29",
+        "seite": "116",
+        "titel": "Tafel 29 · S. 116",
+        "zitat": null
+      }
+    },
+    {
+      "id": "tafelaufsatz",
+      "titel": "Tafelaufsatz",
+      "formen": [
+        "Tafelaufsatz",
+        "Tafelaufsätze",
+        "Aufsätze",
+        "Aufsatz"
+      ],
+      "text": "Ein Aufbau zur Ausstattung oder Ausschmückung der Tischmitte.",
+      "anwendung": "Im Festtafelkapitel geht es um Größe, Symmetrie und die Anordnung solcher Aufsätze.",
+      "quelle": {
+        "art": "tafel",
+        "id": "36",
+        "seite": "123",
+        "titel": "Tafel 36 · S. 123",
+        "zitat": null
+      }
+    },
+    {
+      "id": "etagere",
+      "titel": "Etagere",
+      "formen": [
+        "Etagere",
+        "Etageres",
+        "Etageren",
+        "Étagère"
+      ],
+      "text": "Ein Aufsatz mit mehreren übereinanderliegenden Ebenen.",
+      "anwendung": "Das Buch zählt Etageres zu den Aufsätzen einer Festtafel.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-09",
+        "seite": "70",
+        "titel": "9. Kapitel · S. 70",
+        "zitat": "Das Aufstellen der verschiedenen Aufsätze: Etageres, Pièces montées, Blumenvasen etc., geschieht abwechslungsweise, so dass nie zwei durch Form und Farbe einander ähnliche Aufsätze nebeneinander zu stehen kommen, wobei auch auf die symmetrische Anordnung zu sehen ist. Der größte und schönste Aufsatz oder besser ein niederes, sehr schönes Mittelstück gehört in die Mitte vor den Ehrenplatz, die kleineren links und rechts davon. Sind zwei große Aufsätze vorhanden, so kommen diese bei Längstafeln seitwärts links und rechts vom Ehrenplatz,"
+      }
+    },
+    {
+      "id": "traubenschere",
+      "titel": "Traubenschere",
+      "formen": [
+        "Traubenschere",
+        "Trauben-Schere"
+      ],
+      "text": "Eine Schere zum Abteilen von Teilen einer Weintraube.",
+      "anwendung": "Tafel 19 stellt sie gemeinsam mit Nussknackern und kleinen Löffeln vor.",
+      "quelle": {
+        "art": "tafel",
+        "id": "19",
+        "seite": "106",
+        "titel": "Tafel 19 · S. 106",
+        "zitat": null
+      }
+    },
+    {
+      "id": "nussknacker",
+      "titel": "Nussknacker",
+      "formen": [
+        "Nussknacker",
+        "Nußknacker",
+        "Nuß-Knacker"
+      ],
+      "text": "Ein Werkzeug zum Öffnen harter Nussschalen.",
+      "anwendung": "Vergleiche auf der Tafel seine kräftige Form mit der feineren Traubenschere.",
+      "quelle": {
+        "art": "tafel",
+        "id": "19",
+        "seite": "106",
+        "titel": "Tafel 19 · S. 106",
+        "zitat": null
+      }
+    },
+    {
+      "id": "fischmesser",
+      "titel": "Fischmesser",
+      "formen": [
+        "Fischmesser",
+        "Fisch-Messer",
+        "Fischmessers"
+      ],
+      "text": "Das zum Fischbesteck gehörende Messer.",
+      "anwendung": "Tafel 10 stellt Tisch- und Fischbesteck gegenüber. Vergleiche die Klingenformen.",
+      "quelle": {
+        "art": "tafel",
+        "id": "10",
+        "seite": "97",
+        "titel": "Tafel 10 · S. 97",
+        "zitat": null
+      }
+    },
+    {
+      "id": "vorlegebesteck",
+      "titel": "Vorlegebesteck",
+      "formen": [
+        "Vorlegebesteck",
+        "Vorlege-Besteck",
+        "Vorlegebestecke"
+      ],
+      "text": "Besteck zum Verteilen einer Speise aus einem gemeinsamen Gefäß auf Teller.",
+      "anwendung": "Es gehört zur Speisevorlage; es ist vom persönlichen Besteck eines Gastes zu unterscheiden.",
+      "quelle": {
+        "art": "tafel",
+        "id": "13",
+        "seite": "100",
+        "titel": "Tafel 13 · S. 100",
+        "zitat": null
+      }
+    },
+    {
+      "id": "dessertbesteck",
+      "titel": "Dessertbesteck",
+      "formen": [
+        "Dessertbesteck",
+        "Dessert-Besteck",
+        "Dessertbesteckes"
+      ],
+      "text": "Kleinere Besteckteile für die entsprechenden Gänge am Ende einer Mahlzeit.",
+      "anwendung": "Tafel 11 zeigt die Formen; bei den Gedecken lässt sich ihre Lage vergleichen.",
+      "quelle": {
+        "art": "tafel",
+        "id": "11",
+        "seite": "98",
+        "titel": "Tafel 11 · S. 98",
+        "zitat": null
+      }
+    },
+    {
+      "id": "dejeuner",
+      "titel": "Déjeuner",
+      "formen": [
+        "Déjeuner",
+        "Dejeuner",
+        "Déjeuners"
+      ],
+      "text": "Eine französische Mahlzeitenbezeichnung. Das Buch verwendet sie unter anderem für das erste Frühstück.",
+      "anwendung": "Die Zusätze sind wichtig: Déjeuner à la fourchette bezeichnet im Buch das Gabelfrühstück.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-08",
+        "seite": "49",
+        "titel": "8. Kapitel · S. 49",
+        "zitat": "Bezüglich des Frühstücks haben wir vor allem zu unterscheiden zwischen erstem und zweitem Frühstück und bezüglich des ersteren wieder zwischen dem allgemein üblichen, Frankreich entstammenden Déjeuner und dem der englischen und amerikanischen Geschmacksrichtung und Gewohnheit entsprechenden Breakfast."
+      }
+    },
+    {
+      "id": "breakfast",
+      "titel": "Breakfast",
+      "formen": [
+        "Breakfast"
+      ],
+      "text": "Englische Bezeichnung für Frühstück.",
+      "anwendung": "Das Buch beschreibt englisch-amerikanische Frühstücksgewohnheiten neben dem französisch geprägten Déjeuner.",
+      "quelle": {
+        "art": "tafel",
+        "id": "49",
+        "seite": "139",
+        "titel": "Tafel 49 · S. 139",
+        "zitat": null
+      }
+    },
+    {
+      "id": "gabelfruehstueck",
+      "titel": "Gabelfrühstück",
+      "formen": [
+        "Gabelfrühstück",
+        "Gabelfrühstücks"
+      ],
+      "text": "Eine weitere Mahlzeit nach dem ersten Frühstück, die im Buch auch warme Speisen enthalten kann.",
+      "anwendung": "Kapitel 8 unterscheidet das einfache österreichische Gabelfrühstück, Déjeuner à la fourchette und Lunch.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-08",
+        "seite": "51",
+        "titel": "8. Kapitel · S. 51",
+        "zitat": "Wir unterscheiden drei Arten des zweiten Frühstücks, das einfache österreichische Gabelfrühstück, das Déjeuner à la fourchette und den Lunch."
+      }
+    },
+    {
+      "id": "luncheon",
+      "titel": "Luncheon / Lunch",
+      "formen": [
+        "Luncheon",
+        "Lunch"
+      ],
+      "text": "Englische Bezeichnungen für eine Mahlzeit im Tagesverlauf, hier im Vergleich mit dem zweiten Frühstück.",
+      "anwendung": "Die amerikanische Luncheon-Karte zeigt die konkrete Auswahl eines Hauses; sie ist kein allgemeingültiger Speiseplan.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-08",
+        "seite": "53",
+        "titel": "8. Kapitel · S. 53",
+        "zitat": "Die Mahlzeit zur Mittagszeit nennt der Engländer und Amerikaner Lunch oder Luncheon. Der Lunch unterscheidet sich von unserem Mittagmahle dadurch, dass er erstens nicht die Hauptmahlzeit ist und zweitens nur aus wenigen Gerichten besteht, was dadurch begründet erscheint, dass der Engländer schon zum Breakfast (dem ersten Frühstück) mehrere sogenannte schwere Speisen zu sich nimmt. Der Lunch besteht meist bloß aus einer Fisch- und einer Fleischspeise, Mehlspeise oder Creme und Käse. Doch werden in den großen amerikanischen Hotels vor dem Fische mitunter Clams (diverse essbare Muscheln), eventuell auch Austern, ferner Suppe und darnach Side-Dishes (Hors-d’œuvres), z. B. Kaviar, Sardinen, Sardellen, Anschovis, marinierter Sterlet, Thunfisch oder Makrelen in Öl, Sellerie, eingelegte Melonen etc., geboten. Der Schluss der Mahlzeit wird dann meist durch das prachtvolle amerikanische Obst, nach welchem man noch Tee oder Kaffee nimmt, gebildet."
+      }
+    },
+    {
+      "id": "diner",
+      "titel": "Dîner",
+      "formen": [
+        "Diner",
+        "Dîner",
+        "Diners",
+        "Dîners",
+        "Dinertisch"
+      ],
+      "text": "Französisch geprägte Bezeichnung für eine Hauptmahlzeit; das Buch nennt dazu Mittagessen.",
+      "anwendung": "Ein Dîner kann aus vielen Gängen bestehen. Die Kapitel erläutern dafür Speisenfolge und Gedeck.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-04",
+        "seite": "33",
+        "titel": "4. Kapitel · S. 33",
+        "zitat": "Die Tafelkarten (Menüs) gelten (zum Unterschiede von den Speisekarten) nur für gewisse, bestimmte Mahlzeiten mit fixierten Gängen und Gerichten. Wir unterscheiden Menüs zu Dejeuners à la fourchette, Diners, Soupers, Banquets, Diners de noce, Tables d’hôte, Buffets etc., und werden dieselben auch, diesem ihren Zweck entsprechend überschrieben."
+      }
+    },
+    {
+      "id": "souper",
+      "titel": "Souper",
+      "formen": [
+        "Souper",
+        "Soupers"
+      ],
+      "text": "Eine im Buch verwendete Bezeichnung für ein Abendessen.",
+      "anwendung": "Der Titel einer Menükarte kann die Mahlzeit angeben: etwa Dîner oder Souper.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-04",
+        "seite": "33",
+        "titel": "4. Kapitel · S. 33",
+        "zitat": "Die Tafelkarten (Menüs) gelten (zum Unterschiede von den Speisekarten) nur für gewisse, bestimmte Mahlzeiten mit fixierten Gängen und Gerichten. Wir unterscheiden Menüs zu Dejeuners à la fourchette, Diners, Soupers, Banquets, Diners de noce, Tables d’hôte, Buffets etc., und werden dieselben auch, diesem ihren Zweck entsprechend überschrieben."
+      }
+    },
+    {
+      "id": "buffet",
+      "titel": "Buffet",
+      "formen": [
+        "Buffet",
+        "Buffets"
+      ],
+      "text": "Hier eine Zusammenstellung bereitgestellter Speisen und Getränke für eine Gesellschaft.",
+      "anwendung": "Das Buch bespricht Aufbau und Ausstattung; der bewilligte Betrag beeinflusst den Umfang.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-08",
+        "seite": "53",
+        "titel": "8. Kapitel · S. 53",
+        "zitat": "Geflügel, Schinken, Zunge, Roastbeef u. dgl. werden in englischen Restaurants meistens im ganzen serviert. Wenn der mit dem Tranchieren betraute Kellner (Carver) oder der Gast selbst das Nötige davon heruntergeschnitten hat, werden die kalten Platten auf das in jedem englischen Restaurant befindliche Buffet, die warmen auf den"
+      }
+    },
+    {
+      "id": "bankett",
+      "titel": "Bankett",
+      "formen": [
+        "Bankett",
+        "Bankette",
+        "Banketten",
+        "Banquet",
+        "Banquets"
+      ],
+      "text": "Ein Festmahl zu einem besonderen Anlass.",
+      "anwendung": "Das Festtafelkapitel nennt etwa Jubiläen und andere Feierlichkeiten.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-09",
+        "seite": "68",
+        "titel": "9. Kapitel · S. 68",
+        "zitat": "Bei feierlichen Gelegenheiten, z. B. bei Hochzeiten, Jubiläen, bei Empfang hoher Gäste, bei Banketten*) etc., deckt man die Speisetische in besonders festlicher Weise, so dass sie auf die Bezeichnung „Festtafel“ Anspruch erheben können. Das Arrangement einer solchen Festtafel ist eine ziemlich schwierige Aufgabe, deren zufriedenstellende Lösung Sachkenntnis und Umsicht erfordert."
+      }
+    },
+    {
+      "id": "table-dhote",
+      "titel": "Table d’hôte",
+      "formen": [
+        "Table d’hôte",
+        "Table d'hôte"
+      ],
+      "text": "Eine gemeinsame Mahlzeit mit festgelegter Speisenfolge, wie sie das Buch im Gegensatz zur Einzelbestellung behandelt.",
+      "anwendung": "Vergleiche die Angaben zur gemeinsamen Tafel mit der Bedienung einzelner Gäste.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-08",
+        "seite": "56",
+        "titel": "8. Kapitel · S. 56",
+        "zitat": "Table d’hôte"
+      }
+    },
+    {
+      "id": "a-la-carte",
+      "titel": "À la carte",
+      "formen": [
+        "à la carte"
+      ],
+      "text": "Die Auswahl einzelner Speisen aus einer Karte.",
+      "anwendung": "Die Einleitung unterscheidet Einzelbedienung und gemeinsame Bedienung bei einer Tafel.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "einleitung",
+        "seite": "7",
+        "titel": "Einleitung · S. 7",
+        "zitat": "Die verschiedenen Methoden, in den Fremdenzimmern und im Restaurant zu servieren, und zwar sowohl bei Einzelbedienung (à la carte, à couvert), als auch bei Gesamtbedienung (Table d’hôte, Bankett, Festtafel)."
+      }
+    },
+    {
+      "id": "menu",
+      "titel": "Menü",
+      "formen": [
+        "Menü",
+        "Menüs",
+        "Menu",
+        "Menus"
+      ],
+      "text": "Eine festgelegte Folge von Speisen; zugleich kann die Karte mit dieser Folge gemeint sein.",
+      "anwendung": "Kapitel 4 unterscheidet die allgemeine Speisekarte von der Menükarte einer bestimmten Mahlzeit.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-04",
+        "seite": "31",
+        "titel": "4. Kapitel · S. 31",
+        "zitat": "Die Tafelkarte (Menü)"
+      }
+    },
+    {
+      "id": "speisekarte",
+      "titel": "Speisekarte",
+      "formen": [
+        "Speisekarte",
+        "Speisekarten",
+        "carte du jour",
+        "bill of fare"
+      ],
+      "text": "Das Verzeichnis der im Restaurant angebotenen Speisen, meist mit Preisen.",
+      "anwendung": "Das Buch nennt dazu französisch carte du jour und englisch bill of fare.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-04",
+        "seite": "31",
+        "titel": "4. Kapitel · S. 31",
+        "zitat": "Die Speisekarte"
+      }
+    },
+    {
+      "id": "hors-doeuvre",
+      "titel": "Hors-d’œuvre",
+      "formen": [
+        "Hors-d’œuvre",
+        "Hors-d'œuvre",
+        "Hors-d'oeuvre",
+        "Hors d’œuvre"
+      ],
+      "text": "Eine Vorspeise innerhalb der beschriebenen Speisenfolge.",
+      "anwendung": "Das Wort steht in der ausführlicheren Menüfolge vor dem Fischgang.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-03",
+        "seite": "27",
+        "titel": "3. Kapitel · S. 27",
+        "zitat": "Während sich ein mittleres bürgerliches Mahl gewöhnlich aus 1. Suppe, 2. Fisch, 3. Bœuf (Rindfleisch) mit Gemüse, 4. Braten mit Salat oder Kompott, 5. Mehlspeise und Dessert zusammensetzt, wird ein reicheres Mahl an Gängen aufweisen: 1. Suppe, 2. Vorspeise (Hors-d'œuvre), 3. Fisch, 4. Bœuf (Rindfleisch) mit Gemüse, 5. Entree (Eingangs- oder Mittelgericht), 6. Braten mit Salat oder Kompott, 7. Feines Gemüse, 8. Mehlspeise, 9. Käse, 10. Dessert. Bei einem vollständigen Diner wird jedoch noch eine Anzahl Gänge vor-, respektive eingeschoben, so dass sich folgende wohl zu merkende Reihenfolge der Gänge ergibt:"
+      }
+    },
+    {
+      "id": "entree",
+      "titel": "Entrée",
+      "formen": [
+        "Entrée",
+        "Entree",
+        "Entrées",
+        "Entrees"
+      ],
+      "text": "Im Sprachgebrauch des Buches ein Eingangs- oder Mittelgericht innerhalb einer längeren Speisenfolge.",
+      "anwendung": "Kapitel 8 nennt unter diesem Titel unter anderem Fleischgerichte mit Beigaben.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-08",
+        "seite": "52",
+        "titel": "8. Kapitel · S. 52",
+        "zitat": "Das Déjeuner à la fourchette besteht in der Regel aus einer Consommé-Suppe oder einem Hors-d’œuvre, einer Eier- oder einer Fischspeise, einem Entrée, einem Gange von feinem Gemüse, Käse, Dessert und Kaffee oder aus allen diesen aufgezählten Gängen, so dass folgende Zusammenstellung gegebenenfalls zur Richtschnur genommen werden kann:"
+      }
+    },
+    {
+      "id": "entremets",
+      "titel": "Entremets",
+      "formen": [
+        "Entremets"
+      ],
+      "text": "Eine Bezeichnung für bestimmte Gänge innerhalb eines Menüs; der Zusatz grenzt die Speisen ein.",
+      "anwendung": "Bei Entremets de légumes nennt das Buch feine junge Gemüse. Übersetze daher nicht jedes Vorkommen pauschal mit Nachspeise.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-03",
+        "seite": "27",
+        "titel": "3. Kapitel · S. 27",
+        "zitat": "Zu den Gemüsegerichten (Entremets de légumes) darf man nur die feinen jungen Gemüsearten nehmen. Es wäre gewiss ein grober Fehler, wollte man bei einer feinen Tafel, welche im Monate Juli stattfindet, einen Spargel servieren; um diese Zeit fängt der Spargel bereits an holzig und bitter zu werden, und haben sich auch die meisten Leute an demselben schon abgegessen. Auch beim Dessert und Obst soll, soweit dies eben der Preis zulässt, das Feinste geboten werden. Dass man bei kleineren, nicht umfangreichen Mahlzeiten besonders darauf zu sehen hat, dass speziell auch Speisen geboten werden, welche einen anerkannten Nährwert haben und daher genügend zur Sättigung dienen können, bedarf wohl kaum der Erwähnung."
+      }
+    },
+    {
+      "id": "dessert",
+      "titel": "Dessert",
+      "formen": [
+        "Dessert",
+        "Desserts"
+      ],
+      "text": "Der abschließende Teil einer Mahlzeit; sein Umfang hängt im Buch vom gesamten Menü ab.",
+      "anwendung": "Historische Gangbezeichnungen lassen sich nicht immer eins zu eins auf eine heutige Karte übertragen.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-03",
+        "seite": "27",
+        "titel": "3. Kapitel · S. 27",
+        "zitat": "Zu den Gemüsegerichten (Entremets de légumes) darf man nur die feinen jungen Gemüsearten nehmen. Es wäre gewiss ein grober Fehler, wollte man bei einer feinen Tafel, welche im Monate Juli stattfindet, einen Spargel servieren; um diese Zeit fängt der Spargel bereits an holzig und bitter zu werden, und haben sich auch die meisten Leute an demselben schon abgegessen. Auch beim Dessert und Obst soll, soweit dies eben der Preis zulässt, das Feinste geboten werden. Dass man bei kleineren, nicht umfangreichen Mahlzeiten besonders darauf zu sehen hat, dass speziell auch Speisen geboten werden, welche einen anerkannten Nährwert haben und daher genügend zur Sättigung dienen können, bedarf wohl kaum der Erwähnung."
+      }
+    },
+    {
+      "id": "kompott",
+      "titel": "Kompott",
+      "formen": [
+        "Kompott",
+        "Kompottes",
+        "Compot",
+        "Compote",
+        "Compots"
+      ],
+      "text": "Eine Zubereitung aus Obst, die in den beschriebenen Menüs vorkommt.",
+      "anwendung": "Bei feinen Mahlzeiten behandelt das Buch Kompott auch als eigenen Gang.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-03",
+        "seite": "27",
+        "titel": "3. Kapitel · S. 27",
+        "zitat": "Während sich ein mittleres bürgerliches Mahl gewöhnlich aus 1. Suppe, 2. Fisch, 3. Bœuf (Rindfleisch) mit Gemüse, 4. Braten mit Salat oder Kompott, 5. Mehlspeise und Dessert zusammensetzt, wird ein reicheres Mahl an Gängen aufweisen: 1. Suppe, 2. Vorspeise (Hors-d'œuvre), 3. Fisch, 4. Bœuf (Rindfleisch) mit Gemüse, 5. Entree (Eingangs- oder Mittelgericht), 6. Braten mit Salat oder Kompott, 7. Feines Gemüse, 8. Mehlspeise, 9. Käse, 10. Dessert. Bei einem vollständigen Diner wird jedoch noch eine Anzahl Gänge vor-, respektive eingeschoben, so dass sich folgende wohl zu merkende Reihenfolge der Gänge ergibt:"
+      }
+    },
+    {
+      "id": "sorbet",
+      "titel": "Sorbet",
+      "formen": [
+        "Sorbet",
+        "Sorbets"
+      ],
+      "text": "Eine gefrorene Erfrischung, die in der beschriebenen Menüfolge vor dem Braten stehen kann.",
+      "anwendung": "Hier geht es um ihre Position im historischen Mahl, nicht um eine festgelegte Rezeptur.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-03",
+        "seite": "28",
+        "titel": "3. Kapitel · S. 28",
+        "zitat": "Vor dem Braten wird manchmal auch Sorbet,) Ponche à la romaine,) Ponche glacé) oder dergleichen serviert. Bei feinen Mahlzeiten wird in den meisten Fällen zum Braten Salat gegeben, während das Kompott einen Gang für sich bildet. Finden warme und kalte Mehlspeisen im Menü Aufnahme, so sind die warmen Mehlspeisen vor den kalten zu servieren. Das Dessert muss in seiner Zusammensetzung der größeren oder geringeren Reichhaltigkeit des Gesamtmenüs entsprechen. Käse kann auch vor dem Gefrornen serviert werden. Wird aber zum Käse (mit oder ohne Butter) Bier verabreicht, so ist es richtiger, diesen nach den süßen Speisen anzusetzen."
+      }
+    },
+    {
+      "id": "prinzipal",
+      "titel": "Prinzipal",
+      "formen": [
+        "Prinzipal",
+        "Prinzipale",
+        "Prinzipals",
+        "Principal"
+      ],
+      "text": "Der Inhaber oder Leiter des Betriebes im Sprachgebrauch des Buches.",
+      "anwendung": "Viele Regeln werden aus der damaligen Sicht eines Vorgesetzten formuliert.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-01",
+        "seite": "9",
+        "titel": "1. Kapitel · S. 9",
+        "zitat": "Als Gruß wählt man meist der Tageszeit entsprechende Worte, wie: „Guten Morgen“, „Guten Tag“, „Guten Abend“. Wenn sich der Gast entfernt, wendet man dieselbe Grußformel an, doch werden häufig auch Ausdrücke, wie: „Ergebenster Diener“, „Ich empfehle mich bestens“, gewählt. Die oft gebrauchte Grußform: „Ich habe die Ehre“, ist eine Abkürzung von: „Ich habe die Ehre, einen guten Tag zu wünschen“ oder „Ich habe die Ehre mich zu empfehlen“. Dieser Gruß passt mehr für den Prinzipal als für die Angestellten des Hauses und ist daher zu vermeiden. Mehrere Grußformeln nach einander herzusagen, ist unpassend. Allzu lautes Grüßen, besonders aber aus der Entfernung, ziemt sich gleichfalls nicht, ebenso ist es auch unpassend, dass der Kellner beim Grüßen den Namen oder Charakter des Gastes so laut ausspricht, dass alle im Lokale anwesenden Gäste hören, wer der Betreffende ist, oder wie er heißt. Es ist dies nicht jedem Gaste angenehm, besonders nicht höher stehenden oder bekannteren Persönlichkeiten. Die Grußworte sollen nur so laut gesprochen werden, dass sie von dem Begrüßten und höchstens dessen nächster Umgebung gehört werden."
+      }
+    },
+    {
+      "id": "couvertpreis",
+      "titel": "Kuvertpreis",
+      "formen": [
+        "Kuvertpreis",
+        "Kuvertpreise",
+        "Kuvertpreises",
+        "Couvertpreis",
+        "Couvertpreise"
+      ],
+      "text": "Der Preis einer Mahlzeit pro Person.",
+      "anwendung": "Das Buch verbindet ihn mit der Auswahl und dem Umfang einer Speisenfolge.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "couvertpreise",
+        "seite": "78",
+        "titel": "Einiges über die Ermittlung der Kuvertpreise · S. 78",
+        "zitat": "Einiges über die Ermittlung der Kuvertpreise."
+      }
+    }
+  ],
+  "fragen": [
+    {
+      "id": "k01-1",
+      "kapitel": "capitel-01",
+      "frage": "Wer soll einen eintretenden Gast nach dem Buch zuerst begrüßen?",
+      "antworten": [
+        "Nur der Kellner an der Tür, unabhängig vom Standort.",
+        "Die ihm am nächsten stehenden Kellner.",
+        "Alle Kellner gleichzeitig."
+      ],
+      "richtig": 1,
+      "erklaerung": "Die Begrüßung soll nach Nähe zum Gast erfolgen, ohne gleichzeitiges Grüßen aller.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-01",
+        "seite": "9",
+        "titel": "1. Kapitel · S. 9",
+        "zitat": "Tritt ein Gast in das Lokal, so haben ihn die anwesenden Kellner stehend zu begrüßen; es ist wohl selbstverständlich, dass von diesem Momente an sich kein Kellner mehr im selben Lokale niedersetzen darf. Bei Begrüßung der Gäste aber muss es vermieden werden, dass alle Kellner zugleich grüßen. Die dem Gaste zunächst stehenden haben ihn zuerst zu grüßen; nach und nach grüßen die anderen, am besten erst dann, wenn der Gast in ihre Nähe kommt oder sie in die Nähe des Gastes kommen. Später das Lokal betretende Kellner haben in der Regel nur dann zu grüßen, wenn sie in die Nähe des Gastes kommen oder wenn sie mit demselben dienstlich zu verkehren haben."
+      }
+    },
+    {
+      "id": "k01-2",
+      "kapitel": "capitel-01",
+      "frage": "Wo sollen Kellner die Zubereitungszeit häufig bestellter Gerichte erfragen?",
+      "antworten": [
+        "In der Küche.",
+        "Bei anderen Gästen.",
+        "Ausschließlich auf der Getränkekarte."
+      ],
+      "richtig": 0,
+      "erklaerung": "Kenntnis der Küchenzeiten ermöglicht eine verlässliche Auskunft an den Gast.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-01",
+        "seite": "16",
+        "titel": "1. Kapitel · S. 16",
+        "zitat": "dieser bestimmten Stunde. Tüchtige Kellner werden sich daher diesbezüglich rechtzeitig vorher in der Küche genauestens informieren. Ebenso ist es — besonders in Wien — notwendig, dass Servierkellner sich genau Kenntnis davon verschaffen, in welcher Zeit die gangbarsten à la minute-Gerichte in der Küche fertiggestellt werden können, damit sie dem Gaste eine möglichst verlässliche Auskunft hierüber geben können."
+      }
+    },
+    {
+      "id": "k01-3",
+      "kapitel": "capitel-01",
+      "frage": "Unter welcher Bedingung dürfen sich die Kellner im leeren Lokal laut Buch setzen?",
+      "antworten": [
+        "Sobald die erste Speise serviert wurde.",
+        "Nur wenn die Fenster offen stehen.",
+        "Wenn der Prinzipal es gestattet."
+      ],
+      "richtig": 2,
+      "erklaerung": "Die Passage beschreibt eine historische Dienstregel und die damalige Hierarchie.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-01",
+        "seite": "21",
+        "titel": "1. Kapitel · S. 21",
+        "zitat": "Es wurde früher gesagt, dass die Kellner, solange Gäste im Lokale anwesend sind, sich unbedingt nicht niedersetzen dürfen. Steht das Lokal leer, so können sie, wenn ihnen dies von Seite ihres Prinzipals gestattet ist, sich derart niedersetzen, dass sie von eintretenden Gästen nicht bemerkt werden. Sehr wenig anständig ist es, wenn sich die Kellner zu den Fenstern setzen oder gar bei offenen Fenstern sich hinausbeugen und Späße machen."
+      }
+    },
+    {
+      "id": "k02-1",
+      "kapitel": "capitel-02",
+      "frage": "Wie nennt das Buch das Serviertuch auch?",
+      "antworten": [
+        "Hangerl.",
+        "Couvert.",
+        "Menage."
+      ],
+      "richtig": 0,
+      "erklaerung": "Hangerl ist hier die Bezeichnung des beim Servieren verwendeten Tuches.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-02",
+        "seite": "22",
+        "titel": "2. Kapitel · S. 22",
+        "zitat": "Das Serviertuch, das sogenannte „Hangerl“, dient dazu, beim Servieren Gläser, Platten, Teller etc., bevor man diese dem Gaste zur Verfügung stellt oder etwas darauf anrichten oder einschenken lässt, nochmals nachzuwischen, wiewohl alle diese Gegenstände selbstverständlich schon auf das Sorgfältigste gereinigt in Bereitschaft stehen sollen."
+      }
+    },
+    {
+      "id": "k02-2",
+      "kapitel": "capitel-02",
+      "frage": "Was empfiehlt das Buch, wenn viele Serviergegenstände zu tragen sind?",
+      "antworten": [
+        "Teller auf bereits angerichtete Speisen stellen.",
+        "Möglichst alles in einer Hand halten.",
+        "Ein Auftragbrett zu Hilfe nehmen."
+      ],
+      "richtig": 2,
+      "erklaerung": "Das Plateau erleichtert das Tragen; Speisen sollen nicht durch andere Teller berührt werden.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-02",
+        "seite": "23",
+        "titel": "2. Kapitel · S. 23",
+        "zitat": "Das Aufeinanderstellen von Tellern, auf denen Speisen angerichtet sind, derart, dass einzelne Teller ganz oder teilweise auf Speisen zu stehen kommen, ist eine große Unart, die vermieden werden muss. Man gehe lieber öfter in die Küche, nehme weniger, sei aber desto flinker. Wo es nur halbwegs möglich ist, sollen, wenn der Geschäftsgang ein stärkerer ist, die Speisen auf Plateaux (Auftragbrettern) aus der Küche geholt werden. Es ist überhaupt unschön, viele Servicegegenstände gleichzeitig in die Hände zu nehmen und zu tragen. Hat man vieles auf einmal zu tragen, so nehme man ein Auftragbrett zu Hilfe."
+      }
+    },
+    {
+      "id": "k02-3",
+      "kapitel": "capitel-02",
+      "frage": "Worauf soll man beim Einlegen der Zeitungen achten?",
+      "antworten": [
+        "Auf eine Sortierung ausschließlich nach Blattgröße.",
+        "Auf auffindbare Fortsetzungen und frei sichtbaren Druck.",
+        "Auf verdeckte Seitenzahlen."
+      ],
+      "richtig": 1,
+      "erklaerung": "Die Anordnung soll dem Gast das Weiterlesen ermöglichen.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-02",
+        "seite": "24",
+        "titel": "2. Kapitel · S. 24",
+        "zitat": "Zeitungen sind in der Weise einzurahmen, dass die Nummern der Seiten sich aneinanderreihen. Ist dies nicht möglich, müssen sie doch derart eingeheftet werden, dass es dem Gast leicht ist, die Fortsetzung von Blatt zu Blatt zu finden. Ferner muss man die Zeitungen derart einlegen, dass der bedruckte Teil stets frei bleibt. Auch sollen die aufgelegten Zeitungen alle aufgeschnitten sein."
+      }
+    },
+    {
+      "id": "k03-1",
+      "kapitel": "capitel-03",
+      "frage": "Welche Reihenfolge nennt das Buch für warme und kalte Mehlspeisen?",
+      "antworten": [
+        "Kalte vor warmen Mehlspeisen.",
+        "Die Temperatur spielt dabei keine Rolle.",
+        "Warme vor kalten Mehlspeisen."
+      ],
+      "richtig": 2,
+      "erklaerung": "Die Regel bezieht sich auf den Fall, dass beide Arten im Menü vorkommen.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-03",
+        "seite": "28",
+        "titel": "3. Kapitel · S. 28",
+        "zitat": "Vor dem Braten wird manchmal auch Sorbet,) Ponche à la romaine,) Ponche glacé) oder dergleichen serviert. Bei feinen Mahlzeiten wird in den meisten Fällen zum Braten Salat gegeben, während das Kompott einen Gang für sich bildet. Finden warme und kalte Mehlspeisen im Menü Aufnahme, so sind die warmen Mehlspeisen vor den kalten zu servieren. Das Dessert muss in seiner Zusammensetzung der größeren oder geringeren Reichhaltigkeit des Gesamtmenüs entsprechen. Käse kann auch vor dem Gefrornen serviert werden. Wird aber zum Käse (mit oder ohne Butter) Bier verabreicht, so ist es richtiger, diesen nach den süßen Speisen anzusetzen."
+      }
+    },
+    {
+      "id": "k03-2",
+      "kapitel": "capitel-03",
+      "frage": "Welche Rolle kann Kompott bei einer feinen Mahlzeit haben?",
+      "antworten": [
+        "Es gehört ausschließlich in ein Getränk.",
+        "Es kann einen eigenen Gang bilden.",
+        "Es ersetzt immer die Suppe."
+      ],
+      "richtig": 1,
+      "erklaerung": "Der Text unterscheidet Salat zum Braten und Kompott als eigenen Gang.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-03",
+        "seite": "28",
+        "titel": "3. Kapitel · S. 28",
+        "zitat": "Vor dem Braten wird manchmal auch Sorbet,) Ponche à la romaine,) Ponche glacé) oder dergleichen serviert. Bei feinen Mahlzeiten wird in den meisten Fällen zum Braten Salat gegeben, während das Kompott einen Gang für sich bildet. Finden warme und kalte Mehlspeisen im Menü Aufnahme, so sind die warmen Mehlspeisen vor den kalten zu servieren. Das Dessert muss in seiner Zusammensetzung der größeren oder geringeren Reichhaltigkeit des Gesamtmenüs entsprechen. Käse kann auch vor dem Gefrornen serviert werden. Wird aber zum Käse (mit oder ohne Butter) Bier verabreicht, so ist es richtiger, diesen nach den süßen Speisen anzusetzen."
+      }
+    },
+    {
+      "id": "k03-3",
+      "kapitel": "capitel-03",
+      "frage": "Welche Gemüse nennt das Buch für Entremets de légumes?",
+      "antworten": [
+        "Feine junge Gemüsearten.",
+        "Ausschließlich eingelegtes Gemüse.",
+        "Nur Kartoffeln in jeder Jahreszeit."
+      ],
+      "richtig": 0,
+      "erklaerung": "Die Passage verbindet die Auswahl des Gemüses mit Jahreszeit und Beschaffenheit.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-03",
+        "seite": "27",
+        "titel": "3. Kapitel · S. 27",
+        "zitat": "Zu den Gemüsegerichten (Entremets de légumes) darf man nur die feinen jungen Gemüsearten nehmen. Es wäre gewiss ein grober Fehler, wollte man bei einer feinen Tafel, welche im Monate Juli stattfindet, einen Spargel servieren; um diese Zeit fängt der Spargel bereits an holzig und bitter zu werden, und haben sich auch die meisten Leute an demselben schon abgegessen. Auch beim Dessert und Obst soll, soweit dies eben der Preis zulässt, das Feinste geboten werden. Dass man bei kleineren, nicht umfangreichen Mahlzeiten besonders darauf zu sehen hat, dass speziell auch Speisen geboten werden, welche einen anerkannten Nährwert haben und daher genügend zur Sättigung dienen können, bedarf wohl kaum der Erwähnung."
+      }
+    },
+    {
+      "id": "k04-1",
+      "kapitel": "capitel-04",
+      "frage": "Was bezeichnet die Speisekarte laut Buch?",
+      "antworten": [
+        "Ausschließlich eine Liste der Weine.",
+        "Das Verzeichnis der angebotenen Speisen, meist mit Preisen.",
+        "Nur die Sitzordnung."
+      ],
+      "richtig": 1,
+      "erklaerung": "Kapitel 4 erklärt zuerst die Speisekarte und anschließend andere Kartenarten.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-04",
+        "seite": "31",
+        "titel": "4. Kapitel · S. 31",
+        "zitat": "Unter Speisekarte (französisch: carte du jour, englisch: bill of fare) versteht man das Verzeichnis der Speisen, welche im Restaurant zu haben sind. Meistens sind auch die Preise derselben daneben angegeben."
+      }
+    },
+    {
+      "id": "k04-2",
+      "kapitel": "capitel-04",
+      "frage": "Wie empfiehlt das Buch die Namen von Nationalgerichten zu schreiben?",
+      "antworten": [
+        "Wie im Herkunftsland des Gerichtes.",
+        "Alle Namen durch Nummern ersetzen.",
+        "Jeden Namen in Fraktur übersetzen."
+      ],
+      "richtig": 0,
+      "erklaerung": "Die Empfehlung betrifft den Namen und seine Schreibweise.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-04",
+        "seite": "33",
+        "titel": "4. Kapitel · S. 33",
+        "zitat": "Bei Nationalgerichten wird man am besten tun, dieselben so zu schreiben, wie sie in dem betreffenden Lande geschrieben werden, von wo sie herstammen."
+      }
+    },
+    {
+      "id": "k04-3",
+      "kapitel": "capitel-04",
+      "frage": "Wie viele Personen sollen sich bei der Table d’hôte nach dem Buch ein Menü teilen können?",
+      "antworten": [
+        "Genau eine Person.",
+        "Alle Gäste im gesamten Saal.",
+        "Vier bis sechs Personen."
+      ],
+      "richtig": 2,
+      "erklaerung": "Diese Angabe betrifft die Anzahl der ausliegenden Menükarten.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-04",
+        "seite": "35",
+        "titel": "4. Kapitel · S. 35",
+        "zitat": "Bei Festtafeln soll mindestens zwischen je zwei Kuverts eine Tafelkarte aufgestellt sein. Meistens aber ist für jeden Gast eine solche bestimmt, welche dann auch oft den Namen des Gastes trägt und auf diese Weise gleich anzeigt, wo der Gast Platz zu nehmen hat. Bei der Table d’hôte wird für je vier bis sechs Personen ein Menü genügen."
+      }
+    },
+    {
+      "id": "k05-1",
+      "kapitel": "capitel-05",
+      "frage": "Wann wird Bier an einer Tafel nach der beschriebenen Regel gereicht, wenn es vorgesehen ist?",
+      "antworten": [
+        "Vor oder zur Suppe.",
+        "Erst nach dem Kaffee.",
+        "Nur zwischen zwei Dessertgängen."
+      ],
+      "richtig": 0,
+      "erklaerung": "Die Frage bezieht sich auf die historische Speisen- und Getränkefolge.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-05",
+        "seite": "36",
+        "titel": "5. Kapitel · S. 36",
+        "zitat": "Wird bei einer Tafel Bier serviert, so geschieht dies vor oder zu der Suppe. Fast ausnahmslos wird nach der Suppe Wein serviert. Wird Bier aber an der Tafel überhaupt nicht dargereicht, so ist schon zur Suppe Wein zu servieren. Dies hat auch stets bei allen denjenigen Gästen zu geschehen, welche kein Bier trinken."
+      }
+    },
+    {
+      "id": "k05-2",
+      "kapitel": "capitel-05",
+      "frage": "Was soll beim Öffnen gelagerter Rhein- oder Moselweine ungestört bleiben?",
+      "antworten": [
+        "Das Tischtuch im Vorratsschrank.",
+        "Die Reihenfolge der Menüzeilen.",
+        "Der abgesetzte Bodensatz."
+      ],
+      "richtig": 2,
+      "erklaerung": "Der Text erklärt, dass sich bei längerer Lagerung ein Bodensatz bilden kann.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-05",
+        "seite": "38",
+        "titel": "5. Kapitel · S. 38",
+        "zitat": "Serviert man Rhein- oder Moselweine, so muss man sowohl beim Einkühlen, wie insbesondere beim Öffnen der Bouteillen sehr vorsichtig sein,*) da sich diese Weine bei längerem Lagern meist gebrochen haben, d. h. sie wurden zuerst trübe und lagerten dann ab (setzten Bodensatz ab). Dieser darf nicht aufgerüttelt werden. Um"
+      }
+    },
+    {
+      "id": "k05-3",
+      "kapitel": "capitel-05",
+      "frage": "Warum sollen Weingläser laut Buch nicht bis zum Rand gefüllt werden?",
+      "antworten": [
+        "Damit das Glas schwerer zu greifen ist.",
+        "Um Verschütten zu vermeiden und das Bouquet zur Wirkung kommen zu lassen.",
+        "Damit kein Gast die Farbe erkennen kann."
+      ],
+      "richtig": 1,
+      "erklaerung": "Der Text nennt neben der Erscheinung auch diese beiden Gründe.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-05",
+        "seite": "40",
+        "titel": "5. Kapitel · S. 40",
+        "zitat": "Bezüglich des Einschenkens der Weine beachte Folgendes: Man gieße die Gläser niemals bis zum Rande voll, erstens, weil dies unschön aussehen würde, zweitens, weil dadurch dem Verschütten des Weines vorgebeugt wird, und drittens, weil nur in einem nicht vollen Glase das Bouquet zur vollen Entwicklung und Wirkung gelangt. Natürlich darf auch nicht zu wenig in die Gläser eingegossen werden. Beim Servieren von Flaschenweinen oder Wein in Karaffen gießt man zuerst dem Gastgeber ein viertel bis ein halbes Glas voll ein, dann erst den übrigen Gästen, und zwar, wenn tunlich, in fallender Linie nach ihrem Ansehen und Range, und erst zum Schlusse fülle man das Glas des Gastgebers oder Bestellers des Weines in entsprechender Weise voll."
+      }
+    },
+    {
+      "id": "k06-1",
+      "kapitel": "capitel-06",
+      "frage": "Wen ziehen die Gäste nach Darstellung des Buches bei mangelnder Reinheit zur Verantwortung?",
+      "antworten": [
+        "Den Drucker der Menükarte.",
+        "Andere Gäste an derselben Tafel.",
+        "Den Servierkellner."
+      ],
+      "richtig": 2,
+      "erklaerung": "Daraus leitet der Autor die Verantwortung des Kellners für die Nachreinigung ab.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-06",
+        "seite": "41",
+        "titel": "6. Kapitel · S. 41",
+        "zitat": "Obwohl die Reinigung des gebrauchten Services meist einem eigens dazu bestimmten Personale obliegt, so ist es, da ja die Hauptaufgabe des Kellners in der direkten Verabreichung von Speisen und Getränken an die Gäste besteht, unbedingt seine Pflicht, mindestens eine gründliche Nachreinigung desselben vorzunehmen, da die Gäste bei etwa mangelnder Reinheit nicht die in der Putzkammer oder Abwaschküche Bediensteten zur Verantwortung ziehen, sondern den Servierkellner. Dieser muss daher volles Verständnis dafür haben, wie eine ordentliche und gründliche Reinigung der Serviergegenstände zu geschehen hat."
+      }
+    },
+    {
+      "id": "k06-2",
+      "kapitel": "capitel-06",
+      "frage": "Wie soll man ein Kelchglas beim Abwischen halten?",
+      "antworten": [
+        "Am Rand auf den Tisch drücken.",
+        "Mit dem Kelch in der Handfläche.",
+        "Nur am dünnen Stängel festhalten und verdrehen."
+      ],
+      "richtig": 1,
+      "erklaerung": "Die Anweisung soll das Abbrechen des Stängels vermeiden.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-06",
+        "seite": "43",
+        "titel": "6. Kapitel · S. 43",
+        "zitat": "Das Blankwischen hat auf dieselbe Weise wie bei den Tellern zu geschehen; man hält das zu reinigende Glas in der linken Hand mit der Handserviette fest, wischt es vorerst mit diesem Tuche aus, hierauf mit einem reinen trockenen Wischtuche nach. Bei dem Abwischen von Kelchgläsern nimmt man den Kelch in die linke Handfläche, um das Abbrechen des Stängels zu vermeiden."
+      }
+    },
+    {
+      "id": "k06-3",
+      "kapitel": "capitel-06",
+      "frage": "Wann sollen Instandhaltungs- und Reinigungsarbeiten laut Buch stattfinden?",
+      "antworten": [
+        "In Abwesenheit der Gäste; Ausnahmen in einem Nebenlokal.",
+        "Grundsätzlich während der Begrüßung.",
+        "Immer mitten auf der besetzten Festtafel."
+      ],
+      "richtig": 0,
+      "erklaerung": "Die Passage erläutert auch den Ausnahmefall während der Geschäftszeit.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-06",
+        "seite": "46",
+        "titel": "6. Kapitel · S. 46",
+        "zitat": "Sämtliche Instandhaltungs- und Reinigungsarbeiten dürfen nur in Abwesenheit der Gäste vorgenommen werden; wenn deren Ausführung ausnahmsweise während der Geschäftszeit notwendig werden sollte, so hat diese in einem Nebenlokale zu geschehen."
+      }
+    },
+    {
+      "id": "k07-1",
+      "kapitel": "capitel-07",
+      "frage": "Was ist vor dem Decken mit den Tischen zu tun?",
+      "antworten": [
+        "Die Tischbeine mit Papier dekorieren.",
+        "Sie richtig aufstellen und gegen Wackeln sichern.",
+        "Zuerst alle Gläser darauf füllen."
+      ],
+      "richtig": 1,
+      "erklaerung": "Der Text nennt zugeschnittenes Holz oder Kork zum stabilen Aufstellen.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-07",
+        "seite": "47",
+        "titel": "7. Kapitel · S. 47",
+        "zitat": "Bevor man daran geht, die Tische zu decken, müssen diese auf ihren Plätzen zurechtgestellt und eventuell durch Unterlegen von zugeschnittenen Holz- oder Korkstücken derart festgestellt werden, dass sie nicht wackeln können. Das Unterlegen von Papier ist sehr unschön und daher nur im Notfalle vorzunehmen."
+      }
+    },
+    {
+      "id": "k07-2",
+      "kapitel": "capitel-07",
+      "frage": "Wie weit vom Tischrand sollen flache Speiseteller nach dem Buch stehen?",
+      "antworten": [
+        "Zwei Finger breit nach innen.",
+        "Direkt über den Rand hinausragend.",
+        "Eine volle Armlänge nach innen."
+      ],
+      "richtig": 0,
+      "erklaerung": "Die historische Maßangabe lautet zwei Finger breit.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-07",
+        "seite": "48",
+        "titel": "7. Kapitel · S. 48",
+        "zitat": "Die sogenannten flachen Speiseteller sind zwei Finger breit vom Rande des Tisches nach innen aufzustellen. Die Suppenteller bringt man immer erst gleichzeitig mit der Suppe von der Küche oder dem Rechaud mit."
+      }
+    },
+    {
+      "id": "k07-3",
+      "kapitel": "capitel-07",
+      "frage": "Wo liegen beim beschriebenen einfachen Gedeck Gabel und Messer?",
+      "antworten": [
+        "Beide links vom Teller.",
+        "Messer links, Gabel rechts vom Teller.",
+        "Gabel links, Messer rechts vom Teller."
+      ],
+      "richtig": 2,
+      "erklaerung": "Die Regel steht im Abschnitt über das Auflegen des Besteckes.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-07",
+        "seite": "48",
+        "titel": "7. Kapitel · S. 48",
+        "zitat": "Die Gabel hat stets links, das Messer rechts, beide zwei Finger vom Tischrande entfernt und nicht allzu nahe dem Teller zu liegen. In vielen Restaurants ist es üblich, mittags auch den Suppenlöffel aufzulegen, welcher mitunter oberhalb des Tellers mit dem Griffe nach rechts oder besser und richtiger neben das Messer gelegt wird."
+      }
+    },
+    {
+      "id": "k08-1",
+      "kapitel": "capitel-08",
+      "frage": "Welche grundlegende Unterscheidung trifft das Buch beim Frühstück?",
+      "antworten": [
+        "Erstes und zweites Frühstück.",
+        "Nur süßes und salziges Frühstück.",
+        "Nur Frühstück mit und ohne Tischkarte."
+      ],
+      "richtig": 0,
+      "erklaerung": "Anschließend unterscheidet es beim ersten Frühstück weitere Gewohnheiten.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-08",
+        "seite": "49",
+        "titel": "8. Kapitel · S. 49",
+        "zitat": "Bezüglich des Frühstücks haben wir vor allem zu unterscheiden zwischen erstem und zweitem Frühstück und bezüglich des ersteren wieder zwischen dem allgemein üblichen, Frankreich entstammenden Déjeuner und dem der englischen und amerikanischen Geschmacksrichtung und Gewohnheit entsprechenden Breakfast."
+      }
+    },
+    {
+      "id": "k08-2",
+      "kapitel": "capitel-08",
+      "frage": "Welche vier Gläser nennt die Beschreibung auf Seite 58?",
+      "antworten": [
+        "Vier gleiche Wassergläser.",
+        "Bier-, Likör-, Schnaps- und Sherryglas.",
+        "Wasser-, Weißwein-, Rotwein- und Champagnerglas."
+      ],
+      "richtig": 2,
+      "erklaerung": "Die Angabe gehört zu diesem beschriebenen Gedeck; andere Tafeln zeigen andere Zusammenstellungen.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-08",
+        "seite": "58",
+        "titel": "8. Kapitel · S. 58",
+        "zitat": "Gewöhnlich werden bloß vier Gläser, und zwar das Wasser-, das Weißwein-, das Rotwein- und das Champagnerglas aufgestellt."
+      }
+    },
+    {
+      "id": "k08-3",
+      "kapitel": "capitel-08",
+      "frage": "Wovon hängt laut Buch die einfachere oder reichlichere Ausstattung eines Buffets ab?",
+      "antworten": [
+        "Ausschließlich von der Zahl der Fenster.",
+        "Vom bewilligten Betrag des Gastgebers.",
+        "Von der Länge des Wortes Buffet."
+      ],
+      "richtig": 1,
+      "erklaerung": "Das Kapitel verbindet Umfang und Ausstattung mit dem verfügbaren Betrag.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-08",
+        "seite": "67",
+        "titel": "8. Kapitel · S. 67",
+        "zitat": "Die einfachere oder reichlichere Ausstattung des Buffets hängt natürlich von dem vom Gastgeber für dasselbe bewilligten Betrage ab."
+      }
+    },
+    {
+      "id": "k09-1",
+      "kapitel": "capitel-09",
+      "frage": "Welche Anlässe nennt das Buch für eine Festtafel?",
+      "antworten": [
+        "Ausschließlich ein tägliches Frühstück.",
+        "Nur die Reinigung nach Geschäftsschluss.",
+        "Zum Beispiel Hochzeiten und Jubiläen."
+      ],
+      "richtig": 2,
+      "erklaerung": "Festliche Anlässe sind der Ausgangspunkt des neunten Kapitels.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-09",
+        "seite": "68",
+        "titel": "9. Kapitel · S. 68",
+        "zitat": "Bei feierlichen Gelegenheiten, z. B. bei Hochzeiten, Jubiläen, bei Empfang hoher Gäste, bei Banketten*) etc., deckt man die Speisetische in besonders festlicher Weise, so dass sie auf die Bezeichnung „Festtafel“ Anspruch erheben können. Das Arrangement einer solchen Festtafel ist eine ziemlich schwierige Aufgabe, deren zufriedenstellende Lösung Sachkenntnis und Umsicht erfordert."
+      }
+    },
+    {
+      "id": "k09-2",
+      "kapitel": "capitel-09",
+      "frage": "Wo gehört das größte oder schönste Mittelstück nach dieser Beschreibung hin?",
+      "antworten": [
+        "Unabhängig von der Sitzordnung vor die Tür.",
+        "In die Mitte vor den Ehrenplatz.",
+        "Unter den Serviertisch."
+      ],
+      "richtig": 1,
+      "erklaerung": "Die Anordnung der Tischdekoration bezieht sich auf den Ehrenplatz und die Symmetrie.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-09",
+        "seite": "70",
+        "titel": "9. Kapitel · S. 70",
+        "zitat": "Das Aufstellen der verschiedenen Aufsätze: Etageres, Pièces montées, Blumenvasen etc., geschieht abwechslungsweise, so dass nie zwei durch Form und Farbe einander ähnliche Aufsätze nebeneinander zu stehen kommen, wobei auch auf die symmetrische Anordnung zu sehen ist. Der größte und schönste Aufsatz oder besser ein niederes, sehr schönes Mittelstück gehört in die Mitte vor den Ehrenplatz, die kleineren links und rechts davon. Sind zwei große Aufsätze vorhanden, so kommen diese bei Längstafeln seitwärts links und rechts vom Ehrenplatz,"
+      }
+    },
+    {
+      "id": "k09-3",
+      "kapitel": "capitel-09",
+      "frage": "Was soll vor dem Kaffeeservice an der Tafel entfernt werden?",
+      "antworten": [
+        "Dessert- beziehungsweise Obstteller.",
+        "Die Stühle der Gäste.",
+        "Sämtliche Fensterdekorationen."
+      ],
+      "richtig": 0,
+      "erklaerung": "Die Tafel wird für den nächsten Teil der Mahlzeit vorbereitet.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-09",
+        "seite": "73",
+        "titel": "9. Kapitel · S. 73",
+        "zitat": "Wird hingegen der Kaffee an der Tafel serviert, so sind die Dessert-, respektive Obstteller wegzunehmen, der Tisch rein zu machen und vor den Herren der Gesellschaft Feuerzeuge oder statt derselben brennende Kerzen und Aschenschalen einzustellen. Über das Servieren des Kaffees etc. siehe Seite 63."
+      }
+    },
+    {
+      "id": "k10-1",
+      "kapitel": "capitel-10",
+      "frage": "Warum betont das Buch die vollständige Vorbereitung beim Zimmerservice?",
+      "antworten": [
+        "Weil dort immer mehrere Kellner bereitstehen.",
+        "Fehlende Teile verursachen zusätzliche Wege und Zeitverlust.",
+        "Weil im Zimmer keine Speisen gegessen werden."
+      ],
+      "richtig": 1,
+      "erklaerung": "Der Zimmerkellner arbeitet nach der Darstellung weitgehend selbständig.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-10",
+        "seite": "74",
+        "titel": "10. Kapitel · S. 74",
+        "zitat": "Die Aufgabe des Zimmerkellners ist es, den Gast in seinem Zimmer ebenso gut, ebenso schnell und auf ebenso gediegene Art und Weise zu bedienen, wie dies im Restaurant durchführbar ist. Er muss daher stets darauf bedacht sein, dass neben ihm kein Kellner vorhanden ist, der während seiner Abwesenheit Fehlendes allenfalls ersetzen könnte, wie auch kein Oberkellner, Geschäftsführer etc., der im Restaurant immer in der Nähe ist, um etwaige Mängel rechtzeitig zu entdecken und korrigieren zu lassen. Der Zimmerkellner ist daher ein gänzlich selbständiger Arbeiter. Das Vergessen einer einzigen Gabel, eines einzigen Löffels, Glases etc. verursacht oft große Störung und bringt oft größeren Zeitverlust mit sich als das Servieren des ganzen Mahles in Anspruch nehmen soll, besonders wenn sich das Zimmer des Gastes in einem hochgelegenen Stockwerke oder in einem abseits gelegenen Hoteltrakte befindet."
+      }
+    },
+    {
+      "id": "k10-2",
+      "kapitel": "capitel-10",
+      "frage": "Was ist beim Frühstück mehrerer Personen im Zimmer zusätzlich nötig?",
+      "antworten": [
+        "Den Tisch vollständig und korrekt decken.",
+        "Jedem Gast ein ungeordnetes Plateau hinstellen.",
+        "Das Tischtuch grundsätzlich weglassen."
+      ],
+      "richtig": 0,
+      "erklaerung": "Der Text unterscheidet den einzelnen Gast vom gemeinsamen Frühstück mehrerer Personen.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-10",
+        "seite": "76",
+        "titel": "10. Kapitel · S. 76",
+        "zitat": "Einzelne Gäste bedienen sich des Frühstücks direkt vom Plateau, weshalb es genügt – dasselbe vorher entsprechend arrangiert – auf den mit einem Tischtuche bedeckten Tisch zu Handen des Gastes zu stellen. Nehmen mehrere Personen am Frühstück teil, so ist es nicht nur notwendig, das Tischtuch aufzulegen, sondern auch den Tisch vollständig und korrekt zu decken."
+      }
+    },
+    {
+      "id": "k10-3",
+      "kapitel": "capitel-10",
+      "frage": "Wie soll das Zimmerinventar nach dem beschriebenen Service zurückbleiben?",
+      "antworten": [
+        "In einer vom Kellner frei gewählten neuen Anordnung.",
+        "Zusammengestellt vor der Zimmertür.",
+        "In der früheren Ordnung."
+      ],
+      "richtig": 2,
+      "erklaerung": "Nach dem Abräumen soll die ursprüngliche Ordnung wiederhergestellt werden.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-10",
+        "seite": "77",
+        "titel": "10. Kapitel · S. 77",
+        "zitat": "sorgfältig zusammengefaltet und beiseite gelegt hat,*) ist wieder auf den Tisch in genau derselben Weise aufzulegen wie vorher, auch die übrigen Möbel und das sonstige Inventar sind in die frühere Ordnung zurückzubringen."
+      }
+    }
+  ],
+  "touren": [
+    {
+      "id": "erste-schicht",
+      "titel": "Deine erste Schicht im Jahr 1899",
+      "dauer": "10–15 Minuten",
+      "text": "Vom Gruß bis zum gedeckten Platz: Entdecke sechs kleine Aufgaben des Kellners.",
+      "schritte": [
+        {
+          "id": "gruss",
+          "titel": "Ein Gast kommt herein",
+          "text": "Lies, wer den Gast begrüßen soll. Was sagt die Stelle über die Arbeitsteilung?",
+          "ziel": {
+            "art": "kapitel",
+            "id": "capitel-01",
+            "seite": "9"
+          }
+        },
+        {
+          "id": "hangerl",
+          "titel": "Ein unbekanntes Wort",
+          "text": "Lerne das Hangerl kennen. Welche Arbeit übernimmt dieses Tuch?",
+          "ziel": {
+            "art": "begriff",
+            "id": "hangerl",
+            "seite": null
+          }
+        },
+        {
+          "id": "tragen",
+          "titel": "Gut vorbereitet",
+          "text": "Lies die Stelle zum Auftragbrett. Denke dir einen Weg mit mehreren Gegenständen aus.",
+          "ziel": {
+            "art": "kapitel",
+            "id": "capitel-02",
+            "seite": "23"
+          }
+        },
+        {
+          "id": "besteck",
+          "titel": "Genau hinschauen",
+          "text": "Erkenne das Fischmesser an seiner Form.",
+          "ziel": {
+            "art": "bild",
+            "id": "fischmesser",
+            "seite": null
+          }
+        },
+        {
+          "id": "decken",
+          "titel": "Decke einen Platz",
+          "text": "Ordne Gabel, Messer und Löffel nach der Vorlage zu.",
+          "ziel": {
+            "art": "bild",
+            "id": "gedeck",
+            "seite": null
+          }
+        },
+        {
+          "id": "rueckblick",
+          "titel": "Was ist hängen geblieben?",
+          "text": "Beantworte drei Fragen zur Handhabung der Utensilien. Du kannst jederzeit die Buchstelle öffnen.",
+          "ziel": {
+            "art": "fragen",
+            "id": "capitel-02",
+            "seite": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "festabend",
+      "titel": "Ein Festabend bei Johann Strauss",
+      "dauer": "10–15 Minuten",
+      "text": "Eine historische Menükarte führt dich von der Feier zur Speisenfolge und zur Festtafel.",
+      "schritte": [
+        {
+          "id": "karte",
+          "titel": "Die Karte selbst",
+          "text": "Sieh dir Schrift, Schmuck, Datum und Speisen auf der Originalkarte an.",
+          "ziel": {
+            "art": "menu",
+            "id": "03_Johann_Strauss_Jubilaeum_1894.jpg",
+            "seite": null
+          }
+        },
+        {
+          "id": "gaenge",
+          "titel": "Gang für Gang",
+          "text": "Entschlüssle die französischen Bezeichnungen und entdecke die Reihenfolge.",
+          "ziel": {
+            "art": "menuhilfe",
+            "id": "03_Johann_Strauss_Jubilaeum_1894.jpg",
+            "seite": null
+          }
+        },
+        {
+          "id": "entremets",
+          "titel": "Ein Wort mit mehreren Bedeutungen",
+          "text": "Warum bedeutet Entremets nicht überall dasselbe?",
+          "ziel": {
+            "art": "begriff",
+            "id": "entremets",
+            "seite": null
+          }
+        },
+        {
+          "id": "mitte",
+          "titel": "Der Ehrenplatz",
+          "text": "Lies, wo der größte Aufsatz der Festtafel stehen soll.",
+          "ziel": {
+            "art": "kapitel",
+            "id": "capitel-09",
+            "seite": "70"
+          }
+        },
+        {
+          "id": "schere",
+          "titel": "Ein Werkzeug zum Dessert",
+          "text": "Finde die Traubenschere und vergleiche sie mit dem Nussknacker.",
+          "ziel": {
+            "art": "bild",
+            "id": "traubenschere",
+            "seite": null
+          }
+        },
+        {
+          "id": "festfragen",
+          "titel": "Eine Feier verstehen",
+          "text": "Prüfe dein Verständnis des Festtafelkapitels.",
+          "ziel": {
+            "art": "fragen",
+            "id": "capitel-09",
+            "seite": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "festessen",
+      "titel": "Ein Festessen vorbereiten",
+      "dauer": "8–12 Minuten",
+      "text": "Von der Speisenfolge zur Festtafel: Was muss vor einem großen Essen vorbereitet werden?",
+      "schritte": [
+        {
+          "id": "folge",
+          "titel": "Die Speisenfolge",
+          "text": "Lies im dritten Kapitel, wie die Speisen einer Mahlzeit aufeinander folgen.",
+          "ziel": {
+            "art": "kapitel",
+            "id": "capitel-03",
+            "seite": "25"
+          }
+        },
+        {
+          "id": "entremets",
+          "titel": "Ein Gang mit Gemüse",
+          "text": "Lerne die Bezeichnung Entremets de légumes kennen.",
+          "ziel": {
+            "art": "begriff",
+            "id": "entremets",
+            "seite": null
+          }
+        },
+        {
+          "id": "anlass",
+          "titel": "Eine besondere Gelegenheit",
+          "text": "Welche Anlässe nennt das Buch für eine Festtafel?",
+          "ziel": {
+            "art": "kapitel",
+            "id": "capitel-09",
+            "seite": "68"
+          }
+        },
+        {
+          "id": "tafelform",
+          "titel": "Platz für eine Gesellschaft",
+          "text": "Sieh dir die U-förmige Festtafel an. Wo liegen die offenen und die geschlossenen Seiten?",
+          "ziel": {
+            "art": "tafel",
+            "id": "52",
+            "seite": null
+          }
+        },
+        {
+          "id": "satz",
+          "titel": "Eine Anweisung lesen",
+          "text": "Lies einen der Sätze aus dem Buch in Fraktur und vergleiche mit der neuen Schrift.",
+          "ziel": {
+            "art": "leseuebungen",
+            "id": "satz",
+            "seite": null
+          }
+        },
+        {
+          "id": "verstanden",
+          "titel": "Die Folge verstehen",
+          "text": "Beantworte drei Fragen zur Speisenfolge.",
+          "ziel": {
+            "art": "fragen",
+            "id": "capitel-03",
+            "seite": null
+          }
+        }
+      ]
+    }
+  ],
+  "kontexte": [
+    {
+      "id": "anrede",
+      "titel": "Anrede und Rangordnung",
+      "text": "Das erste Kapitel beschreibt eine Arbeitswelt mit ausgeprägter Rangordnung. Begrüßung, Anrede und das Verhalten gegenüber dem Prinzipal nehmen viel Raum ein. Lies diese Vorgaben als Aussagen des Lehrbuchs von 1899.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-01",
+        "seite": "9",
+        "titel": "1. Kapitel · S. 9",
+        "zitat": "Tritt ein Gast in das Lokal, so haben ihn die anwesenden Kellner stehend zu begrüßen; es ist wohl selbstverständlich, dass von diesem Momente an sich kein Kellner mehr im selben Lokale niedersetzen darf. Bei Begrüßung der Gäste aber muss es vermieden werden, dass alle Kellner zugleich grüßen. Die dem Gaste zunächst stehenden haben ihn zuerst zu grüßen; nach und nach grüßen die anderen, am besten erst dann, wenn der Gast in ihre Nähe kommt oder sie in die Nähe des Gastes kommen. Später das Lokal betretende Kellner haben in der Regel nur dann zu grüßen, wenn sie in die Nähe des Gastes kommen oder wenn sie mit demselben dienstlich zu verkehren haben."
+      }
+    },
+    {
+      "id": "werkzeuge",
+      "titel": "Arbeiten mit vorbereitetem Service",
+      "text": "Das Serviertuch und das Auftragbrett zeigen, wie genau das Buch kleine Arbeitsschritte behandelt. Die Handgriffe hängen mit vorbereiteten Gegenständen und Wegen zwischen Küche und Gastraum zusammen.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-02",
+        "seite": "23",
+        "titel": "2. Kapitel · S. 23",
+        "zitat": "Das Aufeinanderstellen von Tellern, auf denen Speisen angerichtet sind, derart, dass einzelne Teller ganz oder teilweise auf Speisen zu stehen kommen, ist eine große Unart, die vermieden werden muss. Man gehe lieber öfter in die Küche, nehme weniger, sei aber desto flinker. Wo es nur halbwegs möglich ist, sollen, wenn der Geschäftsgang ein stärkerer ist, die Speisen auf Plateaux (Auftragbrettern) aus der Küche geholt werden. Es ist überhaupt unschön, viele Servicegegenstände gleichzeitig in die Hände zu nehmen und zu tragen. Hat man vieles auf einmal zu tragen, so nehme man ein Auftragbrett zu Hilfe."
+      }
+    },
+    {
+      "id": "mahlzeiten",
+      "titel": "Eine Mahlzeit hat viele Namen",
+      "text": "Déjeuner, Gabelfrühstück, Lunch und Dîner bezeichnen im Buch unterschiedliche Mahlzeiten. Die Bedeutung ergibt sich aus der damaligen Beschreibung und dem jeweiligen Zusatz. Vergleiche deshalb immer die genannte Mahlzeit und ihre Speisen.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-08",
+        "seite": "49",
+        "titel": "8. Kapitel · S. 49",
+        "zitat": "Bezüglich des Frühstücks haben wir vor allem zu unterscheiden zwischen erstem und zweitem Frühstück und bezüglich des ersteren wieder zwischen dem allgemein üblichen, Frankreich entstammenden Déjeuner und dem der englischen und amerikanischen Geschmacksrichtung und Gewohnheit entsprechenden Breakfast."
+      }
+    },
+    {
+      "id": "karten",
+      "titel": "Karten als Teil einer Feier",
+      "text": "Eine Menükarte hält die geplante Speisenfolge fest. Einige abgebildete Karten nennen zusätzlich Anlass, Ort und Datum. Der gedruckte Text bietet einen unmittelbaren Zugang zur Feier; weitergehende Geschichten lassen sich daraus allein nicht ableiten.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-04",
+        "seite": "35",
+        "titel": "4. Kapitel · S. 35",
+        "zitat": "Die den Bildertafeln folgenden Blätter bieten einige Muster der Herstellung von Menüs*) durch Druck und der dabei zur Anwendung kommenden Anordnung der Zeilen."
+      }
+    },
+    {
+      "id": "festtafel",
+      "titel": "Die Mitte der Festtafel",
+      "text": "Die Tischdekoration wird im Buch mit den Ehrenplätzen verbunden. Das größte Mittelstück, kleinere Aufsätze und die Sitzordnung sollen zusammenpassen. Vergleiche dazu die verschiedenen Tafelformen.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-09",
+        "seite": "70",
+        "titel": "9. Kapitel · S. 70",
+        "zitat": "Das Aufstellen der verschiedenen Aufsätze: Etageres, Pièces montées, Blumenvasen etc., geschieht abwechslungsweise, so dass nie zwei durch Form und Farbe einander ähnliche Aufsätze nebeneinander zu stehen kommen, wobei auch auf die symmetrische Anordnung zu sehen ist. Der größte und schönste Aufsatz oder besser ein niederes, sehr schönes Mittelstück gehört in die Mitte vor den Ehrenplatz, die kleineren links und rechts davon. Sind zwei große Aufsätze vorhanden, so kommen diese bei Längstafeln seitwärts links und rechts vom Ehrenplatz,"
+      }
+    },
+    {
+      "id": "zimmer",
+      "titel": "Service über längere Wege",
+      "text": "Beim Zimmerservice muss ein Kellner nach dieser Darstellung vieles im Voraus bedenken. Ein fehlender Löffel kann einen langen zusätzlichen Weg verursachen. Die Passage macht den Zusammenhang zwischen Vorbereitung und Arbeitsablauf anschaulich.",
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-10",
+        "seite": "74",
+        "titel": "10. Kapitel · S. 74",
+        "zitat": "Die Aufgabe des Zimmerkellners ist es, den Gast in seinem Zimmer ebenso gut, ebenso schnell und auf ebenso gediegene Art und Weise zu bedienen, wie dies im Restaurant durchführbar ist. Er muss daher stets darauf bedacht sein, dass neben ihm kein Kellner vorhanden ist, der während seiner Abwesenheit Fehlendes allenfalls ersetzen könnte, wie auch kein Oberkellner, Geschäftsführer etc., der im Restaurant immer in der Nähe ist, um etwaige Mängel rechtzeitig zu entdecken und korrigieren zu lassen. Der Zimmerkellner ist daher ein gänzlich selbständiger Arbeiter. Das Vergessen einer einzigen Gabel, eines einzigen Löffels, Glases etc. verursacht oft große Störung und bringt oft größeren Zeitverlust mit sich als das Servieren des ganzen Mahles in Anspruch nehmen soll, besonders wenn sich das Zimmer des Gastes in einem hochgelegenen Stockwerke oder in einem abseits gelegenen Hoteltrakte befindet."
+      }
+    }
+  ],
+  "leseuebungen": [
+    {
+      "id": "gruppe-1",
+      "stufe": "gruppe",
+      "neu": "Das Serviertuch",
+      "alt": "Das Serviertuch",
+      "antiqua": [],
+      "map": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-02",
+        "seite": "22",
+        "titel": "2. Kapitel · S. 22",
+        "zitat": "Das Serviertuch, das sogenannte „Hangerl“, dient dazu, beim Servieren Gläser, Platten, Teller etc., bevor man diese dem Gaste zur Verfügung stellt oder etwas darauf anrichten oder einschenken lässt, nochmals nachzuwischen, wiewohl alle diese Gegenstände selbstverständlich schon auf das Sorgfältigste gereinigt in Bereitschaft stehen sollen."
+      }
+    },
+    {
+      "id": "gruppe-2",
+      "stufe": "gruppe",
+      "neu": "auf einmal zu tragen",
+      "alt": "auf einmal zu tragen",
+      "antiqua": [],
+      "map": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-02",
+        "seite": "23",
+        "titel": "2. Kapitel · S. 23",
+        "zitat": "Das Aufeinanderstellen von Tellern, auf denen Speisen angerichtet sind, derart, dass einzelne Teller ganz oder teilweise auf Speisen zu stehen kommen, ist eine große Unart, die vermieden werden muss. Man gehe lieber öfter in die Küche, nehme weniger, sei aber desto flinker. Wo es nur halbwegs möglich ist, sollen, wenn der Geschäftsgang ein stärkerer ist, die Speisen auf Plateaux (Auftragbrettern) aus der Küche geholt werden. Es ist überhaupt unschön, viele Servicegegenstände gleichzeitig in die Hände zu nehmen und zu tragen. Hat man vieles auf einmal zu tragen, so nehme man ein Auftragbrett zu Hilfe."
+      }
+    },
+    {
+      "id": "gruppe-3",
+      "stufe": "gruppe",
+      "neu": "warmen Mehlspeisen vor den kalten",
+      "alt": "warmen Mehlſpeiſen vor den kalten",
+      "antiqua": [],
+      "map": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33
+      ],
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-03",
+        "seite": "28",
+        "titel": "3. Kapitel · S. 28",
+        "zitat": "Vor dem Braten wird manchmal auch Sorbet,) Ponche à la romaine,) Ponche glacé) oder dergleichen serviert. Bei feinen Mahlzeiten wird in den meisten Fällen zum Braten Salat gegeben, während das Kompott einen Gang für sich bildet. Finden warme und kalte Mehlspeisen im Menü Aufnahme, so sind die warmen Mehlspeisen vor den kalten zu servieren. Das Dessert muss in seiner Zusammensetzung der größeren oder geringeren Reichhaltigkeit des Gesamtmenüs entsprechen. Käse kann auch vor dem Gefrornen serviert werden. Wird aber zum Käse (mit oder ohne Butter) Bier verabreicht, so ist es richtiger, diesen nach den süßen Speisen anzusetzen."
+      }
+    },
+    {
+      "id": "gruppe-4",
+      "stufe": "gruppe",
+      "neu": "vier bis sechs Personen",
+      "alt": "vier bis ſechs Perſonen",
+      "antiqua": [],
+      "map": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-04",
+        "seite": "35",
+        "titel": "4. Kapitel · S. 35",
+        "zitat": "Bei Festtafeln soll mindestens zwischen je zwei Kuverts eine Tafelkarte aufgestellt sein. Meistens aber ist für jeden Gast eine solche bestimmt, welche dann auch oft den Namen des Gastes trägt und auf diese Weise gleich anzeigt, wo der Gast Platz zu nehmen hat. Bei der Table d’hôte wird für je vier bis sechs Personen ein Menü genügen."
+      }
+    },
+    {
+      "id": "gruppe-5",
+      "stufe": "gruppe",
+      "neu": "zwei Finger breit vom Rande",
+      "alt": "zwei Finger breit vom Rande",
+      "antiqua": [],
+      "map": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-07",
+        "seite": "48",
+        "titel": "7. Kapitel · S. 48",
+        "zitat": "Die sogenannten flachen Speiseteller sind zwei Finger breit vom Rande des Tisches nach innen aufzustellen. Die Suppenteller bringt man immer erst gleichzeitig mit der Suppe von der Küche oder dem Rechaud mit."
+      }
+    },
+    {
+      "id": "gruppe-6",
+      "stufe": "gruppe",
+      "neu": "Der größte und schönste Aufsatz",
+      "alt": "Der größte und ſchönſte Aufſatz",
+      "antiqua": [],
+      "map": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-09",
+        "seite": "70",
+        "titel": "9. Kapitel · S. 70",
+        "zitat": "Das Aufstellen der verschiedenen Aufsätze: Etageres, Pièces montées, Blumenvasen etc., geschieht abwechslungsweise, so dass nie zwei durch Form und Farbe einander ähnliche Aufsätze nebeneinander zu stehen kommen, wobei auch auf die symmetrische Anordnung zu sehen ist. Der größte und schönste Aufsatz oder besser ein niederes, sehr schönes Mittelstück gehört in die Mitte vor den Ehrenplatz, die kleineren links und rechts davon. Sind zwei große Aufsätze vorhanden, so kommen diese bei Längstafeln seitwärts links und rechts vom Ehrenplatz,"
+      }
+    },
+    {
+      "id": "satz-1",
+      "stufe": "satz",
+      "neu": "Die dem Gaste zunächst stehenden haben ihn zuerst zu grüßen; nach und nach grüßen die anderen, am besten erst dann, wenn der Gast in ihre Nähe kommt oder sie in die Nähe des Gastes kommen.",
+      "alt": "Die dem Gaſte zunächſt ſtehenden haben ihn zuerſt zu grüßen; nach und nach grüßen die anderen, am beſten erſt dann, wenn der Gaſt in ihre Nähe kommt oder ſie in die Nähe des Gaſtes kommen.",
+      "antiqua": [],
+      "map": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188
+      ],
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-01",
+        "seite": "9",
+        "titel": "1. Kapitel · S. 9",
+        "zitat": "Tritt ein Gast in das Lokal, so haben ihn die anwesenden Kellner stehend zu begrüßen; es ist wohl selbstverständlich, dass von diesem Momente an sich kein Kellner mehr im selben Lokale niedersetzen darf. Bei Begrüßung der Gäste aber muss es vermieden werden, dass alle Kellner zugleich grüßen. Die dem Gaste zunächst stehenden haben ihn zuerst zu grüßen; nach und nach grüßen die anderen, am besten erst dann, wenn der Gast in ihre Nähe kommt oder sie in die Nähe des Gastes kommen. Später das Lokal betretende Kellner haben in der Regel nur dann zu grüßen, wenn sie in die Nähe des Gastes kommen oder wenn sie mit demselben dienstlich zu verkehren haben."
+      }
+    },
+    {
+      "id": "satz-2",
+      "stufe": "satz",
+      "neu": "Hat man vieles auf einmal zu tragen, so nehme man ein Auftragbrett zu Hilfe.",
+      "alt": "Hat man vieles auf einmal zu tragen, ſo nehme man ein Auftragbrett zu Hilfe.",
+      "antiqua": [],
+      "map": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76
+      ],
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-02",
+        "seite": "23",
+        "titel": "2. Kapitel · S. 23",
+        "zitat": "Das Aufeinanderstellen von Tellern, auf denen Speisen angerichtet sind, derart, dass einzelne Teller ganz oder teilweise auf Speisen zu stehen kommen, ist eine große Unart, die vermieden werden muss. Man gehe lieber öfter in die Küche, nehme weniger, sei aber desto flinker. Wo es nur halbwegs möglich ist, sollen, wenn der Geschäftsgang ein stärkerer ist, die Speisen auf Plateaux (Auftragbrettern) aus der Küche geholt werden. Es ist überhaupt unschön, viele Servicegegenstände gleichzeitig in die Hände zu nehmen und zu tragen. Hat man vieles auf einmal zu tragen, so nehme man ein Auftragbrett zu Hilfe."
+      }
+    },
+    {
+      "id": "satz-3",
+      "stufe": "satz",
+      "neu": "Bei feinen Mahlzeiten wird in den meisten Fällen zum Braten Salat gegeben, während das Kompott einen Gang für sich bildet.",
+      "alt": "Bei feinen Mahlzeiten wird in den meiſten Fällen zum Braten Salat gegeben, während das Kompott einen Gang für ſich bildet.",
+      "antiqua": [],
+      "map": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122
+      ],
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-03",
+        "seite": "28",
+        "titel": "3. Kapitel · S. 28",
+        "zitat": "Vor dem Braten wird manchmal auch Sorbet,) Ponche à la romaine,) Ponche glacé) oder dergleichen serviert. Bei feinen Mahlzeiten wird in den meisten Fällen zum Braten Salat gegeben, während das Kompott einen Gang für sich bildet. Finden warme und kalte Mehlspeisen im Menü Aufnahme, so sind die warmen Mehlspeisen vor den kalten zu servieren. Das Dessert muss in seiner Zusammensetzung der größeren oder geringeren Reichhaltigkeit des Gesamtmenüs entsprechen. Käse kann auch vor dem Gefrornen serviert werden. Wird aber zum Käse (mit oder ohne Butter) Bier verabreicht, so ist es richtiger, diesen nach den süßen Speisen anzusetzen."
+      }
+    },
+    {
+      "id": "satz-4",
+      "stufe": "satz",
+      "neu": "Die Gabel hat stets links, das Messer rechts, beide zwei Finger vom Tischrande entfernt und nicht allzu nahe dem Teller zu liegen.",
+      "alt": "Die Gabel hat ſtets links, das Meſſer rechts, beide zwei Finger vom Tiſchrande entfernt und nicht allzu nahe dem Teller zu liegen.",
+      "antiqua": [],
+      "map": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130
+      ],
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-07",
+        "seite": "48",
+        "titel": "7. Kapitel · S. 48",
+        "zitat": "Die Gabel hat stets links, das Messer rechts, beide zwei Finger vom Tischrande entfernt und nicht allzu nahe dem Teller zu liegen. In vielen Restaurants ist es üblich, mittags auch den Suppenlöffel aufzulegen, welcher mitunter oberhalb des Tellers mit dem Griffe nach rechts oder besser und richtiger neben das Messer gelegt wird."
+      }
+    },
+    {
+      "id": "satz-5",
+      "stufe": "satz",
+      "neu": "Wird hingegen der Kaffee an der Tafel serviert, so sind die Dessert-, respektive Obstteller wegzunehmen, der Tisch rein zu machen und vor den Herren der Gesellschaft Feuerzeuge oder statt derselben brennende Kerzen und Aschenschalen einzustellen.",
+      "alt": "Wird hingegen der Kaffee an der Tafel ſerviert, ſo ſind die Deſſert-, reſpektive Obſtteller wegzunehmen, der Tiſch rein zu machen und vor den Herren der Geſellſchaft Feuerzeuge oder ſtatt derſelben brennende Kerzen und Aſchenſchalen einzuſtellen.",
+      "antiqua": [],
+      "map": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215,
+        216,
+        217,
+        218,
+        219,
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237,
+        238,
+        239,
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        246
+      ],
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-09",
+        "seite": "73",
+        "titel": "9. Kapitel · S. 73",
+        "zitat": "Wird hingegen der Kaffee an der Tafel serviert, so sind die Dessert-, respektive Obstteller wegzunehmen, der Tisch rein zu machen und vor den Herren der Gesellschaft Feuerzeuge oder statt derselben brennende Kerzen und Aschenschalen einzustellen. Über das Servieren des Kaffees etc. siehe Seite 63."
+      }
+    },
+    {
+      "id": "satz-6",
+      "stufe": "satz",
+      "neu": "Das Vergessen einer einzigen Gabel, eines einzigen Löffels, Glases etc.",
+      "alt": "Das Vergeſſen einer einzigen Gabel, eines einzigen Löffels, Glaſes ꝛc.",
+      "antiqua": [],
+      "map": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        67,
+        68,
+        69,
+        70
+      ],
+      "quelle": {
+        "art": "kapitel",
+        "id": "capitel-10",
+        "seite": "74",
+        "titel": "10. Kapitel · S. 74",
+        "zitat": "Die Aufgabe des Zimmerkellners ist es, den Gast in seinem Zimmer ebenso gut, ebenso schnell und auf ebenso gediegene Art und Weise zu bedienen, wie dies im Restaurant durchführbar ist. Er muss daher stets darauf bedacht sein, dass neben ihm kein Kellner vorhanden ist, der während seiner Abwesenheit Fehlendes allenfalls ersetzen könnte, wie auch kein Oberkellner, Geschäftsführer etc., der im Restaurant immer in der Nähe ist, um etwaige Mängel rechtzeitig zu entdecken und korrigieren zu lassen. Der Zimmerkellner ist daher ein gänzlich selbständiger Arbeiter. Das Vergessen einer einzigen Gabel, eines einzigen Löffels, Glases etc. verursacht oft große Störung und bringt oft größeren Zeitverlust mit sich als das Servieren des ganzen Mahles in Anspruch nehmen soll, besonders wenn sich das Zimmer des Gastes in einem hochgelegenen Stockwerke oder in einem abseits gelegenen Hoteltrakte befindet."
+      }
+    }
+  ],
+  "bildaufgaben": [
+    {
+      "id": "fischmesser",
+      "titel": "Finde das Fischmesser",
+      "text": "Welcher Ausschnitt zeigt das Fischmesser? Vergleiche die Klingen und die Form der Spitze.",
+      "quelle": {
+        "art": "tafel",
+        "id": "10",
+        "seite": "97",
+        "titel": "Tafel 10 · S. 97",
+        "zitat": null
+      },
+      "bild": "tafel_10_Tisch_und_Fischbesteck.jpg",
+      "art": "auswahl",
+      "richtig": 1,
+      "optionen": [
+        {
+          "titel": "A",
+          "beschreibung": "Langes gerades Messer mit abgerundeter Spitze",
+          "crop": [
+            0.39,
+            0.05,
+            0.16,
+            0.61
+          ]
+        },
+        {
+          "titel": "B",
+          "beschreibung": "Breites verziertes Messer mit spitzer Klinge, waagrecht",
+          "crop": [
+            0.09,
+            0.711,
+            0.8,
+            0.063
+          ]
+        },
+        {
+          "titel": "C",
+          "beschreibung": "Löffel mit ovaler Schale und langem Stiel",
+          "crop": [
+            0.65,
+            0.23,
+            0.16,
+            0.43
+          ]
+        }
+      ],
+      "erklaerung": "B ist das Fischmesser. Es liegt auf Tafel 10 waagrecht unter dem Tischbesteck. Die Bildunterschrift bestätigt die Zuordnung."
+    },
+    {
+      "id": "traubenschere",
+      "titel": "Finde die Traubenschere",
+      "text": "Welcher Ausschnitt zeigt die Schere zum Abteilen von Trauben? Die Formen helfen dir beim Vergleich.",
+      "quelle": {
+        "art": "tafel",
+        "id": "19",
+        "seite": "106",
+        "titel": "Tafel 19 · S. 106",
+        "zitat": null
+      },
+      "bild": "tafel_19_Nussknacker_und_Traubenschere.jpg",
+      "art": "auswahl",
+      "richtig": 2,
+      "optionen": [
+        {
+          "titel": "A",
+          "beschreibung": "Kräftiges Werkzeug mit zwei geriffelten Griffen",
+          "crop": [
+            0.2,
+            0.09,
+            0.13,
+            0.375
+          ]
+        },
+        {
+          "titel": "B",
+          "beschreibung": "Schmales spitzes Werkzeug mit einem Griff",
+          "crop": [
+            0.5,
+            0.16,
+            0.07,
+            0.305
+          ]
+        },
+        {
+          "titel": "C",
+          "beschreibung": "Schere mit zwei runden Grifföffnungen",
+          "crop": [
+            0.71,
+            0.12,
+            0.17,
+            0.345
+          ]
+        }
+      ],
+      "erklaerung": "C ist die Traubenschere. Daneben stehen der Nussknacker (A) und der Nussschäler (B). Öffne die Tafel, um die gedruckten Namen zu vergleichen."
+    },
+    {
+      "id": "gedeck",
+      "titel": "Decke einen Platz",
+      "text": "Lege drei Teile an ihren Platz: Wähle zuerst ein Besteckteil, dann seine Lage am Teller. Die Übung vereinfacht Tafel 42 auf drei Positionen.",
+      "quelle": {
+        "art": "tafel",
+        "id": "42",
+        "seite": "132",
+        "titel": "Tafel 42 · S. 132",
+        "zitat": null
+      },
+      "bild": "tafel_42_Diner_Gedeck.jpg",
+      "art": "anordnen",
+      "richtig": 0,
+      "optionen": [],
+      "erklaerung": "Die Gabel gehört links vom Teller, das Messer rechts. Der kleine Löffel liegt auf dieser Tafel oberhalb des Tellers. Die gedruckte Vorlage nennt fünf Gläser; „Bier Glas“ ist handschriftlich ergänzt und zählt hier nicht mit."
+    }
+  ],
+  "menufuehrer": [
+    {
+      "id": "strauss",
+      "menu": "03_Johann_Strauss_Jubilaeum_1894.jpg",
+      "titel": "Ein Festabend, Gang für Gang",
+      "text": "Ein Leseschlüssel zur Karte von 1894. Die Erläuterungen sind heutige Ergänzungen; den genauen Wortlaut findest du auf der Originalkarte.",
+      "quelle": {
+        "art": "menu",
+        "id": "03_Johann_Strauss_Jubilaeum_1894.jpg",
+        "seite": null,
+        "titel": "Johann Strauss Jubiläum · Wien, 15. Oktober 1894",
+        "zitat": null
+      },
+      "abschnitte": [
+        {
+          "id": "m1",
+          "titel": "Anlass und Ort",
+          "zitat": "Johann Strauss Jubiläum · Grand Hôtel, Vienne. · Wien, 15. October 1894.",
+          "text": "Die Angaben verorten die Karte in Wien und nennen das Jubiläum. Die Karte allein belegt keine vollständige Gästeliste.",
+          "sprache": "de-AT"
+        },
+        {
+          "id": "m2",
+          "titel": "Der Auftakt",
+          "zitat": "Tortue claire à l'Anglaise",
+          "text": "Wörtlich: klare Schildkrötensuppe auf englische Art. Der Name nennt eine historische Speise; eine genaue Rezeptur lässt sich aus dieser Zeile nicht ablesen.",
+          "sprache": "fr-FR"
+        },
+        {
+          "id": "m3",
+          "titel": "Der Fischgang",
+          "zitat": "Fogas à la Chambord · Pommes, sauce tartare",
+          "text": "Fogas bezeichnet Zander. Pommes meint hier Kartoffeln; dazu nennt die Karte Sauce tartare. „À la Chambord“ ist ein Zubereitungsname, dessen genaue Ausführung die Karte offenlässt.",
+          "sprache": "fr-FR"
+        },
+        {
+          "id": "m4",
+          "titel": "Fleisch und Beigaben",
+          "zitat": "Pièce de boeuf pré-salé garni à la jardinière",
+          "text": "Die Zeile nennt Rindfleisch und eine Garnitur nach Gärtnerart, also mit Gemüse. Welche Gemüse und Mengen verwendet wurden, steht hier nicht.",
+          "sprache": "fr-FR"
+        },
+        {
+          "id": "m5",
+          "titel": "Ein Name im Gericht",
+          "zitat": "Filet de chevreuil à la Jean Strauss",
+          "text": "Chevreuil bedeutet Reh: ein Rehfilet, benannt nach Jean Strauss. Die Benennung würdigt den Namen des Jubilars; sie liefert kein vollständiges Rezept.",
+          "sprache": "fr-FR"
+        },
+        {
+          "id": "m6",
+          "titel": "Eine Unterbrechung",
+          "zitat": "Punch à la Romaine",
+          "text": "Der Punch steht zwischen dem Rehfilet und dem Geflügel. Entdecke diese Pause in der Speisenfolge und vergleiche im dritten Kapitel die Position von Sorbet vor dem Braten.",
+          "sprache": "fr-FR"
+        },
+        {
+          "id": "m7",
+          "titel": "Geflügel und Beilagen",
+          "zitat": "Chapons de Styrie à la broche · Salade, Compote",
+          "text": "Kapaune aus der Steiermark am Spieß, gefolgt von Salat und Kompott. Chapon ist ein kastrierter, für die Küche gemästeter Hahn.",
+          "sprache": "fr-FR"
+        },
+        {
+          "id": "m8",
+          "titel": "Der Ausklang",
+          "zitat": "Glace et Crème · Fromages · Fruits — Dessert. · Café.",
+          "text": "Eis und Creme, Käse, Früchte und Dessert, zuletzt Kaffee. Verfolge die einzelnen Zeilen: Der Abschluss besteht hier aus mehreren Angeboten.",
+          "sprache": "fr-FR"
+        },
+        {
+          "id": "m9",
+          "titel": "Die Getränke",
+          "zitat": "Bière de Dreher. · Grinzinger Eigenbau 1885 — Vöslauer Ausstich 1887 · Pommery & Greno, frappé · Liqueurs.",
+          "text": "Bier, benannte Weine mit Jahrgängen, gekühlter Champagner und Liköre stehen auf der Karte. Die räumliche Anordnung allein legt keine genaue Zuordnung jedes Getränks zu einem Gang fest.",
+          "sprache": "de-AT"
+        },
+        {
+          "id": "m10",
+          "titel": "Dein Blick auf die Karte",
+          "zitat": "Was verrät eine Menükarte?",
+          "text": "Finde drei Dinge: den Anlass, einen Gang mit Ortsbezug und die Stelle des Kaffees. Vergleiche anschließend mit einer anderen Karte der Sammlung.",
+          "sprache": "de-AT"
+        }
+      ],
+      "links": [
+        {
+          "titel": "Fogas / Zander · Treccani",
+          "url": "https://www.treccani.it/enciclopedia/sandra_%28Enciclopedia-Italiana%29/"
+        },
+        {
+          "titel": "Chapon · Académie française",
+          "url": "https://www.dictionnaire-academie.fr/article/A9C1642"
+        }
+      ]
+    }
+  ]
+}

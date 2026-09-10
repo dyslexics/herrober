@@ -13,11 +13,13 @@ struct ProgressData: Codable {
 /// Lesestand – nur lokal (UserDefaults), kein Konto.
 final class ProgressStore: ObservableObject {
     @Published private(set) var data = ProgressData()
+    @Published private(set) var lern = Lernstand()
     private let defaults: UserDefaults
     private let key = "progress.v1"
 
     init(defaults: UserDefaults = .standard) {
         self.defaults = defaults
+        if let raw = defaults.data(forKey: "lernen.v1"), let d = try? JSONDecoder().decode(Lernstand.self, from: raw) { lern = d }
         if let raw = defaults.data(forKey: key), let d = try? JSONDecoder().decode(ProgressData.self, from: raw) {
             data = d
         }
@@ -54,6 +56,27 @@ final class ProgressStore: ObservableObject {
     func reset() {
         data = ProgressData()
         defaults.removeObject(forKey: key)
+        lern = Lernstand()
+        defaults.removeObject(forKey: "lernen.v1")
+    }
+
+    func begriffMerken(_ id: String) {
+        if lern.gemerkt.contains(id) { lern.gemerkt.remove(id) } else { lern.gemerkt.insert(id) }
+        saveLernen()
+    }
+    func frage(_ id: String, richtig: Bool) {
+        lern.beantwortet.insert(id)
+        if richtig { lern.wiederholen.remove(id) } else { lern.wiederholen.insert(id) }
+        saveLernen()
+    }
+    func schritt(_ id: String, tour: String, fertig: Bool) {
+        let key = "\(tour)/\(id)"
+        if fertig { lern.tourSchritte.insert(key) } else { lern.tourSchritte.remove(key) }
+        saveLernen()
+    }
+    func uebung(_ id: String) { lern.uebungen.insert(id); saveLernen() }
+    private func saveLernen() {
+        if let raw = try? JSONEncoder().encode(lern) { defaults.set(raw, forKey: "lernen.v1") }
     }
 
     /// „Weiterlesen": zuletzt geöffnetes Kapitel + Seite, sonst das erste Kapitel.

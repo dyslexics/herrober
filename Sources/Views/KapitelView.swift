@@ -12,6 +12,7 @@ struct KapitelView: View {
     @State private var alt = true
     @State private var lupe: Lupe?
     @State private var geladen = false
+    @State private var nachLupe: Route?
 
     struct Lupe: Identifiable {
         let id = UUID()
@@ -19,6 +20,7 @@ struct KapitelView: View {
         let alt: String
         let wort: VorleseDaten.Wort?
         let teil: Int
+        let kontext: String
     }
 
     private var groesse: CGFloat { CGFloat(settings.fontSize) }
@@ -66,7 +68,11 @@ struct KapitelView: View {
         .safeAreaInset(edge: .bottom) {
             if vorleser.bereit { VorleseZeile(vorleser: vorleser) }
         }
-        .sheet(item: $lupe) { l in WortLupe(lupe: l, vorleser: vorleser) }
+        .sheet(item: $lupe, onDismiss: {
+            if let ziel = nachLupe { nachLupe = nil; nav.open(ziel) }
+        }) { l in
+            WortLupe(lupe: l, vorleser: vorleser) { ziel in nachLupe = ziel; lupe = nil }
+        }
         .onDisappear { vorleser.stop() }
         .tint(Theme.akzent)
     }
@@ -83,6 +89,11 @@ struct KapitelView: View {
                 .accessibilityLabel(kapitel.titel)
             Text(T("chapter.pages", kapitel.seiten.count, max(1, kapitel.woerter / 130)))
                 .font(Schrift.meta).foregroundStyle(Theme.leise)
+            if repo.lernen.fragen.contains(where: { $0.kapitel == kapitel.slug }) {
+                Button { nav.open(.lernen("fragen", kapitel.slug)) } label: {
+                    Label(LT("Drei Fragen zu diesem Kapitel", "Three questions about this chapter"), systemImage: "questionmark.bubble").font(Schrift.meta).frame(minHeight: 44)
+                }
+            }
         }
         .padding(.top, 10)
         .padding(.bottom, 8)
@@ -105,12 +116,18 @@ struct KapitelView: View {
                 }
                 .id("block-\(si)-\(bi)")
             }
+            ForEach(repo.lernen.kontexte.filter { $0.quelle.id == kapitel.slug && $0.quelle.seite == seite.nr }) { k in
+                StartKachel(titel: k.titel, unter: LT("Heute erklärt · Einblick in die Zeit", "Explained today · Historical context"), symbol: "clock") { nav.open(.lernen("kontext", k.id)) }
+            }
         }
     }
 
     private var fuss: some View {
         VStack(spacing: 12) {
             Divider().padding(.top, 30)
+            if repo.lernen.fragen.contains(where: { $0.kapitel == kapitel.slug }) {
+                StartKachel(titel: LT("Zum Kapitel nachdenken", "Chapter questions"), unter: LT("Drei Fragen mit Erklärung und Buchstelle", "Three questions with explanations and sources"), symbol: "questionmark.bubble") { nav.open(.lernen("fragen", kapitel.slug)) }
+            }
             if progress.istGelesen(kapitel) {
                 Label(T("chapter.done"), systemImage: "checkmark.circle.fill").font(Schrift.meta).foregroundStyle(Theme.akzent)
             }
@@ -178,7 +195,7 @@ struct KapitelView: View {
             if w.a < w.e, w.e <= seg.count { neu = String(seg[seg.index(seg.startIndex, offsetBy: w.a)..<seg.index(seg.startIndex, offsetBy: w.e)]) }
             if let aa = w.aa, let ae = w.ae, aa < ae, ae <= segAlt.count { altWort = String(segAlt[segAlt.index(segAlt.startIndex, offsetBy: aa)..<segAlt.index(segAlt.startIndex, offsetBy: ae)]) }
         }
-        lupe = Lupe(neu: neu, alt: altWort, wort: treffer?.1, teil: treffer?.0 ?? 0)
+        lupe = Lupe(neu: neu, alt: altWort, wort: treffer?.1, teil: treffer?.0 ?? 0, kontext: textNeu)
     }
 }
 
@@ -190,24 +207,36 @@ extension Array {
 struct WortLupe: View {
     let lupe: KapitelView.Lupe
     @ObservedObject var vorleser: Vorleser
+    let oeffnen: (Route) -> Void
+    @EnvironmentObject private var repo: ContentRepository
+    @StateObject private var stimme = LernStimme()
     @Environment(\.dismiss) private var dismiss
 
     var body: some View {
-        VStack(spacing: 22) {
+        ScrollView {
+          VStack(spacing: 22) {
             Text(T("lupe.title")).font(Schrift.eyebrow).foregroundStyle(Theme.akzent)
             Text(lupe.neu).font(Schrift.bold(40)).foregroundStyle(Theme.tinte).minimumScaleFactor(0.5).lineLimit(2).multilineTextAlignment(.center)
             Text(lupe.alt).font(Schrift.fraktur(34)).foregroundStyle(Theme.leise).minimumScaleFactor(0.5).lineLimit(2).multilineTextAlignment(.center)
             if let w = lupe.wort {
-                PrimaerKnopf(titel: T("lupe.play"), symbol: "speaker.wave.2.fill") { vorleser.spieleWort(w, teil: lupe.teil) }
+                PrimaerKnopf(titel: T("lupe.play"), symbol: "speaker.wave.2.fill") { stimme.stop(); vorleser.spieleWort(w, teil: lupe.teil) }
                     .frame(maxWidth: 260)
             }
+            if let b = repo.lernen.begriff(wort: lupe.neu, kontext: lupe.kontext) {
+                Divider()
+                BegriffInhalt(begriff: b, oeffnen: oeffnen)
+            }
             Button(T("common.done")) { dismiss() }.font(Schrift.knopf).tint(Theme.akzent)
+          }
+          .padding(28)
         }
-        .padding(28)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Theme.bg)
-        .presentationDetents([.height(340)])
+        .environmentObject(stimme)
+        .presentationDetents([.medium, .large])
         .onAppear { if let w = lupe.wort { vorleser.spieleWort(w, teil: lupe.teil) } }
+        .onChange(of: stimme.aktiv) { _, id in if id != nil { vorleser.stop() } }
+        .onDisappear { stimme.stop() }
     }
 }
 

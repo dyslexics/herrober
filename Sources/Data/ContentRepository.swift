@@ -4,6 +4,7 @@ import UIKit
 final class ContentRepository: ObservableObject {
     let bibliothek: Bibliothek
     let audioIndex: AudioIndex
+    let lernen: LernInhalte
     private let cache = NSCache<NSString, UIImage>()
     private let bundle: Bundle
 
@@ -16,6 +17,13 @@ final class ContentRepository: ObservableObject {
             do { lib = try JSONDecoder().decode(Bibliothek.self, from: data) } catch { print("content.json: \(error)") }
         }
         bibliothek = lib
+        var lern = LernInhalte()
+        if let url = bundle.url(forResource: "lernen", withExtension: "json", subdirectory: "Content"),
+           let data = try? Data(contentsOf: url) {
+            do { lern = try JSONDecoder().decode(LernInhalte.self, from: data) }
+            catch { print("lernen.json: \(error)") }
+        }
+        lernen = lern
         var idx = AudioIndex(kapitel: [:], tafeln: [:], menus: [:])
         if let url = bundle.url(forResource: "index", withExtension: "json", subdirectory: "Content/Audio"),
            let data = try? Data(contentsOf: url), let d = try? JSONDecoder().decode(AudioIndex.self, from: data) {

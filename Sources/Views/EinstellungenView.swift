@@ -47,10 +47,13 @@ struct EinstellungenView: View {
                 Button { nav.open(.ueber) } label: { Label(T("settings.about"), systemImage: "book.closed") }
                 Button(role: .destructive) { resetFrage = true } label: { Label(T("settings.reset"), systemImage: "arrow.counterclockwise") }
             } footer: {
+              VStack(alignment: .leading, spacing: 14) {
                 Text(T("settings.idea"))
                     .font(Schrift.meta)
                     .foregroundStyle(Theme.leise)
                     .accessibilityIdentifier("settings.idea")
+                AppsthrumLink()
+              }
             }
         }
         .scrollContentBackground(.hidden)
@@ -109,6 +112,7 @@ struct UeberView: View {
                     Text(versionText).font(Schrift.klein).foregroundStyle(Theme.leise)
                 }
                 .font(Schrift.text)
+                AppsthrumLink()
             }
             .frame(maxWidth: Theme.leseBreite)
             .frame(maxWidth: .infinity)
@@ -119,5 +123,21 @@ struct UeberView: View {
         .tint(Theme.akzent)
         .navigationTitle(T("about.title"))
         .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+/// Originales Appsthrum-Banner; Bild und sichtbare Domain führen gemeinsam zur Website.
+struct AppsthrumLink: View {
+    var body: some View {
+        Link(destination: URL(string: "https://appsthrum.com")!) {
+            VStack(alignment: .leading, spacing: 8) {
+                Image("Appsthrum").resizable().scaledToFit().frame(maxWidth: 480)
+                    .clipShape(RoundedRectangle(cornerRadius: 8)).accessibilityHidden(true)
+                Label("Appsthrum.com", systemImage: "arrow.up.right.square").font(Schrift.zeile)
+            }.padding(.vertical, 8).frame(minHeight: 44, alignment: .leading)
+        }
+        .foregroundStyle(Theme.akzent)
+        .accessibilityLabel(LT("Appsthrum.com – Website öffnen", "Appsthrum.com — open website"))
+        .accessibilityIdentifier("appsthrum.link")
     }
 }

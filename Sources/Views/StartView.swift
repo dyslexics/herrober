@@ -12,6 +12,8 @@ struct StartView: View {
             VStack(alignment: .leading, spacing: 22) {
                 einband
                 weiterlesen
+                StartKachel(titel: LT("Entdecken & lernen", "Discover & learn"), unter: LT("Touren, Wörter, Bilder und Fragen zum Buch", "Tours, words, pictures and questions about the book"), symbol: "sparkle.magnifyingglass") { nav.open(.lernen("hub", "")) }
+                    .accessibilityIdentifier("learning.open")
                 kapitelListe
                 weitere
             }

@@ -15,6 +15,7 @@ struct FibelView: View {
                 if let f = repo.bibliothek.fibel {
                     Text(f.einleitung).font(Schrift.text).foregroundStyle(Theme.leise)
                     uebung
+                    StartKachel(titel: LT("Weiter mit Wortgruppen & Sätzen", "Continue with phrases & sentences"), unter: LT("12 Beispiele aus dem Buch · lesen und anhören", "12 examples from the book · read and listen"), symbol: "text.alignleft") { nav.open(.lernen("leseuebungen", "gruppe")) }
                     alphabet(f)
                     stolpersteine(f)
                     woerter(f)

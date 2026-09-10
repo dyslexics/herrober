@@ -10,6 +10,7 @@ struct HerrOberApp: App {
     init() {
         let r = ContentRepository()
         let p = ProgressStore()
+        if Launch.hat("-resetProgress") { p.reset() } // DEBUG-Argument, in Release wirkungslos.
         if Launch.demoProgress { p.loadDemo(repo: r) }
         let s = Settings()
         if let l = Launch.lang, let al = AppLang(rawValue: l) { s.lang = al }
@@ -67,6 +68,7 @@ enum Route: Hashable {
     case fibelQuiz
     case toc
     case ueber
+    case lernen(String, String)    // Art, stabile Inhalts-ID
 }
 
 final class Navigator: ObservableObject {
@@ -121,6 +123,11 @@ struct RootView: View {
         if let nr = Launch.tafel, repo.tafel(nr) != nil { nav.tab = 1; nav.open(.tafel(nr)); return }
         if let bild = Launch.menu { nav.tab = 1; nav.open(.menus); nav.open(.menu(bild + ".jpg")); return }
         switch Launch.screen {
+        case "lernen": nav.tab = 0; nav.open(.lernen("hub", ""))
+        case "glossar": nav.tab = 0; nav.open(.lernen("glossar", ""))
+        case "lernfragen": nav.tab = 0; nav.open(.lernen("fragen", "capitel-02"))
+        case "bildaufgabe": nav.tab = 0; nav.open(.lernen("bild", "gedeck"))
+        case "leseuebungen": nav.tab = 2; nav.open(.lernen("leseuebungen", "satz"))
         case "fibel": nav.tab = 2
         case "quiz": nav.tab = 2; nav.open(.fibelQuiz)
         case "ueber": nav.tab = 3; nav.open(.ueber)
@@ -155,6 +162,7 @@ struct RouteView: View {
         case .fibelQuiz: FibelQuizView()
         case .toc: InhaltsverzeichnisView()
         case .ueber: UeberView()
+        case .lernen(let art, let id): LernRouteView(art: art, id: id)
         }
     }
 }

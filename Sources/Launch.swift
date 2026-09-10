@@ -8,7 +8,8 @@ import Foundation
 ///   -vorlesen         Vorlesen sofort starten (Screenshots der Wortmarkierung)
 ///   -tafel NR         Tafel öffnen
 ///   -menu BILD        Menükarte öffnen (Dateiname ohne .jpg)
-///   -screen fibel|quiz|ueber|toc|settings
+///   -screen fibel|quiz|ueber|toc|settings|lernen|glossar|lernfragen|bildaufgabe|leseuebungen
+///   -resetProgress    isolierter Simulator-Test: Lese- und Lernstand zurücksetzen
 ///   -lang de|en       UI-Sprache
 ///   -demoProgress     Beispiel-Lesestand
 ///   -darstellung hell|dunkel|system

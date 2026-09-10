@@ -10,6 +10,7 @@ struct TafelnView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
                 Text(T("tafeln.sub")).font(Schrift.text).foregroundStyle(Theme.leise)
+                StartKachel(titel: LT("Mit Bildern lernen", "Learn with pictures"), unter: LT("Drei Aufgaben mit den Tafeln", "Three activities using the plates"), symbol: "eye") { nav.open(.lernen("bilder", "")) }
                 ForEach(repo.bibliothek.tafeln) { g in
                     VStack(alignment: .leading, spacing: 10) {
                         Text(g.titel).font(Schrift.abschnitt).foregroundStyle(Theme.tinte)
@@ -53,6 +54,7 @@ struct TafelView: View {
     let tafel: Tafel
     @EnvironmentObject private var repo: ContentRepository
     @EnvironmentObject private var settings: Settings
+    @EnvironmentObject private var nav: Navigator
     @StateObject private var vorleser = Vorleser()
     @State private var alt = true
     @State private var original = false
@@ -80,6 +82,12 @@ struct TafelView: View {
                     }
                 }
                 beschriftungen
+                ForEach(repo.lernen.bildaufgaben.filter { $0.quelle.id == tafel.nr }) { a in
+                    StartKachel(titel: a.titel, unter: LT("Mit dieser Tafel üben", "Practise with this plate"), symbol: "hand.tap") { nav.open(.lernen("bild", a.id)) }
+                }
+                ForEach(repo.lernen.begriffe.filter { $0.quelle.art == "tafel" && $0.quelle.id == tafel.nr }) { b in
+                    StartKachel(titel: b.titel, unter: LT("Heute erklärt", "Explained today"), symbol: "text.magnifyingglass") { nav.open(.lernen("begriff", b.id)) }
+                }
                 if let text = tafel.text, !text.isEmpty {
                     VStack(alignment: .leading, spacing: 10) {
                         ForEach(Array(text.enumerated()), id: \.offset) { i, b in
@@ -273,6 +281,7 @@ struct MenuView: View {
     let karte: Menukarte
     @EnvironmentObject private var repo: ContentRepository
     @EnvironmentObject private var settings: Settings
+    @EnvironmentObject private var nav: Navigator
     @StateObject private var vorleser = Vorleser()
     @State private var alt = true
     @State private var original = false
@@ -285,6 +294,9 @@ struct MenuView: View {
                 }
                 Picker("", selection: $original) { Text(T("tafel.clean")).tag(false); Text(T("tafel.original")).tag(true) }.pickerStyle(.segmented)
                 if let od = karte.ortDatum, !od.isEmpty { Text(od).font(Schrift.meta).foregroundStyle(Theme.leise) }
+                if repo.lernen.menufuehrer.contains(where: { $0.menu == karte.bild }) {
+                    StartKachel(titel: LT("Diese Karte verstehen", "Explore this menu"), unter: LT("Ein Festabend, Gang für Gang", "An evening, course by course"), symbol: "text.magnifyingglass") { nav.open(.lernen("menuhilfe", karte.bild)) }
+                }
                 VStack(alignment: .leading, spacing: 6) {
                     ForEach(Array(karte.zeilen.enumerated()), id: \.offset) { i, z in
                         let fett = z.art == "titel" || z.art == "ueberschrift"
